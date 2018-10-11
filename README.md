@@ -8,3 +8,11 @@ There is currently a working map of the campus, however the office coordinates n
 
 The first commit to this repo is the existing js code from t4. This code will be refactored to include the corrected coordinates and the updated functionality.
 
+Today readability and review was completed for existing code.
+
+TODO:
+Friday verify all coordinates
+Find out how to link the Keys to the Markers and begin implementation.
+Next week convert keys content type to an accordion
+Move text box to margin
+Get map to center on Markers using click listener 
