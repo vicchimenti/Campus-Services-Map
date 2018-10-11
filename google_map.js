@@ -1,29 +1,33 @@
+//  *** Begin Google Map JS ***  //
 <script>
+ // Text Box
  function modifyTextBox(type, header, text) {
    $("#POITextBox").show();
    $("#POITextBox h5").html(header);
    $("#POITextBox p").html(text);
    $("#POITextBox").css("padding","5px 25px 15px 25px");
+   
+   // Physical Space/Yellow
    if(type == 0){
-    //physical space/yellow
     $("#POITextBox").css("border-left", "5px solid #fdb913");
     $("#POITextBox h5").css("color", "#333333");
    }
-	//services/green
+	// Services/Green
 	if(type == 1){
 	$("#POITextBox").css("border-left", "5px solid #55b31b");
     $("#POITextBox h5").css("color", "#333333");
 	}
+  // Involvement/Red
 	if(type == 2){
-    //involvement/red
     $("#POITextBox").css("border-left", "5px solid #aa0000");
     $("#POITextBox h5").css("color", "#aa0000");
    }
+  //  Food/Blue
 	if(type == 3){
-    //food/blue
     $("#POITextBox").css("border-left", "5px solid #003282");
     $("#POITextBox h5").css("color", "#003282");
    }
+   // Text Box Margins
    var margin = ($("#POITextBox").height() * -1) - 30;
    $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
  }
