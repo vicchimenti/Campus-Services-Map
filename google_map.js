@@ -6,7 +6,7 @@
    $("#POITextBox h5").html(header);
    $("#POITextBox p").html(text);
    $("#POITextBox").css("padding","5px 25px 15px 25px");
-   
+
    // Physical Space/Yellow
    if(type == 0){
     $("#POITextBox").css("border-left", "5px solid #fdb913");
