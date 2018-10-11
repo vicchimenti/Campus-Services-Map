@@ -42,9 +42,7 @@
      streetViewControl: false,
      mapTypeControl: false,
      fullscreenControl: false,
-     zoom: 16
-   }
- };
+     zoom: 16,
 
      //  *** Map style from Snazzy Maps (Blue Water) start ***  //
      styles: [{
