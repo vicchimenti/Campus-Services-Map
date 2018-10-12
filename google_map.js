@@ -194,8 +194,8 @@
    // Outreach Center
    var outreachCenterMarker = new google.maps.Marker({
      position: {
-       lat: 47.608422,
-       lng: -122.318200
+       lat: 47.608319,
+       lng: -122.317772
      },
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
@@ -302,8 +302,8 @@
    // Redhawk Resource Desk
    var redhawkResourceHubDeskMarker = new google.maps.Marker({
      position: {
-       lat: 47.608484,
-       lng: -122.318037
+       lat: 47.608453,
+       lng: -122.317994
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -506,8 +506,8 @@
    // Student Center Dining Options
    var stcnDiningMarker = new google.maps.Marker({
      position: {
-       lat: 47.608288,
-       lng: -122.318390
+       lat: 47.608298,
+       lng: -122.318114
      },
      icon: icons['foodIcon'].icon,
      map: map,
