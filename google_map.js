@@ -153,8 +153,8 @@
    // Commuter Showers
    var commuterShowersMarker = new google.maps.Marker({
      position: {
-       lat: 47.608307,
-       lng: -122.318693
+       lat: 47.608422,
+       lng: -122.318024
      },
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
@@ -166,8 +166,8 @@
    // Lemieux Library
    var lemieuxLibraryMarker = new google.maps.Marker({
      position: {
-       lat: 47.608881,
-       lng: -122.318842
+       lat: 47.608845,
+       lng: -122.319127
      },
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
@@ -179,8 +179,8 @@
    // McGoldrick Collegium
    var mcgoldrickCollegiumMarker = new google.maps.Marker({
      position: {
-       lat: 47.611974,
-       lng: -122.318442
+       lat: 47.611762,
+       lng: -122.318301
      },
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
@@ -192,8 +192,8 @@
    // Outreach Center
    var outreachCenterMarker = new google.maps.Marker({
      position: {
-       lat: 47.608326,
-       lng: -122.317791
+       lat: 47.608422,
+       lng: -122.318200
      },
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
@@ -209,8 +209,8 @@
    // Campus Store
    var campusStoreMarker = new google.maps.Marker({
      position: {
-       lat: 47.612568,
-       lng: -122.316990
+       lat: 47.611722,
+       lng: -122.318360
      },
      icon: icons['servicesIcon'].icon,
      map: map,
