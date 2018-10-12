@@ -222,8 +222,8 @@
    // Career Engagement office
    var careerEngagementOfficeMarker = new google.maps.Marker({
      position: {
-       lat: 47.608874,
-       lng: -122.317831
+       lat: 47.608365,
+       lng: -122.317919
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -235,8 +235,8 @@
    // Counseling and Psychological Services
    var capsMarker = new google.maps.Marker({
      position: {
-       lat: 47.608874,
-       lng: -122.317710
+       lat: 47.608761,
+       lng: -122.317796
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -248,8 +248,8 @@
    // Learning Assistance Program
    var learningAssistanceProgramsMarker = new google.maps.Marker({
      position: {
-       lat: 47.609005,
-       lng: -122.319060
+       lat: 47.608689,
+       lng: -122.318775
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -261,8 +261,8 @@
    // Media Production Center
    var mpcMarker = new google.maps.Marker({
      position: {
-       lat: 47.608938,
-       lng: -122.318696
+       lat: 47.608801,
+       lng: -122.318099
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -274,8 +274,8 @@
    // Public Safety
    var publicSafetyMarker = new google.maps.Marker({
      position: {
-       lat: 47.610168,
-       lng: -122.317646
+       lat: 47.609815,
+       lng: -122.318229
      },
      icon: icons['servicesIcon'].icon,
      map: map,
