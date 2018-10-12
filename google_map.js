@@ -250,8 +250,8 @@
    // Learning Assistance Program
    var learningAssistanceProgramsMarker = new google.maps.Marker({
      position: {
-       lat: 47.608689,
-       lng: -122.318775
+       lat: 47.608837,
+       lng: -122.319127
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -263,8 +263,8 @@
    // Media Production Center
    var mpcMarker = new google.maps.Marker({
      position: {
-       lat: 47.608801,
-       lng: -122.318099
+       lat: 47.608838,
+       lng: -122.318540
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -289,8 +289,8 @@
    // Redhawk Axis
    var redhawkAxisMarker = new google.maps.Marker({
      position: {
-       lat: 47.609931,
-       lng: -122.317576
+       lat: 47.610037,
+       lng: -122.317502
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -315,8 +315,8 @@
    // SU Supercopy
    var supercopyMarker = new google.maps.Marker({
      position: {
-       lat: 47.608761,
-       lng: -122.317864
+       lat: 47.609077,
+       lng: -122.317527
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -480,8 +480,8 @@
    // The Byte
    var theByteMarker = new google.maps.Marker({
      position: {
-       lat: 47.608797,
-       lng: -122.318758
+       lat: 47.608912,
+       lng: -122.318623
      },
      icon: icons['foodIcon'].icon,
      map: map,
@@ -493,8 +493,8 @@
    // The Side Bar
    var theSideBarMarker = new google.maps.Marker({
      position: {
-       lat: 47.609555,
-       lng: -122.317610
+       lat: 47.609565,
+       lng: -122.317597
      },
      icon: icons['foodIcon'].icon,
      map: map,
