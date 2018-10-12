@@ -155,8 +155,8 @@
    // Commuter Showers
    var commuterShowersMarker = new google.maps.Marker({
      position: {
-       lat: 47.608422,
-       lng: -122.318024
+       lat: 47.608331,
+       lng: -122.318721
      },
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
@@ -302,7 +302,7 @@
    // Redhawk Resource Desk
    var redhawkResourceHubDeskMarker = new google.maps.Marker({
      position: {
-       lat: 47.608453,
+       lat: 47.608555,
        lng: -122.317994
      },
      icon: icons['servicesIcon'].icon,
@@ -345,8 +345,8 @@
    // Center for Student Involvement
    var centerStudentInvolvementMarker = new google.maps.Marker({
      position: {
-       lat: 47.608847,
-       lng: -122.318892
+       lat: 47.608285,
+       lng: -122.318658
      },
      icon: icons['involvementIcon'].icon,
      map: map,
@@ -397,8 +397,8 @@
    // Student Government at SeattleU
    var sgsuMarker = new google.maps.Marker({
      position: {
-       lat: 47.608348,
-       lng: -122.318420
+       lat: 47.608363,
+       lng: -122.318600
      },
      icon: icons['involvementIcon'].icon,
      map: map,
