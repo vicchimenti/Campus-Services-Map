@@ -168,8 +168,8 @@
    // Lemieux Library
    var lemieuxLibraryMarker = new google.maps.Marker({
      position: {
-       lat: 47.608845,
-       lng: -122.319127
+       lat: 47.608963,
+       lng: -122.318996
      },
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
@@ -237,8 +237,8 @@
    // Counseling and Psychological Services
    var capsMarker = new google.maps.Marker({
      position: {
-       lat: 47.608761,
-       lng: -122.317796
+       lat: 47.608884,
+       lng: -122.317554
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -315,8 +315,8 @@
    // SU Supercopy
    var supercopyMarker = new google.maps.Marker({
      position: {
-       lat: 47.609077,
-       lng: -122.317527
+       lat: 47.608936,
+       lng: -122.317423
      },
      icon: icons['servicesIcon'].icon,
      map: map,
