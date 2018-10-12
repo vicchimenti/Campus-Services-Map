@@ -44,7 +44,9 @@
    var map = new google.maps.Map(document.getElementById('SeattlePOIMap'), {
      center: seattleu,
      streetViewControl: false,
-     mapTypeControl: false,
+     scaleControl: true,
+     zoomControl: true,
+     mapTypeControl: true,
      fullscreenControl: false,
      zoom: 16,
 
