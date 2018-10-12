@@ -287,8 +287,8 @@
    // Redhawk Axis
    var redhawkAxisMarker = new google.maps.Marker({
      position: {
-       lat: 47.610048,
-       lng: -122.317233
+       lat: 47.609815,
+       lng: -122.318111
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -300,8 +300,8 @@
    // Redhawk Resource Desk
    var redhawkResourceHubDeskMarker = new google.maps.Marker({
      position: {
-       lat: 47.608472,
-       lng: -122.318108
+       lat: 47.608484,
+       lng: -122.318037
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -313,8 +313,8 @@
    // SU Supercopy
    var supercopyMarker = new google.maps.Marker({
      position: {
-       lat: 47.609141,
-       lng: -122.317512
+       lat: 47.608761,
+       lng: -122.317864
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -343,8 +343,8 @@
    // Center for Student Involvement
    var centerStudentInvolvementMarker = new google.maps.Marker({
      position: {
-       lat: 47.608330,
-       lng: -122.318610
+       lat: 47.608847,
+       lng: -122.318892
      },
      icon: icons['involvementIcon'].icon,
      map: map,
@@ -369,8 +369,8 @@
    // International Student Center
    var internationalStudentCenterMarker = new google.maps.Marker({
      position: {
-       lat: 47.608640,
-       lng: -122.317589
+       lat: 47.608721,
+       lng: -122.317914
      },
      icon: icons['involvementIcon'].icon,
      map: map,
@@ -382,8 +382,8 @@
    // Office of Multicultural Affairs
    var omaMarker = new google.maps.Marker({
      position: {
-       lat: 47.608678,
-       lng: -122.317747
+       lat: 47.608484,
+       lng: -122.317919
      },
      icon: icons['involvementIcon'].icon,
      map: map,
@@ -396,7 +396,7 @@
    var sgsuMarker = new google.maps.Marker({
      position: {
        lat: 47.608348,
-       lng: -122.318603
+       lng: -122.318420
      },
      icon: icons['involvementIcon'].icon,
      map: map,
@@ -408,8 +408,8 @@
    // Wellness and Health Promotion
    var wellnessHealthPromotionMarker = new google.maps.Marker({
      position: {
-       lat: 47.608348,
-       lng: -122.318603
+       lat: 47.608268,
+       lng: -122.318509
      },
      icon: icons['involvementIcon'].icon,
      map: map,
@@ -465,8 +465,8 @@
    // The Bottom Line
    var theBottomLineMarker = new google.maps.Marker({
      position: {
-       lat: 47.640784,
-       lng: -122.318706
+       lat: 47.609656,
+       lng: -122.318170
      },
      icon: icons['foodIcon'].icon,
      map: map,
@@ -478,8 +478,8 @@
    // The Byte
    var theByteMarker = new google.maps.Marker({
      position: {
-       lat: 47.609070,
-       lng: -122.318612
+       lat: 47.608797,
+       lng: -122.318758
      },
      icon: icons['foodIcon'].icon,
      map: map,
@@ -491,8 +491,8 @@
    // The Side Bar
    var theSideBarMarker = new google.maps.Marker({
      position: {
-       lat: 47.609461,
-       lng: -122.317788
+       lat: 47.608801,
+       lng: -122.318158
      },
      icon: icons['foodIcon'].icon,
      map: map,
@@ -504,8 +504,8 @@
    // Student Center Dining Options
    var stcnDiningMarker = new google.maps.Marker({
      position: {
-       lat: 47.608299,
-       lng: -122.318402
+       lat: 47.608288,
+       lng: -122.318390
      },
      icon: icons['foodIcon'].icon,
      map: map,
