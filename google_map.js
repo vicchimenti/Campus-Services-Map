@@ -467,8 +467,8 @@
    // The Bottom Line
    var theBottomLineMarker = new google.maps.Marker({
      position: {
-       lat: 47.609656,
-       lng: -122.318170
+       lat: 47.610729,
+       lng: -122.318657
      },
      icon: icons['foodIcon'].icon,
      map: map,
@@ -493,8 +493,8 @@
    // The Side Bar
    var theSideBarMarker = new google.maps.Marker({
      position: {
-       lat: 47.608801,
-       lng: -122.318158
+       lat: 47.609513,
+       lng: -122.317636
      },
      icon: icons['foodIcon'].icon,
      map: map,
