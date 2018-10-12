@@ -410,8 +410,8 @@
    // Wellness and Health Promotion
    var wellnessHealthPromotionMarker = new google.maps.Marker({
      position: {
-       lat: 47.608268,
-       lng: -122.318509
+       lat: 47.608406,
+       lng: -122.318307
      },
      icon: icons['involvementIcon'].icon,
      map: map,
