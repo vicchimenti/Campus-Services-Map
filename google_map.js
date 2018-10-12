@@ -211,8 +211,8 @@
    // Campus Store
    var campusStoreMarker = new google.maps.Marker({
      position: {
-       lat: 47.611722,
-       lng: -122.318360
+       lat: 47.612600,
+       lng: -122.316988
      },
      icon: icons['servicesIcon'].icon,
      map: map,
