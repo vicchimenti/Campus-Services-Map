@@ -224,8 +224,8 @@
    // Career Engagement office
    var careerEngagementOfficeMarker = new google.maps.Marker({
      position: {
-       lat: 47.608365,
-       lng: -122.317919
+       lat: 47.608853,
+       lng: -122.317784
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -371,8 +371,8 @@
    // International Student Center
    var internationalStudentCenterMarker = new google.maps.Marker({
      position: {
-       lat: 47.608721,
-       lng: -122.317914
+       lat: 47.608758,
+       lng: -122.317567
      },
      icon: icons['involvementIcon'].icon,
      map: map,
@@ -384,8 +384,8 @@
    // Office of Multicultural Affairs
    var omaMarker = new google.maps.Marker({
      position: {
-       lat: 47.608484,
-       lng: -122.317919
+       lat: 47.608711,
+       lng: -122.317803
      },
      icon: icons['involvementIcon'].icon,
      map: map,
