@@ -493,8 +493,8 @@
    // The Side Bar
    var theSideBarMarker = new google.maps.Marker({
      position: {
-       lat: 47.609513,
-       lng: -122.317636
+       lat: 47.609518,
+       lng: -122.317610
      },
      icon: icons['foodIcon'].icon,
      map: map,
