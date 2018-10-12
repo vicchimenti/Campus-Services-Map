@@ -276,8 +276,8 @@
    // Public Safety
    var publicSafetyMarker = new google.maps.Marker({
      position: {
-       lat: 47.609815,
-       lng: -122.318229
+       lat: 47.610125,
+       lng: -122.317712
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -289,8 +289,8 @@
    // Redhawk Axis
    var redhawkAxisMarker = new google.maps.Marker({
      position: {
-       lat: 47.609815,
-       lng: -122.318111
+       lat: 47.609931,
+       lng: -122.317576
      },
      icon: icons['servicesIcon'].icon,
      map: map,
@@ -493,7 +493,7 @@
    // The Side Bar
    var theSideBarMarker = new google.maps.Marker({
      position: {
-       lat: 47.609518,
+       lat: 47.609555,
        lng: -122.317610
      },
      icon: icons['foodIcon'].icon,
