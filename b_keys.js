@@ -5,7 +5,9 @@
 
 $(document).ready(function(){
      $("li").click(function() {
+       function
         alert(this.id);
+        alert(lemieuxLibraryMarker.length)
      });
 })
 
