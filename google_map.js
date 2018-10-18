@@ -39,7 +39,7 @@
 
 
 
- //  *** Global Markers ***  //
+ //  *** Global Marker Declarations  ***  //
 
  //  *** Seattle University Main Campus Marker ***  //
  var seattleuMarker = new google.maps.Marker({
@@ -319,19 +319,20 @@
    icon: icons['foodIcon'].icon,
    map: map,
  });
+ //  *** End of Global Marker Declarations  ***  //
 
 
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
 
-
-   // Campus Primary Location
+   //  ***  Campus Primary Location  ***  //
    var seattleu = {
      lat: 47.610399,
      lng: -122.318070
    }
-   // Campus Map Control Settings
+
+   //  ***  Campus Map Control Settings  ***  //
    var map = new google.maps.Map(document.getElementById('SeattlePOIMap'), {
      center: seattleu,
      streetViewControl: false,
@@ -592,17 +593,17 @@
    stcnDiningMarker.addListener('click', function() {
      modifyTextBox(3, "Student Center Dining Options", "On the second floor of the Student Center, you will find the <strong>Cherry Street Market</strong>, our main dining hall location on campus; serving a variety of breakfast, lunch, and dinner options every day. On the third floor of the Student Center, check out the <strong>Hawk's Nest Bistro</strong>-a great place to grab a late night meal! Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
-   //  *** End of Food/blue markers ***  //
+   //  *** End of Food/Blue Markers ***  //
 
 
 
-   //  *** End of Google Map js Script ***  //
+   //  *** End of Google Map JavaScript ***  //
  }
 </script>
 
 
 
-// Google Map API Source
+//  ***  Google Map API Source  ***  //
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl51bxzHfJlGn9--0VhBtEMpDHknYu6sI&callback=initialize" async defer></script>
 
 
