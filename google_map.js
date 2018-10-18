@@ -100,6 +100,26 @@
    map: map,
  });
 
+ //  ***  Career Engagement Office  ***  //
+ var careerEngagementOfficeMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608853,
+     lng: -122.317784
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Counseling and Psychological Services  ***  //
+ var capsMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608884,
+     lng: -122.317554
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
@@ -239,33 +259,17 @@
 
    //  *** Services/Green Markers start, alphabetized listings ***  //
 
-
+   //  ***  Campus Store  ***  //
    campusStoreMarker.addListener('click', function() {
      modifyTextBox(1, "Campus Store", "Located at 12th and Madison, you can buy, rent, and sell your textbooks, and get all your Seattle U swag, at the <a href='https://www.seattleu.edu/campus-store/' target='_blank'>Campus Store</a>.");
    });
 
-   // Career Engagement office
-   var careerEngagementOfficeMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608853,
-       lng: -122.317784
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Career Engagement Office  ***  //
    careerEngagementOfficeMarker.addListener('click', function() {
      modifyTextBox(1, "Career Engagement Office", "The <a href='https://www.seattleu.edu/careerservices' target='_blank'>Career Engagement Office</a>, located in PAVL 110, works with students at every stage of the career and job process. Career advisors are available to discuss career exploration, job and internship searches, resumes, cover letters, conduct mock interviews, and more.");
    });
 
-   // Counseling and Psychological Services
-   var capsMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608884,
-       lng: -122.317554
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Counseling and Psychological Services  ***  //
    capsMarker.addListener('click', function() {
      modifyTextBox(1, "Counseling & Psychological Services", "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual.");
    });
