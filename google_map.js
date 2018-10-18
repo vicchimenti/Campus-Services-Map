@@ -1,6 +1,11 @@
 //  *** Begin Google Map JS ***  //
 
 
+//  ***  Google Map API Source  ***  //
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl51bxzHfJlGn9--0VhBtEMpDHknYu6sI&callback=initialize" async defer></script>
+
+
+
 <script>
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
@@ -319,12 +324,16 @@
    icon: icons['foodIcon'].icon,
    map: map,
  });
- //  *** End of Global Marker Declarations  ***  //
+ //  ***  Student Center Dining Options  ***  //
+ var dummyMarker = 'dummy';
+  //  *** End of Global Marker Declarations  ***  //
 
-
+alert('a' + dummyMarker);
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
+
+alert('b' + dummyMarker);
 
    //  ***  Campus Primary Location  ***  //
    var seattleu = {
@@ -437,6 +446,8 @@
 
    //  *** Seattle University Main Campus Marker ***  //
    seattleuMarker.addListener('click', function() {
+     map.setZoom(8);
+     map.setCenter(marker.getPosition());
      modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
    });
 
@@ -600,11 +611,6 @@
    //  *** End of Google Map JavaScript ***  //
  }
 </script>
-
-
-
-//  ***  Google Map API Source  ***  //
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl51bxzHfJlGn9--0VhBtEMpDHknYu6sI&callback=initialize" async defer></script>
 
 
 
