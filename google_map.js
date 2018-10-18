@@ -80,6 +80,26 @@
    map: map,
  });
 
+ //  ***  Outreach Center  ***  //
+ var outreachCenterMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608319,
+     lng: -122.317772
+   },
+   icon: icons['physicalSpacesIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Campus Store  ***  //
+ var campusStoreMarker = new google.maps.Marker({
+   position: {
+     lat: 47.612600,
+     lng: -122.316988
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
@@ -210,15 +230,7 @@
      modifyTextBox(0, "McGoldrick Collegium", "<a href='https://www.seattleu.edu/student-outreach/adult-learners/mcgoldrick-collegium/' target='_blank'>McGoldrick Collegium</a>, located in Hunthausen Hall, is the home for graduate students and adult learners over the age of 25. The space is staffed by current SU students and offers a comfortable study space and multiple events and programs throughout the year. For a list of events and to stay connected please visit our <a href='https://www.facebook.com/SUcollegia/' target='_blank'>Facebook</a> and <a href='https://orgsync.com/161729/chapter' target='_blank'>ConnectSU</a> pages.");
    });
 
-   // Outreach Center
-   var outreachCenterMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608319,
-       lng: -122.317772
-     },
-     icon: icons['physicalSpacesIcon'].icon,
-     map: map,
-   });
+   //  ***  Outreach Center  ***  //
    outreachCenterMarker.addListener('click', function() {
      modifyTextBox(0, "The Outreach Center", "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience.");
    });
@@ -227,15 +239,7 @@
 
    //  *** Services/Green Markers start, alphabetized listings ***  //
 
-   // Campus Store
-   var campusStoreMarker = new google.maps.Marker({
-     position: {
-       lat: 47.612600,
-       lng: -122.316988
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+
    campusStoreMarker.addListener('click', function() {
      modifyTextBox(1, "Campus Store", "Located at 12th and Madison, you can buy, rent, and sell your textbooks, and get all your Seattle U swag, at the <a href='https://www.seattleu.edu/campus-store/' target='_blank'>Campus Store</a>.");
    });
