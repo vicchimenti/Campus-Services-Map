@@ -140,6 +140,36 @@
    map: map,
  });
 
+ //  ***  Public Safety  ***  //
+ var publicSafetyMarker = new google.maps.Marker({
+   position: {
+     lat: 47.610125,
+     lng: -122.317712
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Redhawk Axis  ***  //
+ var redhawkAxisMarker = new google.maps.Marker({
+   position: {
+     lat: 47.610037,
+     lng: -122.317502
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Redhawk Resource Desk  ***  //
+ var redhawkResourceHubDeskMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608555,
+     lng: -122.317994
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
@@ -253,6 +283,7 @@
      modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
    });
 
+
    //  *** Physical Space/yellow Markers start, alphabetized listings ***  //
 
    //  ***  Commuter Showers  ***  //
@@ -304,41 +335,17 @@
      modifyTextBox(1, "Media Production Center", "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions.");
    });
 
-   // Public Safety
-   var publicSafetyMarker = new google.maps.Marker({
-     position: {
-       lat: 47.610125,
-       lng: -122.317712
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Public Safety  ***  //
    publicSafetyMarker.addListener('click', function() {
      modifyTextBox(1, "Public Safety", "Located in University Services 102, open 8:30am-4:30pm. 24-Hour Emergency Line:  (206) 296-5911; 24-Hour Non-Emergency Line:  (206) 296-5990; Business Line: (206) 296-5992; Email: <a href='mailto:publicsafety@seattleu.edu'>publicsafety@seattleu.edu</a>.");
    });
 
-   // Redhawk Axis
-   var redhawkAxisMarker = new google.maps.Marker({
-     position: {
-       lat: 47.610037,
-       lng: -122.317502
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Redhawk Axis  ***  //
    redhawkAxisMarker.addListener('click', function() {
      modifyTextBox(1, "Redhawk Axis", "Located on the first floor of the University Services building, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!");
    });
 
-   // Redhawk Resource Desk
-   var redhawkResourceHubDeskMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608555,
-       lng: -122.317994
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Redhawk Resource Desk  ***  //
    redhawkResourceHubDeskMarker.addListener('click', function() {
      modifyTextBox(1, "Redhawk Resource Hub Desk", "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events.");
    });
