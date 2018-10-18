@@ -170,6 +170,36 @@
    map: map,
  });
 
+ //  ***  SU Supercopy  ***  //
+ var supercopyMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608936,
+     lng: -122.317423
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Fitness Center  ***  //
+ var universityRecreationMarker = new google.maps.Marker({
+   position: {
+     lat: 47.606994,
+     lng: -122.313798
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Center for Student Involvement  ***  //
+ var centerStudentInvolvementMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608285,
+     lng: -122.318658
+   },
+   icon: icons['involvementIcon'].icon,
+   map: map,
+ });
+
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
@@ -350,28 +380,12 @@
      modifyTextBox(1, "Redhawk Resource Hub Desk", "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events.");
    });
 
-   // SU Supercopy
-   var supercopyMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608936,
-       lng: -122.317423
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  SU Supercopy  ***  //
    supercopyMarker.addListener('click', function() {
      modifyTextBox(1, "Supercopy", "Located in PAVL 010, Supercopy offers multiple services to students, such as printing, copying, mailing, and making your SU ID card. They also sell stamps and course packs. They take cash, check or card for payment. You can mail things from campus through this office! Perfect for when you need to mail back a rented textbook. Pick up time for USPS is 2pm Mon-Fri.");
    });
 
-   // Fitness Center
-   var universityRecreationMarker = new google.maps.Marker({
-     position: {
-       lat: 47.606994,
-       lng: -122.313798
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Fitness Center  ***  //
    universityRecreationMarker.addListener('click', function() {
      modifyTextBox(1, "William F. Eisiminger Fitness Center", "Located in the Redhawk Center, the Rec Center offers fitness classes, a weight room, cardio floor and studios. Check out their <a href='https://www.seattleu.edu/recreation'>website</a> for quarterly hours, as well as pool hours.");
    });
@@ -380,15 +394,7 @@
 
    //  *** Involvement Opportunities/red Markers, alphabetized listings ***  //
 
-   // Center for Student Involvement
-   var centerStudentInvolvementMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608285,
-       lng: -122.318658
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
+   //  ***  Center for Student Involvement  ***  //
    centerStudentInvolvementMarker.addListener('click', function() {
      modifyTextBox(2, "Center for Student Involvement", "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac'>SEAC</a> event - there are many way to get connected!");
    });
