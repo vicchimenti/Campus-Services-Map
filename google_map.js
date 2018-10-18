@@ -120,6 +120,26 @@
    map: map,
  });
 
+ //  ***  Learning Assistance Program  ***  //
+ var learningAssistanceProgramsMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608837,
+     lng: -122.319127
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Media Production Center  ***  //
+ var mpcMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608838,
+     lng: -122.318540
+   },
+   icon: icons['servicesIcon'].icon,
+   map: map,
+ });
+
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
@@ -274,28 +294,12 @@
      modifyTextBox(1, "Counseling & Psychological Services", "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual.");
    });
 
-   // Learning Assistance Program
-   var learningAssistanceProgramsMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608837,
-       lng: -122.319127
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Learning Assistance Program  ***  //
    learningAssistanceProgramsMarker.addListener('click', function() {
      modifyTextBox(1, "Learning Assistance Programs & The Writing Center", "Both located on the second floor of the Lemieux Library, the <a href='https://www.seattleu.edu/writingcenter/' target='_blank'>Writing Center</a> and <a href='https://www.seattleu.edu/learning-assistance/' target='_blank'>Learning Assistance Programs</a> offer one-on-one sessions and workshops to help you become a better writer and learner.");
    });
 
-   // Media Production Center
-   var mpcMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608838,
-       lng: -122.318540
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
+   //  ***  Media Production Center  ***  //
    mpcMarker.addListener('click', function() {
      modifyTextBox(1, "Media Production Center", "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions.");
    });
