@@ -200,6 +200,46 @@
    map: map,
  });
 
+ //  ***  Intramural Sports  ***  //
+ var intramuralMarker = new google.maps.Marker({
+   position: {
+     lat: 47.607561,
+     lng: -122.313441
+   },
+   icon: icons['involvementIcon'].icon,
+   map: map,
+ });
+
+ //  ***  International Student Center  ***  //
+ var internationalStudentCenterMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608758,
+     lng: -122.317567
+   },
+   icon: icons['involvementIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Office of Multicultural Affairs  ***  //
+ var omaMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608711,
+     lng: -122.317803
+   },
+   icon: icons['involvementIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Student Government at SeattleU  ***  //
+ var sgsuMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608363,
+     lng: -122.318600
+   },
+   icon: icons['involvementIcon'].icon,
+   map: map,
+ });
+
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
@@ -399,54 +439,22 @@
      modifyTextBox(2, "Center for Student Involvement", "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac'>SEAC</a> event - there are many way to get connected!");
    });
 
-   // Intramural Sports
-   var intramuralMarker = new google.maps.Marker({
-     position: {
-       lat: 47.607561,
-       lng: -122.313441
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
+   //  ***  Intramural Sports  ***  //
    intramuralMarker.addListener('click', function() {
      modifyTextBox(2, "Intramural Sports", "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information.");
    });
 
-   // International Student Center
-   var internationalStudentCenterMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608758,
-       lng: -122.317567
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
+   //  ***  International Student Center  ***  //
    internationalStudentCenterMarker.addListener('click', function() {
      modifyTextBox(2, "International Student Center", "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week.");
    });
 
-   // Office of Multicultural Affairs
-   var omaMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608711,
-       lng: -122.317803
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
+   //  ***  Office of Multicultural Affairs  ***  //
    omaMarker.addListener('click', function() {
      modifyTextBox(2, "Office of Multicultural Affairs", "Located in PAVL 180, OMA encourages students to increase their awareness of and engagement with diversity by creating an environment that promotes inclusion and advocacy. This is done through a variety of programs, services, and resources focused on historically marginalized experiences, dynamics of privilege, and social justice.");
    });
 
-   // Student Government at SeattleU
-   var sgsuMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608363,
-       lng: -122.318600
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
+   //  ***  Student Government at SeattleU  ***  //
    sgsuMarker.addListener('click', function() {
      modifyTextBox(2, "Student Government of SU", "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/' target='_blank'>Graduate Student Council</a> is here to support you.");
    });
