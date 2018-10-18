@@ -240,9 +240,92 @@
    map: map,
  });
 
+ //  ***  Wellness and Health Promotion  ***  //
+ var wellnessHealthPromotionMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608406,
+     lng: -122.318307
+   },
+   icon: icons['involvementIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Cupcake Royale  ***  //
+ var cupcakeRoyaleMarker = new google.maps.Marker({
+   position: {
+     lat: 47.614058,
+     lng: -122.317592
+   },
+   icon: icons['foodIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Mr. Saigon  ***  //
+ var mrSaigonMarker = new google.maps.Marker({
+   position: {
+     lat: 47.609314,
+     lng: -122.316544
+   },
+   icon: icons['foodIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Southpaw Pizza  ***  //
+ var southPawMarker = new google.maps.Marker({
+   position: {
+     lat: 47.611189,
+     lng: -122.316465
+   },
+   icon: icons['foodIcon'].icon,
+   map: map,
+ });
+
+ //  ***  The Bottom Line  ***  //
+ var theBottomLineMarker = new google.maps.Marker({
+   position: {
+     lat: 47.610729,
+     lng: -122.318657
+   },
+   icon: icons['foodIcon'].icon,
+   map: map,
+ });
+
+ //  ***  The Byte  ***  //
+ var theByteMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608912,
+     lng: -122.318623
+   },
+   icon: icons['foodIcon'].icon,
+   map: map,
+ });
+
+ //  ***  The Side Bar  ***  //
+ var theSideBarMarker = new google.maps.Marker({
+   position: {
+     lat: 47.609565,
+     lng: -122.317597
+   },
+   icon: icons['foodIcon'].icon,
+   map: map,
+ });
+
+ //  ***  Student Center Dining Options  ***  //
+ var stcnDiningMarker = new google.maps.Marker({
+   position: {
+     lat: 47.608298,
+     lng: -122.318114
+   },
+   icon: icons['foodIcon'].icon,
+   map: map,
+ });
+
+
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
+
+
    // Campus Primary Location
    var seattleu = {
      lat: 47.610399,
@@ -257,6 +340,8 @@
      mapTypeControl: true,
      fullscreenControl: false,
      zoom: 16,
+
+
 
      //  *** Map style from Snazzy Maps (Blue Water) start ***  //
      styles: [{
@@ -319,6 +404,7 @@
 
 
    //  *** Map markers start ***  //
+
    //  *** Map marker url list start ***  //
    var icons = {
      // SU Icon
@@ -354,6 +440,7 @@
    });
 
 
+
    //  *** Physical Space/yellow Markers start, alphabetized listings ***  //
 
    //  ***  Commuter Showers  ***  //
@@ -376,6 +463,7 @@
      modifyTextBox(0, "The Outreach Center", "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience.");
    });
    //  *** Physical Spaces markers end ***  //
+
 
 
    //  *** Services/Green Markers start, alphabetized listings ***  //
@@ -432,6 +520,7 @@
    //  *** Services Markers end ***  //
 
 
+
    //  *** Involvement Opportunities/red Markers, alphabetized listings ***  //
 
    //  ***  Center for Student Involvement  ***  //
@@ -459,15 +548,7 @@
      modifyTextBox(2, "Student Government of SU", "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/' target='_blank'>Graduate Student Council</a> is here to support you.");
    });
 
-   // Wellness and Health Promotion
-   var wellnessHealthPromotionMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608406,
-       lng: -122.318307
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
+   //  ***  Wellness and Health Promotion  ***  //
    wellnessHealthPromotionMarker.addListener('click', function() {
      modifyTextBox(2, "Wellness and Health Promotion", "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/'>HAWC</a>.");
    });
@@ -477,97 +558,42 @@
 
    //  *** Food/Blue markers begin, alphabetically listed ***  //
 
-   // Cupcake Royale
-   var cupcakeRoyaleMarker = new google.maps.Marker({
-     position: {
-       lat: 47.614058,
-       lng: -122.317592
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
+   //  ***  Cupcake Royale  ***  //
    cupcakeRoyaleMarker.addListener('click', function() {
      modifyTextBox(3, "Cupcake Royale", "Just off campus, at 1111 E Pike St, be sure to visit <a href='https://www.cupcakeroyale.com/' target='_blank'>Cupcake Royale</a> to enjoy fresh baked cupcakes, Stumptown espresso, and Seattle's Best ice cream scoops, sundaes, shakes, and pints! They are open late (to 10am Sun-Thurs and 11pm Fri-Sat) and offer a 10% student discount for SU students.");
    });
 
-   // Mr. Saigon
-   var mrSaigonMarker = new google.maps.Marker({
-     position: {
-       lat: 47.609314,
-       lng: -122.316544
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
+   //  ***  Mr. Saigon  ***  //
    mrSaigonMarker.addListener('click', function() {
      modifyTextBox(3, "Mr. Saigon", "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID.");
    });
 
-   // Southpaw Pizza
-   var southPawMarker = new google.maps.Marker({
-     position: {
-       lat: 47.611189,
-       lng: -122.316465
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
+   //  ***  Southpaw Pizza  ***  //
    southPawMarker.addListener('click', function() {
      modifyTextBox(3, "Southpaw", "Located at 926 12th Ave, for great pizza, a great lunch special, and a family friendly atmosphere, this is a great place to eat near campus. Check out their <a href='http://www.southpawpizza.com/' target='_blank'>website</a> for details about their menu and upcoming events. They also offer a student discount of 10%, so remember to bring your SU ID.");
    });
 
-   // The Bottom Line
-   var theBottomLineMarker = new google.maps.Marker({
-     position: {
-       lat: 47.610729,
-       lng: -122.318657
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
+   //  ***  The Bottom Line  ***  //
    theBottomLineMarker.addListener('click', function() {
      modifyTextBox(3, "The Bottom Line", "If you have a class in Pigott, stop by The Bottom Line for coffee, baked goods, or a hot sandwich. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
 
-   // The Byte
-   var theByteMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608912,
-       lng: -122.318623
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
+   //  ***  The Byte  ***  //
    theByteMarker.addListener('click', function() {
      modifyTextBox(3, "The Byte", "Located on the second floor of the Lemieux Library, The Byte offers a great place to grab a coffee or snack while studying. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
 
-   // The Side Bar
-   var theSideBarMarker = new google.maps.Marker({
-     position: {
-       lat: 47.609565,
-       lng: -122.317597
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
+   //  ***  The Side Bar  ***  //
    theSideBarMarker.addListener('click', function() {
      modifyTextBox(3, "The Side Bar", "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
 
-   // Student Center Dining Options
-   var stcnDiningMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608298,
-       lng: -122.318114
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
+   //  ***  Student Center Dining Options  ***  //
    stcnDiningMarker.addListener('click', function() {
      modifyTextBox(3, "Student Center Dining Options", "On the second floor of the Student Center, you will find the <strong>Cherry Street Market</strong>, our main dining hall location on campus; serving a variety of breakfast, lunch, and dinner options every day. On the third floor of the Student Center, check out the <strong>Hawk's Nest Bistro</strong>-a great place to grab a late night meal! Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
    //  *** End of Food/blue markers ***  //
+
 
 
    //  *** End of Google Map js Script ***  //
@@ -575,8 +601,10 @@
 </script>
 
 
+
 // Google Map API Source
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl51bxzHfJlGn9--0VhBtEMpDHknYu6sI&callback=initialize" async defer></script>
+
 
 
 //eof
