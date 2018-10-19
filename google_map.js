@@ -13,9 +13,9 @@ var myNameSpace = function() {
     }
 }();
 
-
-<script>
 init();
+<script>
+
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
    $("#POITextBox").show();
@@ -324,15 +324,7 @@ init();
    map: map,
  });
 
- //  ***  Student Center Dining Options  ***  //
- var stcnDiningMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608298,
-     lng: -122.318114
-   },
-   icon: icons['foodIcon'].icon,
-   map: map,
- });
+
  //  ***  Student Center Dining Options  ***  //
  var dummyMarker = 'dummy';
   //  *** End of Global Marker Declarations  ***  //
@@ -610,6 +602,14 @@ alert('b' + dummyMarker);
    });
 
    //  ***  Student Center Dining Options  ***  //
+   var stcnDiningMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608298,
+       lng: -122.318114
+     },
+     icon: icons['foodIcon'].icon,
+     map: map,
+   });
    stcnDiningMarker.addListener('click', function() {
      modifyTextBox(3, "Student Center Dining Options", "On the second floor of the Student Center, you will find the <strong>Cherry Street Market</strong>, our main dining hall location on campus; serving a variety of breakfast, lunch, and dinner options every day. On the third floor of the Student Center, check out the <strong>Hawk's Nest Bistro</strong>-a great place to grab a late night meal! Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
@@ -623,5 +623,5 @@ alert('b' + dummyMarker);
 
 
 
-//js file
+
 //eof
