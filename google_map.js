@@ -5,17 +5,19 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl51bxzHfJlGn9--0VhBtEMpDHknYu6sI&callback=initialize" async defer></script>
 
 
+
+
+
+<script>
 //  ***  Namespace Module  ***  //
 var myNameSpace = function() {
-  function init(){}
-    return {
-      init:initialize();
-    }
+  function init() {return initialize();}
+  return {
+    init:init
+  }
 }();
 
-init();
-<script>
-
+myNameSpace.init();
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
    $("#POITextBox").show();
