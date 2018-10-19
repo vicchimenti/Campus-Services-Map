@@ -15,10 +15,14 @@ var myNameSpace = (function() {
     init: function() {
       return initialize();
     }
+    textBox: function() {
+      return modifyTextBox();
+    }
   };
 })();
-
 myNameSpace.init();
+myNameSpace.textBox();
+
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
    $("#POITextBox").show();
@@ -52,112 +56,6 @@ myNameSpace.init();
    $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
  }
  // *** End of Floating InfoWindow  ***  //
-
-
-
-
- //  *** Global Marker Declarations  ***  //
-
- //  *** Seattle University Main Campus Marker ***  //
- var seattleuMarker = new google.maps.Marker({
-   position: seattleu,
-   icon: icons['seattleUIcon'].icon,
-   map: map,
-   optimized: false,
-   zIndex: 100,
- });
-
- //  ***  Commuter Showers  ***  //
- var commuterShowersMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608331,
-     lng: -122.318721
-   },
-   icon: icons['physicalSpacesIcon'].icon,
-   map: map,
- });
-
- //  ***  Lemieux Library   ***  //
- var lemieuxLibraryMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608963,
-     lng: -122.318996
-   },
-   icon: icons['physicalSpacesIcon'].icon,
-   map: map,
- });
-
- //  *** McGoldrick Collegium  ***  //
- var mcgoldrickCollegiumMarker = new google.maps.Marker({
-   position: {
-     lat: 47.611762,
-     lng: -122.318301
-   },
-   icon: icons['physicalSpacesIcon'].icon,
-   map: map,
- });
-
- //  ***  Outreach Center  ***  //
- var outreachCenterMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608319,
-     lng: -122.317772
-   },
-   icon: icons['physicalSpacesIcon'].icon,
-   map: map,
- });
-
- //  ***  Campus Store  ***  //
- var campusStoreMarker = new google.maps.Marker({
-   position: {
-     lat: 47.612600,
-     lng: -122.316988
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
-
- //  ***  Career Engagement Office  ***  //
- var careerEngagementOfficeMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608853,
-     lng: -122.317784
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
-
- //  ***  Counseling and Psychological Services  ***  //
- var capsMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608884,
-     lng: -122.317554
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
-
- //  ***  Learning Assistance Program  ***  //
- var learningAssistanceProgramsMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608837,
-     lng: -122.319127
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -282,6 +180,13 @@ myNameSpace.init();
    //  ***  click listeners for map icons ***  //
 
    //  *** Seattle University Main Campus Marker ***  //
+   var seattleuMarker = new google.maps.Marker({
+     position: seattleu,
+     icon: icons['seattleUIcon'].icon,
+     map: map,
+     optimized: false,
+     zIndex: 100,
+   });
    seattleuMarker.addListener('click', function() {
      map.setZoom(8);
      map.setCenter(marker.getPosition());
@@ -293,21 +198,53 @@ myNameSpace.init();
    //  *** Physical Space/yellow Markers start, alphabetized listings ***  //
 
    //  ***  Commuter Showers  ***  //
+   var commuterShowersMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608331,
+       lng: -122.318721
+     },
+     icon: icons['physicalSpacesIcon'].icon,
+     map: map,
+   });
    commuterShowersMarker.addListener('click', function() {
      modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
    });
 
    //  ***  Lemieux Library   ***  //
+   var lemieuxLibraryMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608963,
+       lng: -122.318996
+     },
+     icon: icons['physicalSpacesIcon'].icon,
+     map: map,
+   });
    lemieuxLibraryMarker.addListener('click', function() {
      modifyTextBox(0, "Lemieux Library and McGoldrick Learning Commons", "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>.");
    });
 
    //  *** McGoldrick Collegium  ***  //
+   var mcgoldrickCollegiumMarker = new google.maps.Marker({
+     position: {
+       lat: 47.611762,
+       lng: -122.318301
+     },
+     icon: icons['physicalSpacesIcon'].icon,
+     map: map,
+   });
    mcgoldrickCollegiumMarker.addListener('click', function() {
      modifyTextBox(0, "McGoldrick Collegium", "<a href='https://www.seattleu.edu/student-outreach/adult-learners/mcgoldrick-collegium/' target='_blank'>McGoldrick Collegium</a>, located in Hunthausen Hall, is the home for graduate students and adult learners over the age of 25. The space is staffed by current SU students and offers a comfortable study space and multiple events and programs throughout the year. For a list of events and to stay connected please visit our <a href='https://www.facebook.com/SUcollegia/' target='_blank'>Facebook</a> and <a href='https://orgsync.com/161729/chapter' target='_blank'>ConnectSU</a> pages.");
    });
 
    //  ***  Outreach Center  ***  //
+   var outreachCenterMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608319,
+       lng: -122.317772
+     },
+     icon: icons['physicalSpacesIcon'].icon,
+     map: map,
+   });
    outreachCenterMarker.addListener('click', function() {
      modifyTextBox(0, "The Outreach Center", "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience.");
    });
@@ -318,21 +255,53 @@ myNameSpace.init();
    //  *** Services/Green Markers start, alphabetized listings ***  //
 
    //  ***  Campus Store  ***  //
+   var campusStoreMarker = new google.maps.Marker({
+     position: {
+       lat: 47.612600,
+       lng: -122.316988
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    campusStoreMarker.addListener('click', function() {
      modifyTextBox(1, "Campus Store", "Located at 12th and Madison, you can buy, rent, and sell your textbooks, and get all your Seattle U swag, at the <a href='https://www.seattleu.edu/campus-store/' target='_blank'>Campus Store</a>.");
    });
 
    //  ***  Career Engagement Office  ***  //
+   var careerEngagementOfficeMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608853,
+       lng: -122.317784
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    careerEngagementOfficeMarker.addListener('click', function() {
      modifyTextBox(1, "Career Engagement Office", "The <a href='https://www.seattleu.edu/careerservices' target='_blank'>Career Engagement Office</a>, located in PAVL 110, works with students at every stage of the career and job process. Career advisors are available to discuss career exploration, job and internship searches, resumes, cover letters, conduct mock interviews, and more.");
    });
 
    //  ***  Counseling and Psychological Services  ***  //
+   var capsMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608884,
+       lng: -122.317554
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    capsMarker.addListener('click', function() {
      modifyTextBox(1, "Counseling & Psychological Services", "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual.");
    });
 
    //  ***  Learning Assistance Program  ***  //
+   var learningAssistanceProgramsMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608837,
+       lng: -122.319127
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    learningAssistanceProgramsMarker.addListener('click', function() {
      modifyTextBox(1, "Learning Assistance Programs & The Writing Center", "Both located on the second floor of the Lemieux Library, the <a href='https://www.seattleu.edu/writingcenter/' target='_blank'>Writing Center</a> and <a href='https://www.seattleu.edu/learning-assistance/' target='_blank'>Learning Assistance Programs</a> offer one-on-one sessions and workshops to help you become a better writer and learner.");
    });
