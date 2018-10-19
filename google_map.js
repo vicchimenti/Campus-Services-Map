@@ -277,35 +277,13 @@ myNameSpace.init();
    map: map,
  });
 
- //  ***  Mr. Saigon  ***  //
- var mrSaigonMarker = new google.maps.Marker({
-   position: {
-     lat: 47.609314,
-     lng: -122.316544
-   },
-   icon: icons['foodIcon'].icon,
-   map: map,
- });
-
- //  ***  Southpaw Pizza  ***  //
- var southPawMarker = new google.maps.Marker({
-   position: {
-     lat: 47.611189,
-     lng: -122.316465
-   },
-   icon: icons['foodIcon'].icon,
-   map: map,
- });
-
-
-
 
 
 
 
 
  //  ***  Student Center Dining Options  ***  //
- var dummyMarker = 'dummy';
+ //var dummyMarker = 'dummy';
   //  *** End of Global Marker Declarations  ***  //
 
 //alert('a' + dummyMarker);
@@ -556,11 +534,27 @@ myNameSpace.init();
    });
 
    //  ***  Mr. Saigon  ***  //
+   var mrSaigonMarker = new google.maps.Marker({
+     position: {
+       lat: 47.609314,
+       lng: -122.316544
+     },
+     icon: icons['foodIcon'].icon,
+     map: map,
+   });
    mrSaigonMarker.addListener('click', function() {
      modifyTextBox(3, "Mr. Saigon", "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID.");
    });
 
    //  ***  Southpaw Pizza  ***  //
+   var southPawMarker = new google.maps.Marker({
+     position: {
+       lat: 47.611189,
+       lng: -122.316465
+     },
+     icon: icons['foodIcon'].icon,
+     map: map,
+   });
    southPawMarker.addListener('click', function() {
      modifyTextBox(3, "Southpaw", "Located at 926 12th Ave, for great pizza, a great lunch special, and a family friendly atmosphere, this is a great place to eat near campus. Check out their <a href='http://www.southpawpizza.com/' target='_blank'>website</a> for details about their menu and upcoming events. They also offer a student discount of 10%, so remember to bring your SU ID.");
    });
