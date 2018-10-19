@@ -5,8 +5,17 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl51bxzHfJlGn9--0VhBtEMpDHknYu6sI&callback=initialize" async defer></script>
 
 
+//  ***  Namespace Module  ***  //
+var myNameSpace = function() {
+  function init(){}
+    return {
+      init:initialize();
+    }
+}();
+
 
 <script>
+init();
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
    $("#POITextBox").show();
