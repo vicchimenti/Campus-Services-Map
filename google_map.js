@@ -247,39 +247,6 @@ myNameSpace.init();
    map: map,
  });
 
- //  ***  Student Government at SeattleU  ***  //
- var sgsuMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608363,
-     lng: -122.318600
-   },
-   icon: icons['involvementIcon'].icon,
-   map: map,
- });
-
- //  ***  Wellness and Health Promotion  ***  //
- var wellnessHealthPromotionMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608406,
-     lng: -122.318307
-   },
-   icon: icons['involvementIcon'].icon,
-   map: map,
- });
-
- //  ***  Cupcake Royale  ***  //
- var cupcakeRoyaleMarker = new google.maps.Marker({
-   position: {
-     lat: 47.614058,
-     lng: -122.317592
-   },
-   icon: icons['foodIcon'].icon,
-   map: map,
- });
-
-
-
-
 
 
  //  ***  Student Center Dining Options  ***  //
@@ -514,11 +481,27 @@ myNameSpace.init();
    });
 
    //  ***  Student Government at SeattleU  ***  //
+   var sgsuMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608363,
+       lng: -122.318600
+     },
+     icon: icons['involvementIcon'].icon,
+     map: map,
+   });
    sgsuMarker.addListener('click', function() {
      modifyTextBox(2, "Student Government of SU", "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/' target='_blank'>Graduate Student Council</a> is here to support you.");
    });
 
    //  ***  Wellness and Health Promotion  ***  //
+   var wellnessHealthPromotionMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608406,
+       lng: -122.318307
+     },
+     icon: icons['involvementIcon'].icon,
+     map: map,
+   });
    wellnessHealthPromotionMarker.addListener('click', function() {
      modifyTextBox(2, "Wellness and Health Promotion", "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/'>HAWC</a>.");
    });
@@ -529,6 +512,14 @@ myNameSpace.init();
    //  *** Food/Blue markers begin, alphabetically listed ***  //
 
    //  ***  Cupcake Royale  ***  //
+   var cupcakeRoyaleMarker = new google.maps.Marker({
+     position: {
+       lat: 47.614058,
+       lng: -122.317592
+     },
+     icon: icons['foodIcon'].icon,
+     map: map,
+   });
    cupcakeRoyaleMarker.addListener('click', function() {
      modifyTextBox(3, "Cupcake Royale", "Just off campus, at 1111 E Pike St, be sure to visit <a href='https://www.cupcakeroyale.com/' target='_blank'>Cupcake Royale</a> to enjoy fresh baked cupcakes, Stumptown espresso, and Seattle's Best ice cream scoops, sundaes, shakes, and pints! They are open late (to 10am Sun-Thurs and 11pm Fri-Sat) and offer a 10% student discount for SU students.");
    });
