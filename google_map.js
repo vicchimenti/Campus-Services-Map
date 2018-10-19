@@ -10,12 +10,13 @@
 
 <script>
 //  ***  Namespace Module  ***  //
-var myNameSpace = function() {
-  function init() {return initialize();}
+var myNameSpace = (function() {
   return {
-    init:init
-  }
-}();
+    init: function() {
+      return initialize();
+    }
+  };
+})();
 
 myNameSpace.init();
  // *** Floating InfoWindow  ***  //
@@ -296,47 +297,23 @@ myNameSpace.init();
    map: map,
  });
 
- //  ***  The Bottom Line  ***  //
- var theBottomLineMarker = new google.maps.Marker({
-   position: {
-     lat: 47.610729,
-     lng: -122.318657
-   },
-   icon: icons['foodIcon'].icon,
-   map: map,
- });
 
- //  ***  The Byte  ***  //
- var theByteMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608912,
-     lng: -122.318623
-   },
-   icon: icons['foodIcon'].icon,
-   map: map,
- });
 
- //  ***  The Side Bar  ***  //
- var theSideBarMarker = new google.maps.Marker({
-   position: {
-     lat: 47.609565,
-     lng: -122.317597
-   },
-   icon: icons['foodIcon'].icon,
-   map: map,
- });
+
+
+
 
 
  //  ***  Student Center Dining Options  ***  //
  var dummyMarker = 'dummy';
   //  *** End of Global Marker Declarations  ***  //
 
-alert('a' + dummyMarker);
+//alert('a' + dummyMarker);
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
 
-alert('b' + dummyMarker);
+//alert('b' + dummyMarker);
 
    //  ***  Campus Primary Location  ***  //
    var seattleu = {
@@ -589,16 +566,40 @@ alert('b' + dummyMarker);
    });
 
    //  ***  The Bottom Line  ***  //
+   var theBottomLineMarker = new google.maps.Marker({
+     position: {
+       lat: 47.610729,
+       lng: -122.318657
+     },
+     icon: icons['foodIcon'].icon,
+     map: map,
+   });
    theBottomLineMarker.addListener('click', function() {
      modifyTextBox(3, "The Bottom Line", "If you have a class in Pigott, stop by The Bottom Line for coffee, baked goods, or a hot sandwich. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
 
    //  ***  The Byte  ***  //
+   var theByteMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608912,
+       lng: -122.318623
+     },
+     icon: icons['foodIcon'].icon,
+     map: map,
+   });
    theByteMarker.addListener('click', function() {
      modifyTextBox(3, "The Byte", "Located on the second floor of the Lemieux Library, The Byte offers a great place to grab a coffee or snack while studying. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
 
    //  ***  The Side Bar  ***  //
+   var theSideBarMarker = new google.maps.Marker({
+     position: {
+       lat: 47.609565,
+       lng: -122.317597
+     },
+     icon: icons['foodIcon'].icon,
+     map: map,
+   });
    theSideBarMarker.addListener('click', function() {
      modifyTextBox(3, "The Side Bar", "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
    });
