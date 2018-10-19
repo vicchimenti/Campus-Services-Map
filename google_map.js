@@ -147,75 +147,11 @@ myNameSpace.init();
    map: map,
  });
 
- //  ***  Media Production Center  ***  //
- var mpcMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608838,
-     lng: -122.318540
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
 
- //  ***  Public Safety  ***  //
- var publicSafetyMarker = new google.maps.Marker({
-   position: {
-     lat: 47.610125,
-     lng: -122.317712
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
 
- //  ***  Redhawk Axis  ***  //
- var redhawkAxisMarker = new google.maps.Marker({
-   position: {
-     lat: 47.610037,
-     lng: -122.317502
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
 
- //  ***  Redhawk Resource Desk  ***  //
- var redhawkResourceHubDeskMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608555,
-     lng: -122.317994
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
 
- //  ***  SU Supercopy  ***  //
- var supercopyMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608936,
-     lng: -122.317423
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
 
- //  ***  Fitness Center  ***  //
- var universityRecreationMarker = new google.maps.Marker({
-   position: {
-     lat: 47.606994,
-     lng: -122.313798
-   },
-   icon: icons['servicesIcon'].icon,
-   map: map,
- });
-
- //  ***  Center for Student Involvement  ***  //
- var centerStudentInvolvementMarker = new google.maps.Marker({
-   position: {
-     lat: 47.608285,
-     lng: -122.318658
-   },
-   icon: icons['involvementIcon'].icon,
-   map: map,
- });
 
 
 
@@ -402,31 +338,79 @@ myNameSpace.init();
    });
 
    //  ***  Media Production Center  ***  //
+   var mpcMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608838,
+       lng: -122.318540
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    mpcMarker.addListener('click', function() {
      modifyTextBox(1, "Media Production Center", "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions.");
    });
 
    //  ***  Public Safety  ***  //
+   var publicSafetyMarker = new google.maps.Marker({
+     position: {
+       lat: 47.610125,
+       lng: -122.317712
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    publicSafetyMarker.addListener('click', function() {
      modifyTextBox(1, "Public Safety", "Located in University Services 102, open 8:30am-4:30pm. 24-Hour Emergency Line:  (206) 296-5911; 24-Hour Non-Emergency Line:  (206) 296-5990; Business Line: (206) 296-5992; Email: <a href='mailto:publicsafety@seattleu.edu'>publicsafety@seattleu.edu</a>.");
    });
 
    //  ***  Redhawk Axis  ***  //
+   var redhawkAxisMarker = new google.maps.Marker({
+     position: {
+       lat: 47.610037,
+       lng: -122.317502
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    redhawkAxisMarker.addListener('click', function() {
      modifyTextBox(1, "Redhawk Axis", "Located on the first floor of the University Services building, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!");
    });
 
    //  ***  Redhawk Resource Desk  ***  //
+   var redhawkResourceHubDeskMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608555,
+       lng: -122.317994
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    redhawkResourceHubDeskMarker.addListener('click', function() {
      modifyTextBox(1, "Redhawk Resource Hub Desk", "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events.");
    });
 
    //  ***  SU Supercopy  ***  //
+   var supercopyMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608936,
+       lng: -122.317423
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    supercopyMarker.addListener('click', function() {
      modifyTextBox(1, "Supercopy", "Located in PAVL 010, Supercopy offers multiple services to students, such as printing, copying, mailing, and making your SU ID card. They also sell stamps and course packs. They take cash, check or card for payment. You can mail things from campus through this office! Perfect for when you need to mail back a rented textbook. Pick up time for USPS is 2pm Mon-Fri.");
    });
 
    //  ***  Fitness Center  ***  //
+   var universityRecreationMarker = new google.maps.Marker({
+     position: {
+       lat: 47.606994,
+       lng: -122.313798
+     },
+     icon: icons['servicesIcon'].icon,
+     map: map,
+   });
    universityRecreationMarker.addListener('click', function() {
      modifyTextBox(1, "William F. Eisiminger Fitness Center", "Located in the Redhawk Center, the Rec Center offers fitness classes, a weight room, cardio floor and studios. Check out their <a href='https://www.seattleu.edu/recreation'>website</a> for quarterly hours, as well as pool hours.");
    });
@@ -437,6 +421,14 @@ myNameSpace.init();
    //  *** Involvement Opportunities/red Markers, alphabetized listings ***  //
 
    //  ***  Center for Student Involvement  ***  //
+   var centerStudentInvolvementMarker = new google.maps.Marker({
+     position: {
+       lat: 47.608285,
+       lng: -122.318658
+     },
+     icon: icons['involvementIcon'].icon,
+     map: map,
+   });
    centerStudentInvolvementMarker.addListener('click', function() {
      modifyTextBox(2, "Center for Student Involvement", "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac'>SEAC</a> event - there are many way to get connected!");
    });
