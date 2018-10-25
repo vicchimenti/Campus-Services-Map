@@ -1,4 +1,4 @@
-//  *** Begin Google Map B-Column Keys JS ***  //
+<!--  *** Begin Google Map B-Column Keys JS ***  -->
 
 
 <script>
