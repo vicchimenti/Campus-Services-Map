@@ -10,7 +10,7 @@
 
 <script>
 //  ***  Namespace Module  ***  //
-/*
+
 var myNameSpace = (function() {
   return {
     init: function() {
@@ -19,7 +19,7 @@ var myNameSpace = (function() {
   };
 })();
 myNameSpace.init();
-*/
+
 
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
