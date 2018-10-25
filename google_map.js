@@ -24,7 +24,7 @@ myNameSpace.init();
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
    $("#POITextBox").show();
-   $("#POITextBox").position(left);
+   //$("#POITextBox").position(left);
    $("#POITextBox h5").html(header);
    $("#POITextBox p").html(text);
    $("#POITextBox").css("padding","5px 25px 15px 25px");
