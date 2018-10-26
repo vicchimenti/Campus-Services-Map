@@ -365,10 +365,21 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var learningAssistanceProgramsLink = document.getElementById('learningAssistancePrograms');
+   // create object to store Info Box attributes
+   var learningAssistanceProgramsObj = {linkId: learningAssistanceProgramsLink, linkName: 'Learning Assistance Programs & The Writing Center', linkDesc: "Both located on the second floor of the Lemieux Library, the <a href='https://www.seattleu.edu/writingcenter/' target='_blank'>Writing Center</a> and <a href='https://www.seattleu.edu/learning-assistance/' target='_blank'>Learning Assistance Programs</a> offer one-on-one sessions and workshops to help you become a better writer and learner."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(learningAssistanceProgramsLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(learningAssistanceProgramsMarker.getPosition());
+     modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
+   });
+   // create click listener for marker
    learningAssistanceProgramsMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(learningAssistanceProgramsMarker.getPosition());
-     modifyTextBox(1, "Learning Assistance Programs & The Writing Center", "Both located on the second floor of the Lemieux Library, the <a href='https://www.seattleu.edu/writingcenter/' target='_blank'>Writing Center</a> and <a href='https://www.seattleu.edu/learning-assistance/' target='_blank'>Learning Assistance Programs</a> offer one-on-one sessions and workshops to help you become a better writer and learner.");
+     modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
    });
 
    //  ***  Media Production Center  ***  //
