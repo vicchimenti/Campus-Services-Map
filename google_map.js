@@ -179,7 +179,7 @@
    // create variable to store b-coloumn link ID
    var commuterShowersLink = document.getElementById('commuterShowers');
    // create object to store Info Box attributes
-   var commuterShowersObj = {linkId: commuterShowersLink, linkName: 'Commuter Showers', linkDesc: "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>."};
+   var commuterShowersObj = {linkId: commuterShowersLink, linkName: 'Commuter Showers', linkDesc: "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>Commuter Students Resources webpage</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(commuterShowersLink, 'click', function() {
      map.setZoom(19);
@@ -293,7 +293,7 @@
    var campusStoreObj = {linkId: campusStoreLink, linkName: 'Campus Store', linkDesc: "Located at 12th and Madison, you can buy, rent, and sell your textbooks, and get all your Seattle U swag, at the <a href='https://www.seattleu.edu/campus-store/' target='_blank'>Campus Store</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(campusStoreLink, 'click', function() {
-     map.setZoom(19);
+     map.setZoom(18);
      map.setCenter(campusStoreMarker.getPosition());
      modifyTextBox(0, campusStoreObj.linkName, campusStoreObj.linkDesc);
    });
@@ -313,10 +313,21 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var careerEngagementOfficeLink = document.getElementById('careerEngagementOffice');
+   // create object to store Info Box attributes
+   var careerEngagementOfficeObj = {linkId: careerEngagementOfficeLink, linkName: 'Career Engagement Office', linkDesc: "The <a href='https://www.seattleu.edu/careerservices' target='_blank'>Career Engagement Office</a>, located in PAVL 110, works with students at every stage of the career and job process. Career advisors are available to discuss career exploration, job and internship searches, resumes, cover letters, conduct mock interviews, and more."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(careerEngagementOfficeLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(careerEngagementOfficeMarker.getPosition());
+     modifyTextBox(0, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
+   });
+   // create click listener for marker
    careerEngagementOfficeMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(careerEngagementOfficeMarker.getPosition());
-     modifyTextBox(1, "Career Engagement Office", "The <a href='https://www.seattleu.edu/careerservices' target='_blank'>Career Engagement Office</a>, located in PAVL 110, works with students at every stage of the career and job process. Career advisors are available to discuss career exploration, job and internship searches, resumes, cover letters, conduct mock interviews, and more.");
+     modifyTextBox(0, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
    });
 
    //  ***  Counseling and Psychological Services  ***  //
