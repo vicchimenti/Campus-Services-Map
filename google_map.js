@@ -1,22 +1,6 @@
 // *** Begin Google Map JS ***  //
 
 
-//  ***  Google Map API Source  ***  //
-
-
-
-//  ***  Namespace Module  ***  //
-
-/*
-var myNameSpace = (function() {
-  return {
-    init: function() {
-      return initialize();
-    }
-  };
-})();
-myNameSpace.init();
-*/
 
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
@@ -199,15 +183,21 @@ myNameSpace.init();
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
    });
+   var commuterShowersLink = document.getElementById('commuterShowers');
+   var commuterShowersObj = {linkId: commuterShowersLink, linkName: 'Commuter Showers', linkDesc: "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>."};
+
+   console.log(commuterShowersLink);
    commuterShowersMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(commuterShowersMarker.getPosition());
-     modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
+     //modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
+     modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
-   commuterShowersMarker.addDomListener(document.getElementById("0000"), 'click', function() {
+
+   google.maps.event.addDomListener(commuterShowersLink, 'click', function() {
      map.setZoom(18);
      map.setCenter(commuterShowersMarker.getPosition());
-     modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
+     modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
 
    //  ***  Lemieux Library   ***  //
