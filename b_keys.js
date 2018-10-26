@@ -1,13 +1,5 @@
-//  *** Begin Google Map B-Column Keys JS ***  //
+// *** b_keys.js *** //
+// *** this file contains necessary js code for the b-coloumn ***//
 
 
-<script>
-
-$(document).ready(function(){
-     $("li").click(function() {
-       function
-        alert(this.id);
-     });
-})
-
-</script>
+<t4 type="media" formatter="text/javascript" id="367616" />
