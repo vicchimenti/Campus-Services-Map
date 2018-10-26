@@ -353,7 +353,7 @@
    capsMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(capsMarker.getPosition());
-     modifyTextBox(1, capsObj.linkName, capsObj.linkDesc););
+     modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
    });
 
    //  ***  Learning Assistance Program  ***  //
