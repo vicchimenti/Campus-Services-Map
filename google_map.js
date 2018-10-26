@@ -295,13 +295,13 @@
    google.maps.event.addDomListener(campusStoreLink, 'click', function() {
      map.setZoom(18);
      map.setCenter(campusStoreMarker.getPosition());
-     modifyTextBox(0, campusStoreObj.linkName, campusStoreObj.linkDesc);
+     modifyTextBox(1, campusStoreObj.linkName, campusStoreObj.linkDesc);
    });
    // create click listener for marker
    campusStoreMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(campusStoreMarker.getPosition());
-     modifyTextBox(0, campusStoreObj.linkName, campusStoreObj.linkDesc);
+     modifyTextBox(1, campusStoreObj.linkName, campusStoreObj.linkDesc);
    });
 
    //  ***  Career Engagement Office  ***  //
@@ -319,15 +319,15 @@
    var careerEngagementOfficeObj = {linkId: careerEngagementOfficeLink, linkName: 'Career Engagement Office', linkDesc: "The <a href='https://www.seattleu.edu/careerservices' target='_blank'>Career Engagement Office</a>, located in PAVL 110, works with students at every stage of the career and job process. Career advisors are available to discuss career exploration, job and internship searches, resumes, cover letters, conduct mock interviews, and more."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(careerEngagementOfficeLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(careerEngagementOfficeMarker.getPosition());
-     modifyTextBox(0, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
+     modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
    });
    // create click listener for marker
    careerEngagementOfficeMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(careerEngagementOfficeMarker.getPosition());
-     modifyTextBox(0, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
+     modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
    });
 
    //  ***  Counseling and Psychological Services  ***  //
@@ -339,10 +339,21 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
-   capsMarker.addListener('click', function() {
-     map.setZoom(18);
+   // create variable to store b-coloumn link ID
+   var capsLink = document.getElementById('caps');
+   // create object to store Info Box attributes
+   var capsObj = {linkId: capsLink, linkName: 'Counseling and Psychological Services (CAPS)', linkDesc: "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(capsLink, 'click', function() {
+     map.setZoom(19);
      map.setCenter(capsMarker.getPosition());
-     modifyTextBox(1, "Counseling & Psychological Services", "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual.");
+     modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
+   });
+   // create click listener for marker
+   capsMarker.addListener('click', function() {
+     map.setZoom(19);
+     map.setCenter(capsMarker.getPosition());
+     modifyTextBox(1, capsObj.linkName, capsObj.linkDesc););
    });
 
    //  ***  Learning Assistance Program  ***  //
