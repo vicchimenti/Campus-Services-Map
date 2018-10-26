@@ -37,15 +37,8 @@
 
 
 
- //var dummyMarker = 'dummy';
-  //  *** End of Global Marker Declarations  ***  //
-
-//alert('a' + dummyMarker);
-
  //  *** Implementation of initialize function ***  //
  function initialize() {
-
-//alert('b' + dummyMarker);
 
    //  ***  Campus Primary Location  ***  //
    var seattleu = {
@@ -188,14 +181,14 @@
 
    console.log(commuterShowersLink);
    commuterShowersMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(commuterShowersMarker.getPosition());
      //modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
 
    google.maps.event.addDomListener(commuterShowersLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(commuterShowersMarker.getPosition());
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
