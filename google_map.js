@@ -209,13 +209,13 @@
    var lemieuxLibraryObj = {linkId: lemieuxLibraryLink, linkName: 'Lemieux Library and McGoldrick Learning Commons', linkDesc: "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(lemieuxLibraryLink, 'click', function() {
-     map.setZoom(17);
+     map.setZoom(18);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
    });
    // create click listener for marker
    lemieuxLibraryMarker.addListener('click', function() {
-     map.setZoom(17);
+     map.setZoom(18);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
    });
@@ -262,13 +262,13 @@
    var outreachCenterObj = {linkId: outreachCenterLink, linkName: 'Outreach Center', linkDesc: "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(outreachCenterLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(outreachCenterMarker.getPosition());
      modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
    });
    // create click listener for marker
    outreachCenterMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(outreachCenterMarker.getPosition());
      modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
    });
@@ -287,10 +287,21 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var campusStoreLink = document.getElementById('campusStore');
+   // create object to store Info Box attributes
+   var campusStoreObj = {linkId: campusStoreLink, linkName: 'Campus Store', linkDesc: "Located at 12th and Madison, you can buy, rent, and sell your textbooks, and get all your Seattle U swag, at the <a href='https://www.seattleu.edu/campus-store/' target='_blank'>Campus Store</a>."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(campusStoreLink, 'click', function() {
+     map.setZoom(19);
+     map.setCenter(campusStoreMarker.getPosition());
+     modifyTextBox(0, campusStoreObj.linkName, campusStoreObj.linkDesc);
+   });
+   // create click listener for marker
    campusStoreMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(campusStoreMarker.getPosition());
-     modifyTextBox(1, "Campus Store", "Located at 12th and Madison, you can buy, rent, and sell your textbooks, and get all your Seattle U swag, at the <a href='https://www.seattleu.edu/campus-store/' target='_blank'>Campus Store</a>.");
+     modifyTextBox(0, campusStoreObj.linkName, campusStoreObj.linkDesc);
    });
 
    //  ***  Career Engagement Office  ***  //
