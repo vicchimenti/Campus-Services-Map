@@ -2,15 +2,12 @@
 
 
 //  ***  Google Map API Source  ***  //
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl51bxzHfJlGn9--0VhBtEMpDHknYu6sI&callback=initialize" async defer></script>
 
 
 
-
-
-<script>
 //  ***  Namespace Module  ***  //
 
+/*
 var myNameSpace = (function() {
   return {
     init: function() {
@@ -19,7 +16,7 @@ var myNameSpace = (function() {
   };
 })();
 myNameSpace.init();
-
+*/
 
  // *** Floating InfoWindow  ***  //
  function modifyTextBox(type, header, text) {
@@ -56,7 +53,6 @@ myNameSpace.init();
 
 
 
- //  ***  Student Center Dining Options  ***  //
  //var dummyMarker = 'dummy';
   //  *** End of Global Marker Declarations  ***  //
 
@@ -204,6 +200,11 @@ myNameSpace.init();
      map: map,
    });
    commuterShowersMarker.addListener('click', function() {
+     map.setZoom(18);
+     map.setCenter(commuterShowersMarker.getPosition());
+     modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
+   });
+   commuterShowersMarker.addDomListener(document.getElementById("0000"), 'click', function() {
      map.setZoom(18);
      map.setCenter(commuterShowersMarker.getPosition());
      modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
@@ -619,7 +620,7 @@ myNameSpace.init();
 
    //  *** End of Google Map JavaScript ***  //
  }
-</script>
+
 
 
 
