@@ -176,18 +176,18 @@
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
    var commuterShowersLink = document.getElementById('commuterShowers');
+   // create object to store Info Box attributes
    var commuterShowersObj = {linkId: commuterShowersLink, linkName: 'Commuter Showers', linkDesc: "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>."};
-
-   console.log(commuterShowersLink);
-   commuterShowersMarker.addListener('click', function() {
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(commuterShowersLink, 'click', function() {
      map.setZoom(19);
      map.setCenter(commuterShowersMarker.getPosition());
-     //modifyTextBox(0, "Commuter Showers", "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>commuter students resources webpage</a>.");
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
-
-   google.maps.event.addDomListener(commuterShowersLink, 'click', function() {
+   // create click listener for marker
+   commuterShowersMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(commuterShowersMarker.getPosition());
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
