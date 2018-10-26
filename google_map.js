@@ -202,10 +202,21 @@
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var lemieuxLibraryLink = document.getElementById('lemieuxLibrary');
+   // create object to store Info Box attributes
+   var lemieuxLibraryObj = {linkId: lemieuxLibraryLink, linkName: 'Lemieux Library and McGoldrick Learning Commons', linkDesc: "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(lemieuxLibraryLink, 'click', function() {
+     map.setZoom(19);
+     map.setCenter(lemieuxLibraryMarker.getPosition());
+     modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
+   });
+   // create click listener for marker
    lemieuxLibraryMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(lemieuxLibraryMarker.getPosition());
-     modifyTextBox(0, "Lemieux Library and McGoldrick Learning Commons", "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>.");
+     modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
    });
 
    //  *** McGoldrick Collegium  ***  //
