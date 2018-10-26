@@ -193,6 +193,7 @@
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
 
+
    //  ***  Lemieux Library   ***  //
    var lemieuxLibraryMarker = new google.maps.Marker({
      position: {
@@ -208,13 +209,13 @@
    var lemieuxLibraryObj = {linkId: lemieuxLibraryLink, linkName: 'Lemieux Library and McGoldrick Learning Commons', linkDesc: "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(lemieuxLibraryLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(17);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
    });
    // create click listener for marker
    lemieuxLibraryMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(17);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
    });
@@ -245,6 +246,7 @@
      modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
    });
 
+
    //  ***  Outreach Center  ***  //
    var outreachCenterMarker = new google.maps.Marker({
      position: {
@@ -254,10 +256,21 @@
      icon: icons['physicalSpacesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var outreachCenterLink = document.getElementById('outreachCenter');
+   // create object to store Info Box attributes
+   var outreachCenterObj = {linkId: outreachCenterLink, linkName: 'Outreach Center', linkDesc: "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(outreachCenterLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(outreachCenterMarker.getPosition());
+     modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
+   });
+   // create click listener for marker
    outreachCenterMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(outreachCenterMarker.getPosition());
-     modifyTextBox(0, "The Outreach Center", "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience.");
+     modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
    });
    //  *** Physical Spaces markers end ***  //
 
