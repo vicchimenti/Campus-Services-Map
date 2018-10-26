@@ -391,10 +391,21 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var mpcLink = document.getElementById('mpc');
+   // create object to store Info Box attributes
+   var mpcObj = {linkId: mpcLink, linkName: 'Media Production Center', linkDesc: "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(mpcLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(mpcMarker.getPosition());
+     modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
+   });
+   // create click listener for marker
    mpcMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(mpcMarker.getPosition());
-     modifyTextBox(1, "Media Production Center", "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions.");
+     modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
    });
 
    //  ***  Public Safety  ***  //
