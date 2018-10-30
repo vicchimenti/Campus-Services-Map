@@ -566,7 +566,7 @@
    centerStudentInvolvementMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(centerStudentInvolvementMarker.getPosition());
-     modifyTextBox(2, "Center for Student Involvement", "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac'>SEAC</a> event - there are many way to get connected!");
+     modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
    });
 
    //  ***  Intramural Sports  ***  //
