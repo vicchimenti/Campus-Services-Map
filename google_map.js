@@ -644,7 +644,7 @@
    omaMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(omaMarker.getPosition());
-     modifyTextBox(2, "Office of Multicultural Affairs", "Located in PAVL 180, OMA encourages students to increase their awareness of and engagement with diversity by creating an environment that promotes inclusion and advocacy. This is done through a variety of programs, services, and resources focused on historically marginalized experiences, dynamics of privilege, and social justice.");
+     modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
    });
 
    //  ***  Student Government at SeattleU  ***  //
