@@ -872,7 +872,7 @@
    // create variable to store b-coloumn link ID
    var stcnDiningLink = document.getElementById('stcnDining');
    // create object to store Info Box attributes
-   var stcnDiningObj = {linkId: stcnDiningLink, linkName: 'Student Center Dining: Cherry Street Market and The Hawks Nest', linkDesc: "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
+   var stcnDiningObj = {linkId: stcnDiningLink, linkName: 'Student Center Dining: Cherry Street Market and The Hawks Nest', linkDesc: "On the second floor of the Student Center, you will find the <strong>Cherry Street Market</strong>, our main dining hall location on campus; serving a variety of breakfast, lunch, and dinner options every day. On the third floor of the Student Center, check out the <strong>Hawk's Nest Bistro</strong>-a great place to grab a late night meal! Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(stcnDiningLink, 'click', function() {
      map.setZoom(18);
@@ -883,7 +883,7 @@
    stcnDiningMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(stcnDiningMarker.getPosition());
-     modifyTextBox(3, "Student Center Dining Options", "On the second floor of the Student Center, you will find the <strong>Cherry Street Market</strong>, our main dining hall location on campus; serving a variety of breakfast, lunch, and dinner options every day. On the third floor of the Student Center, check out the <strong>Hawk's Nest Bistro</strong>-a great place to grab a late night meal! Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
+     modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
    });
    //  *** End of Food/Blue Markers ***  //
 
