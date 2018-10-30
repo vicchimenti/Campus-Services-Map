@@ -581,7 +581,7 @@
    // create variable to store b-coloumn link ID
    var intramuralLink = document.getElementById('intramural');
    // create object to store Info Box attributes
-   var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information."};
+   var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/'>UREC Website</a> for more information."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(intramuralLink, 'click', function() {
      map.setZoom(18);
@@ -607,7 +607,7 @@
    // create variable to store b-coloumn link ID
    var internationalStudentCenterLink = document.getElementById('internationalStudentCenter');
    // create object to store Info Box attributes
-   var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
+   var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(internationalStudentCenterLink, 'click', function() {
      map.setZoom(18);
@@ -630,6 +630,17 @@
      icon: icons['involvementIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var omaLink = document.getElementById('oma');
+   // create object to store Info Box attributes
+   var omaObj = {linkId: omaLink, linkName: 'Office of Multicultural Affairs', linkDesc: "Located in PAVL 180, OMA encourages students to increase their awareness of and engagement with diversity by creating an environment that promotes inclusion and advocacy. This is done through a variety of programs, services, and resources focused on historically marginalized experiences, dynamics of privilege, and social justice."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(omaLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(omaMarker.getPosition());
+     modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
+   });
+   // create click listener for marker
    omaMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(omaMarker.getPosition());
