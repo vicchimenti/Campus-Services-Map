@@ -535,7 +535,7 @@
    universityRecreationMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(universityRecreationMarker.getPosition());
-     modifyTextBox(1, "William F. Eisiminger Fitness Center", "Located in the Redhawk Center, the Rec Center offers fitness classes, a weight room, cardio floor and studios. Check out their <a href='https://www.seattleu.edu/recreation'>website</a> for quarterly hours, as well as pool hours.");
+     modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
    });
    //  *** Services Markers end ***  //
 
