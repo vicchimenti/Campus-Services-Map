@@ -442,6 +442,16 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var redhawkAxisLink = document.getElementById('redhawkAxis');
+   // create object to store Info Box attributes
+   var redhawkAxisObj = {linkId: redhawkAxisLink, linkName: 'Redhawk Axis', linkDesc: "Located on the first floor of the University Services building, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!"};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(redhawkAxisLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(redhawkAxisMarker.getPosition());
+     modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
+   });
    redhawkAxisMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(redhawkAxisMarker.getPosition());
