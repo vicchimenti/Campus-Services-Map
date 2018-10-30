@@ -768,7 +768,7 @@
    // create variable to store b-coloumn link ID
    var southPawLink = document.getElementById('southPaw');
    // create object to store Info Box attributes
-   var southPawObj = {linkId: southPawLink, linkName: 'Southpaw', linkDesc: "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID."};
+   var southPawObj = {linkId: southPawLink, linkName: 'Southpaw', linkDesc: "Located at 926 12th Ave, for great pizza, a great lunch special, and a family friendly atmosphere, this is a great place to eat near campus. Check out their <a href='http://www.southpawpizza.com/' target='_blank'>website</a> for details about their menu and upcoming events. They also offer a student discount of 10%, so remember to bring your SU ID."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(southPawLink, 'click', function() {
      map.setZoom(18);
@@ -779,7 +779,7 @@
    southPawMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(southPawMarker.getPosition());
-     modifyTextBox(3, "Southpaw", "Located at 926 12th Ave, for great pizza, a great lunch special, and a family friendly atmosphere, this is a great place to eat near campus. Check out their <a href='http://www.southpawpizza.com/' target='_blank'>website</a> for details about their menu and upcoming events. They also offer a student discount of 10%, so remember to bring your SU ID.");
+     modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
    });
 
    //  ***  The Bottom Line  ***  //
@@ -791,6 +791,17 @@
      icon: icons['foodIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var theBottomLineLink = document.getElementById('theBottomLine');
+   // create object to store Info Box attributes
+   var theBottomLineObj = {linkId: theBottomLineLink, linkName: 'The Bottom Line', linkDesc: "If you have a class in Pigott, stop by The Bottom Line for coffee, baked goods, or a hot sandwich. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(theBottomLineLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(theBottomLineMarker.getPosition());
+     modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
+   });
+   // create click listener for marker
    theBottomLineMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(theBottomLineMarker.getPosition());
