@@ -713,6 +713,17 @@
      icon: icons['foodIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var cupcakeRoyaleLink = document.getElementById('cupcakeRoyale');
+   // create object to store Info Box attributes
+   var cupcakeRoyaleObj = {linkId: cupcakeRoyaleLink, linkName: 'Cupcake Royale', linkDesc: "Just off campus, at 1111 E Pike St, be sure to visit <a href='https://www.cupcakeroyale.com/' target='_blank'>Cupcake Royale</a> to enjoy fresh baked cupcakes, Stumptown espresso, and Seattle's Best ice cream scoops, sundaes, shakes, and pints! They are open late (to 10am Sun-Thurs and 11pm Fri-Sat) and offer a 10% student discount for SU students."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(cupcakeRoyaleLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(cupcakeRoyaleMarker.getPosition());
+     modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
+   });
+   // create click listener for marker
    cupcakeRoyaleMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(cupcakeRoyaleMarker.getPosition());
