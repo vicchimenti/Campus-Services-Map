@@ -584,7 +584,7 @@
    var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(intramuralLink, 'click', function() {
-     map.setZoom(19);
+     map.setZoom(18);
      map.setCenter(intramuralMarker.getPosition());
      modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
    });
@@ -604,6 +604,17 @@
      icon: icons['involvementIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var internationalStudentCenterLink = document.getElementById('internationalStudentCenter');
+   // create object to store Info Box attributes
+   var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(internationalStudentCenterLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(internationalStudentCenterMarker.getPosition());
+     modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
+   });
+   // create click listener for marker
    internationalStudentCenterMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(internationalStudentCenterMarker.getPosition());
