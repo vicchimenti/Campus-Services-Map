@@ -455,7 +455,7 @@
    redhawkAxisMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(redhawkAxisMarker.getPosition());
-     modifyTextBox(1, "Redhawk Axis", "Located on the first floor of the University Services building, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!");
+     modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
    });
 
    //  ***  Redhawk Resource Desk  ***  //
