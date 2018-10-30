@@ -805,7 +805,7 @@
    theBottomLineMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(theBottomLineMarker.getPosition());
-     modifyTextBox(3, "The Bottom Line", "If you have a class in Pigott, stop by The Bottom Line for coffee, baked goods, or a hot sandwich. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
+     modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
    });
 
    //  ***  The Byte  ***  //
