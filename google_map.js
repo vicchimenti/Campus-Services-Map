@@ -820,7 +820,7 @@
    // create variable to store b-coloumn link ID
    var theByteLink = document.getElementById('theByte');
    // create object to store Info Box attributes
-   var theByteObj = {linkId: theByteLink, linkName: 'The Byte', linkDesc: "If you have a class in Pigott, stop by The Bottom Line for coffee, baked goods, or a hot sandwich. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
+   var theByteObj = {linkId: theByteLink, linkName: 'The Byte', linkDesc: "Located on the second floor of the Lemieux Library, The Byte offers a great place to grab a coffee or snack while studying. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(theByteLink, 'click', function() {
      map.setZoom(18);
@@ -831,7 +831,7 @@
    theByteMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(theByteMarker.getPosition());
-     modifyTextBox(3, "The Byte", "Located on the second floor of the Lemieux Library, The Byte offers a great place to grab a coffee or snack while studying. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
+     modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
    });
 
    //  ***  The Side Bar  ***  //
@@ -843,6 +843,17 @@
      icon: icons['foodIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var theSideBarLink = document.getElementById('theSideBar');
+   // create object to store Info Box attributes
+   var theSideBarObj = {linkId: theSideBarLink, linkName: 'The Sidebar', linkDesc: "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(theSideBarLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(theSideBarMarker.getPosition());
+     modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
+   });
+   // create click listener for marker
    theSideBarMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(theSideBarMarker.getPosition());
