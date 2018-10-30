@@ -618,7 +618,7 @@
    internationalStudentCenterMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(internationalStudentCenterMarker.getPosition());
-     modifyTextBox(2, "International Student Center", "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week.");
+     modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
    });
 
    //  ***  Office of Multicultural Affairs  ***  //
