@@ -524,7 +524,7 @@
    // create variable to store b-coloumn link ID
    var universityRecreationLink = document.getElementById('universityRecreation');
    // create object to store Info Box attributes
-   var universityRecreationObj = {linkId: universityRecreationLink, linkName: 'William F. Eisiminger Fitness Center', linkDesc: "Located in the Redhawk Center, the Rec Center offers fitness classes, a weight room, cardio floor and studios. Check out their <a href='https://www.seattleu.edu/recreation'>website</a> for quarterly hours, as well as pool hours."};
+   var universityRecreationObj = {linkId: universityRecreationLink, linkName: 'William F. Eisiminger Fitness Center', linkDesc: "Located in the Redhawk Center, the Rec Center offers fitness classes, a weight room, cardio floor and studios. Check out their <a href='https://www.seattleu.edu/recreation/' target='_blank'>website</a> for quarterly hours, as well as pool hours."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(universityRecreationLink, 'click', function() {
      map.setZoom(18);
@@ -555,7 +555,7 @@
    // create variable to store b-coloumn link ID
    var centerForStudentInvolvementLink = document.getElementById('centerForStudentInvolvement');
    // create object to store Info Box attributes
-   var centerForStudentInvolvementObj = {linkId: centerForStudentInvolvementLink, linkName: 'Center for Student Involvement', linkDesc: "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac'>SEAC</a> event - there are many way to get connected!"};
+   var centerForStudentInvolvementObj = {linkId: centerForStudentInvolvementLink, linkName: 'Center for Student Involvement', linkDesc: "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac/' target='_blank'>SEAC</a> event - there are many way to get connected!"};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(centerForStudentInvolvementLink, 'click', function() {
      map.setZoom(19);
@@ -581,7 +581,7 @@
    // create variable to store b-coloumn link ID
    var intramuralLink = document.getElementById('intramural');
    // create object to store Info Box attributes
-   var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/'>UREC Website</a> for more information."};
+   var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(intramuralLink, 'click', function() {
      map.setZoom(18);
@@ -607,7 +607,7 @@
    // create variable to store b-coloumn link ID
    var internationalStudentCenterLink = document.getElementById('internationalStudentCenter');
    // create object to store Info Box attributes
-   var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
+   var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(internationalStudentCenterLink, 'click', function() {
      map.setZoom(18);
@@ -685,7 +685,7 @@
    // create variable to store b-coloumn link ID
    var wellnessHealthPromotionLink = document.getElementById('wellnessHealthPromotion');
    // create object to store Info Box attributes
-   var wellnessHealthPromotionObj = {linkId: wellnessHealthPromotionLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/'>HAWC</a>."};
+   var wellnessHealthPromotionObj = {linkId: wellnessHealthPromotionLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/' target='_blank'>HAWC</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(wellnessHealthPromotionLink, 'click', function() {
      map.setZoom(19);
@@ -696,7 +696,7 @@
    wellnessHealthPromotionMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(wellnessHealthPromotionMarker.getPosition());
-     modifyTextBox(2, "Wellness and Health Promotion", "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/'>HAWC</a>.");
+     modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
    });
    //  *** Markers for Involvement Opportunities end ***  //
 
