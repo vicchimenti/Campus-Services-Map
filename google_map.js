@@ -552,8 +552,19 @@
      icon: icons['involvementIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var centerForStudentInvolvementLink = document.getElementById('centerForStudentInvolvement');
+   // create object to store Info Box attributes
+   var centerForStudentInvolvementObj = {linkId: centerForStudentInvolvementLink, linkName: 'Center for Student Involvement', linkDesc: "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac'>SEAC</a> event - there are many way to get connected!"};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(centerForStudentInvolvementLink, 'click', function() {
+     map.setZoom(19);
+     map.setCenter(centerStudentInvolvementMarker.getPosition());
+     modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
+   });
+   // create click listener for marker
    centerStudentInvolvementMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(centerStudentInvolvementMarker.getPosition());
      modifyTextBox(2, "Center for Student Involvement", "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac'>SEAC</a> event - there are many way to get connected!");
    });
