@@ -857,7 +857,7 @@
    theSideBarMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(theSideBarMarker.getPosition());
-     modifyTextBox(3, "The Side Bar", "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu.");
+     modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
    });
 
    //  ***  Student Center Dining Options  ***  //
@@ -869,6 +869,17 @@
      icon: icons['foodIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var stcnDiningLink = document.getElementById('stcnDining');
+   // create object to store Info Box attributes
+   var stcnDiningObj = {linkId: stcnDiningLink, linkName: 'Student Center Dining: Cherry Street Market and The Hawks Nest', linkDesc: "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(stcnDiningLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(stcnDiningMarker.getPosition());
+     modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
+   });
+   // create click listener for marker
    stcnDiningMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(stcnDiningMarker.getPosition());
