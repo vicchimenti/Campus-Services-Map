@@ -193,6 +193,10 @@
      map.setCenter(commuterShowersMarker.getPosition());
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   commuterShowersMarker.addListener('mouseover', function() {
+     // add marker label 
+   });
 
 
    //  ***  Lemieux Library   ***  //
