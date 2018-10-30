@@ -54,6 +54,7 @@
      zoomControl: true,
      mapTypeControl: true,
      fullscreenControl: false,
+     mapTypeId: 'satellite'
      zoom: 16,
 
 
