@@ -659,7 +659,7 @@
    // create variable to store b-coloumn link ID
    var sgsuLink = document.getElementById('sgsu');
    // create object to store Info Box attributes
-   var sgsuObj = {linkId: sgsuLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/'>Graduate Student Council</a> is here to support you."};
+   var sgsuObj = {linkId: sgsuLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/' target='_blank_'>Graduate Student Council</a> is here to support you."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(sgsuLink, 'click', function() {
      map.setZoom(19);
@@ -685,7 +685,7 @@
    // create variable to store b-coloumn link ID
    var wellnessHealthPromotionLink = document.getElementById('wellnessHealthPromotion');
    // create object to store Info Box attributes
-   var wellnessHealthPromotionObj = {linkId: wellnessHealthPromotionLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/' target='_blank'>HAWC</a>."};
+   var wellnessHealthPromotionObj = {linkId: wellnessHealthPromotionLink, linkName: 'Wellness and Health Promotion', linkDesc: "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/' target='_blank'>HAWC</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(wellnessHealthPromotionLink, 'click', function() {
      map.setZoom(19);
@@ -727,7 +727,7 @@
    cupcakeRoyaleMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(cupcakeRoyaleMarker.getPosition());
-     modifyTextBox(3, "Cupcake Royale", "Just off campus, at 1111 E Pike St, be sure to visit <a href='https://www.cupcakeroyale.com/' target='_blank'>Cupcake Royale</a> to enjoy fresh baked cupcakes, Stumptown espresso, and Seattle's Best ice cream scoops, sundaes, shakes, and pints! They are open late (to 10am Sun-Thurs and 11pm Fri-Sat) and offer a 10% student discount for SU students.");
+     modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
    });
 
    //  ***  Mr. Saigon  ***  //
