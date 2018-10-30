@@ -765,6 +765,17 @@
      icon: icons['foodIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var southPawLink = document.getElementById('southPaw');
+   // create object to store Info Box attributes
+   var southPawObj = {linkId: southPawLink, linkName: 'Southpaw', linkDesc: "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(southPawLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(southPawMarker.getPosition());
+     modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
+   });
+   // create click listener for marker
    southPawMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(southPawMarker.getPosition());
