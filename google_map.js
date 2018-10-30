@@ -420,7 +420,7 @@
    // create variable to store b-coloumn link ID
    var publicSafetyLink = document.getElementById('publicSafety');
    // create object to store Info Box attributes
-   var publicSafetyObj = {linkId: publicSafetyLink, linkName: 'Media Production Center', linkDesc: "Located in University Services 102, open 8:30am-4:30pm. 24-Hour Emergency Line:  (206) 296-5911; 24-Hour Non-Emergency Line:  (206) 296-5990; Business Line: (206) 296-5992; Email: <a href='mailto:publicsafety@seattleu.edu'>publicsafety@seattleu.edu</a>."};
+   var publicSafetyObj = {linkId: publicSafetyLink, linkName: 'Public Safety', linkDesc: "Located in University Services 102, open 8:30am-4:30pm. 24-Hour Emergency Line:  (206) 296-5911; 24-Hour Non-Emergency Line:  (206) 296-5990; Business Line: (206) 296-5992; Email: <a href='mailto:publicsafety@seattleu.edu'>publicsafety@seattleu.edu</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(publicSafetyLink, 'click', function() {
      map.setZoom(18);
