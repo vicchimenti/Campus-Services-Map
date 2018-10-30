@@ -495,6 +495,17 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var superCopyLink = document.getElementById('superCopy');
+   // create object to store Info Box attributes
+   var superCopyObj = {linkId: superCopyLink, linkName: 'SUperCopy', linkDesc: "Located in PAVL 010, Supercopy offers multiple services to students, such as printing, copying, mailing, and making your SU ID card. They also sell stamps and course packs. They take cash, check or card for payment. You can mail things from campus through this office! Perfect for when you need to mail back a rented textbook. Pick up time for USPS is 2pm Mon-Fri."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(superCopyLink, 'click', function() {
+     map.setZoom(19);
+     map.setCenter(supercopyMarker.getPosition());
+     modifyTextBox(1, superCopyObj.linkName, superCopyObj.linkDesc);
+   });
+   // create click listener for marker
    supercopyMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(supercopyMarker.getPosition());
