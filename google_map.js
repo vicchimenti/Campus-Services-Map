@@ -670,7 +670,7 @@
    sgsuMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(sgsuMarker.getPosition());
-     modifyTextBox(2, "Student Government of SU", "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/'>Graduate Student Council</a> is here to support you.");
+     modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
    });
 
    //  ***  Wellness and Health Promotion  ***  //
@@ -682,8 +682,19 @@
      icon: icons['involvementIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var wellnessHealthPromotionLink = document.getElementById('wellnessHealthPromotion');
+   // create object to store Info Box attributes
+   var wellnessHealthPromotionObj = {linkId: wellnessHealthPromotionLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/'>HAWC</a>."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(wellnessHealthPromotionLink, 'click', function() {
+     map.setZoom(19);
+     map.setCenter(wellnessHealthPromotionMarker.getPosition());
+     modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
+   });
+   // create click listener for marker
    wellnessHealthPromotionMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(wellnessHealthPromotionMarker.getPosition());
      modifyTextBox(2, "Wellness and Health Promotion", "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/'>HAWC</a>.");
    });
