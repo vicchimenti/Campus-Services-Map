@@ -817,6 +817,17 @@
      icon: icons['foodIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var theByteLink = document.getElementById('theByte');
+   // create object to store Info Box attributes
+   var theByteObj = {linkId: theByteLink, linkName: 'The Byte', linkDesc: "If you have a class in Pigott, stop by The Bottom Line for coffee, baked goods, or a hot sandwich. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(theByteLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(theByteMarker.getPosition());
+     modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
+   });
+   // create click listener for marker
    theByteMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(theByteMarker.getPosition());
