@@ -345,13 +345,13 @@
    var capsObj = {linkId: capsLink, linkName: 'Counseling and Psychological Services (CAPS)', linkDesc: "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(capsLink, 'click', function() {
-     map.setZoom(19);
+     map.setZoom(18);
      map.setCenter(capsMarker.getPosition());
      modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
    });
    // create click listener for marker
    capsMarker.addListener('click', function() {
-     map.setZoom(19);
+     map.setZoom(18);
      map.setCenter(capsMarker.getPosition());
      modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
    });
