@@ -581,7 +581,7 @@
    // create variable to store b-coloumn link ID
    var intramuralLink = document.getElementById('intramural');
    // create object to store Info Box attributes
-   var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information.""};
+   var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(intramuralLink, 'click', function() {
      map.setZoom(19);
@@ -592,7 +592,7 @@
    intramuralMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(intramuralMarker.getPosition());
-     modifyTextBox(2, "Intramural Sports", "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information.");
+     modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
    });
 
    //  ***  International Student Center  ***  //
