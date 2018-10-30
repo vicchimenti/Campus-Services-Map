@@ -427,6 +427,7 @@
      map.setCenter(publicSafetyMarker.getPosition());
      modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
    });
+   // create click listener for marker
    publicSafetyMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(publicSafetyMarker.getPosition());
@@ -452,6 +453,7 @@
      map.setCenter(redhawkAxisMarker.getPosition());
      modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
    });
+   // create click listener for marker
    redhawkAxisMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(redhawkAxisMarker.getPosition());
@@ -467,10 +469,21 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
-   redhawkResourceHubDeskMarker.addListener('click', function() {
-     map.setZoom(18);
+   // create variable to store b-coloumn link ID
+   var redhawkResourceHubDeskLink = document.getElementById('redhawkResourceHubDesk');
+   // create object to store Info Box attributes
+   var redhawkResourceHubDeskObj = {linkId: redhawkResourceHubDeskLink, linkName: 'Redhawk Resource Hub Desk', linkDesc: "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(redhawkResourceHubDeskLink, 'click', function() {
+     map.setZoom(19);
      map.setCenter(redhawkResourceHubDeskMarker.getPosition());
-     modifyTextBox(1, "Redhawk Resource Hub Desk", "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events.");
+     modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
+   });
+   // create click listener for marker
+   redhawkResourceHubDeskMarker.addListener('click', function() {
+     map.setZoom(19);
+     map.setCenter(redhawkResourceHubDeskMarker.getPosition());
+     modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
    });
 
    //  ***  SU Supercopy  ***  //
