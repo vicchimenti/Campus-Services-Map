@@ -501,7 +501,7 @@
    var superCopyObj = {linkId: superCopyLink, linkName: 'SUperCopy', linkDesc: "Located in PAVL 010, Supercopy offers multiple services to students, such as printing, copying, mailing, and making your SU ID card. They also sell stamps and course packs. They take cash, check or card for payment. You can mail things from campus through this office! Perfect for when you need to mail back a rented textbook. Pick up time for USPS is 2pm Mon-Fri."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(superCopyLink, 'click', function() {
-     map.setZoom(19);
+     map.setZoom(18);
      map.setCenter(supercopyMarker.getPosition());
      modifyTextBox(1, superCopyObj.linkName, superCopyObj.linkDesc);
    });
@@ -521,6 +521,17 @@
      icon: icons['servicesIcon'].icon,
      map: map,
    });
+   // create variable to store b-coloumn link ID
+   var universityRecreationLink = document.getElementById('universityRecreation');
+   // create object to store Info Box attributes
+   var universityRecreationObj = {linkId: universityRecreationLink, linkName: 'William F. Eisiminger Fitness Center', linkDesc: "Located in the Redhawk Center, the Rec Center offers fitness classes, a weight room, cardio floor and studios. Check out their <a href='https://www.seattleu.edu/recreation'>website</a> for quarterly hours, as well as pool hours."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(universityRecreationLink, 'click', function() {
+     map.setZoom(18);
+     map.setCenter(universityRecreationMarker.getPosition());
+     modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
+   });
+   // create click listener for marker
    universityRecreationMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(universityRecreationMarker.getPosition());
