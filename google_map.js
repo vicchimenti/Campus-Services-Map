@@ -656,10 +656,21 @@
      icon: icons['involvementIcon'].icon,
      map: map,
    });
-   sgsuMarker.addListener('click', function() {
-     map.setZoom(18);
+   // create variable to store b-coloumn link ID
+   var sgsuLink = document.getElementById('sgsu');
+   // create object to store Info Box attributes
+   var sgsuObj = {linkId: sgsuLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/'>Graduate Student Council</a> is here to support you."};
+   // create dom listener for b-coloumn anchor link
+   google.maps.event.addDomListener(sgsuLink, 'click', function() {
+     map.setZoom(19);
      map.setCenter(sgsuMarker.getPosition());
-     modifyTextBox(2, "Student Government of SU", "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/' target='_blank'>Graduate Student Council</a> is here to support you.");
+     modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
+   });
+   // create click listener for marker
+   sgsuMarker.addListener('click', function() {
+     map.setZoom(19);
+     map.setCenter(sgsuMarker.getPosition());
+     modifyTextBox(2, "Student Government of SU", "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/'>Graduate Student Council</a> is here to support you.");
    });
 
    //  ***  Wellness and Health Promotion  ***  //
