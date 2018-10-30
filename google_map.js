@@ -753,7 +753,7 @@
    mrSaigonMarker.addListener('click', function() {
      map.setZoom(18);
      map.setCenter(mrSaigonMarker.getPosition());
-     modifyTextBox(3, "Mr. Saigon", "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID.");
+     modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
    });
 
    //  ***  Southpaw Pizza  ***  //
