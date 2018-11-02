@@ -54,6 +54,7 @@
      zoomControl: true,
      mapTypeControl: true,
      fullscreenControl: false,
+     mapTypeId: 'satellite',
      zoom: 16,
 
 
@@ -191,6 +192,10 @@
      map.setZoom(19);
      map.setCenter(commuterShowersMarker.getPosition());
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   commuterShowersMarker.addListener('mouseover', function() {
+     // add marker label 
    });
 
 
