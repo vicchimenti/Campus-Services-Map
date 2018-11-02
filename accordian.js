@@ -10,7 +10,7 @@ function initializeAccordian(accordianElement) {
   }
 
   // *** open new panel and close last one *** //
-  funtion showPanel(".panel") {
+  funtion showPanel(panel) {
     var openPanel = accordianElement.querySelctor(".active");
     if (openPanel) {
       openPanel.classList.remove("active");
