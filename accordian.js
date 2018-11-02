@@ -1,8 +1,8 @@
-// ***  accordian.js *** //
+// ***  accordion.js *** //
 
 
 /// *** initialize the accordian
-function initializeAccordian(accordianElement) {
+function initializeAccordion(accordionElement) {
 
   // *** change panel from open or close *** //
   function handlePanelClick(event) {
@@ -11,7 +11,7 @@ function initializeAccordian(accordianElement) {
 
   // *** open new panel and close last one *** //
   funtion showPanel(panel) {
-    var openPanel = accordianElement.querySelctor(".active");
+    var openPanel = accordionElement.querySelctor(".active");
     if (openPanel) {
       openPanel.classList.remove("active");
     }
@@ -20,7 +20,7 @@ function initializeAccordian(accordianElement) {
     panel.classList.add("active");
   }
 
-  var allPanelElements = accordianElement.querySelctorAll(".panel");
+  var allPanelElements = accordionElement.querySelctorAll(".panel");
   for (var i = 0, len = allPanelElements.length; i < len; i++) {
     allPanelElements[i].addEventListener("click", handlePanelClick);
   }
@@ -29,4 +29,4 @@ function initializeAccordian(accordianElement) {
   showPanel(allPanelElements[0])
 }
 
-initializeAccordian(document.getElementById("accordian"));
+initializeAccordion(document.getElementById("accordion"));
