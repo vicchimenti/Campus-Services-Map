@@ -129,19 +129,19 @@
      },
      // Physical Icon
      physicalSpacesIcon: {
-       icon: '/media/student-development/marker_yellow.png'
+       icon: '/media/student-development/Marker_Yellow.png'
      },
      // Services Icon
      servicesIcon: {
-       icon: '/media/student-development/marker_green.png'
+       icon: '/media/student-development/Marker_Green.png'
      },
      // Involvement Icon
      involvementIcon: {
-       icon: '/media/student-development/marker_red.png'
+       icon: '/media/student-development/Marker_Red.png'
      },
      // Food Icon
      foodIcon: {
-       icon: '/media/student-development/marker_blue.png'
+       icon: '/media/student-development/Marker_Blue.png'
      },
    };
    //  *** Map marker url list end ***  //
