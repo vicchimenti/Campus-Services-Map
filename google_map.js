@@ -129,19 +129,19 @@
      },
      // Physical Icon
      physicalSpacesIcon: {
-       icon: '/media/graduate-admissions/images/graduate-viewbook/location_yellow.png'
+       icon: '/media/student-development/marker_yellow.png'
      },
      // Services Icon
      servicesIcon: {
-       icon: '/media/graduate-admissions/images/graduate-viewbook/location_green.png'
+       icon: '/media/student-development/marker_green.png'
      },
      // Involvement Icon
      involvementIcon: {
-       icon: '/media/graduate-admissions/images/graduate-viewbook/location_red.png'
+       icon: '/media/student-development/marker_red.png'
      },
      // Food Icon
      foodIcon: {
-       icon: '/media/graduate-admissions/images/graduate-viewbook/location_blue.png'
+       icon: '/media/student-development/marker_blue.png'
      },
    };
    //  *** Map marker url list end ***  //
@@ -195,7 +195,7 @@
    });
    // create mouseover listener for marker label
    commuterShowersMarker.addListener('mouseover', function() {
-     // add marker label 
+     // add marker label
    });
 
 
