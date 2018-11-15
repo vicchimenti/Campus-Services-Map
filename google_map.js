@@ -37,6 +37,7 @@
 
 
 
+
  //  *** Implementation of initialize function ***  //
  function initialize() {
 
@@ -195,7 +196,7 @@
    });
    // create mouseover listener for marker label
    commuterShowersMarker.addListener('mouseover', function() {
-     // add marker label
+     <span>test 1</span>
    });
 
 
