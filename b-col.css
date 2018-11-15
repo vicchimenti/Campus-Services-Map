@@ -1,0 +1,26 @@
+.categoryLabel {
+    min-height: 40px;
+    margin: 15px 0 15px 0;
+}
+#categoryOne .categoryLabel {
+    background: url(/media/student-development/Marker_Yellow.png) no-repeat 0 center;
+}
+#categoryTwo .categoryLabel {
+    background: url(/media/student-development/Marker_Green.png) no-repeat 0 center;
+}
+#categoryThree .categoryLabel {
+    background: url(/media/student-development/Marker_Red.png) no-repeat 0 center;
+}
+#categoryFour .categoryLabel {
+    background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
+}
+
+.categoryLabel button {
+    color: #aa0000;
+    font-size: 1.5rem;
+    line-height: 20px;
+    margin-left: 22px;
+    min-height: 60px;
+    padding: 10px;
+    text-align: left;
+}
