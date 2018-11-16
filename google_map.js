@@ -45,7 +45,6 @@
    // Physical Space/Yellow
    if(type == 0){
     $("#POITextBox").css("border-left", "5px solid #fdb913");
-    $("#POITextBox h5").css("color", "#333333");
    }
 	// Services/Green
 	if(type == 1){
@@ -66,14 +65,6 @@
    var margin = ($("#POITextBox").height() * -1) - 30;
    $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
  }
-
-
-
-
-
-
-
-
 
 
 
