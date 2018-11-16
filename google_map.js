@@ -36,6 +36,37 @@
  // *** End of Floating InfoWindow  ***  //
 
 
+ // *** Floating InfoPopup  ***  //
+ function modifyInfoPopup(type, text) {
+   $("#POITextBox").show();
+   $("#POITextBox p").html(text);
+   $("#POITextBox").css("padding","5px 25px 15px 25px");
+
+   // Physical Space/Yellow
+   if(type == 0){
+    $("#POITextBox").css("border-left", "5px solid #fdb913");
+    $("#POITextBox h5").css("color", "#333333");
+   }
+	// Services/Green
+	if(type == 1){
+	$("#POITextBox").css("border-left", "5px solid #55b31b");
+    $("#POITextBox h5").css("color", "#333333");
+	}
+  // Involvement/Red
+	if(type == 2){
+    $("#POITextBox").css("border-left", "5px solid #aa0000");
+    $("#POITextBox h5").css("color", "#aa0000");
+   }
+  //  Food/Blue
+	if(type == 3){
+    $("#POITextBox").css("border-left", "5px solid #003282");
+    $("#POITextBox h5").css("color", "#003282");
+   }
+   // Text Box Margins
+   var margin = ($("#POITextBox").height() * -1) - 30;
+   $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
+ }
+
 
 
 
@@ -208,9 +239,9 @@
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
    });
    // create mouseover listener for marker label
-   //commuterShowersMarker.addListener('mouseover', function() {
-   //}
-   //});
+   commuterShowersMarker.addListener('mouseover', function() {
+     modifyInfoPopup(0, commuterShowersObj.linkName);
+   });
 
 
    //  ***  Lemieux Library   ***  //
