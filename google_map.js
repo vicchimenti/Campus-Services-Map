@@ -722,6 +722,10 @@
      map.setCenter(internationalStudentCenterMarker.getPosition());
      modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   internationalStudentCenterMarker.addListener('mouseover', function() {
+     modifyPinLabel(2, internationalStudentCenterObj.linkName);
+   });
 
    //  ***  Office of Multicultural Affairs  ***  //
    var omaMarker = new google.maps.Marker({
@@ -748,6 +752,10 @@
      map.setCenter(omaMarker.getPosition());
      modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   omaMarker.addListener('mouseover', function() {
+     modifyPinLabel(2, omaObj.linkName);
+   });
 
    //  ***  Student Government at SeattleU  ***  //
    var sgsuMarker = new google.maps.Marker({
@@ -773,6 +781,10 @@
      map.setZoom(19);
      map.setCenter(sgsuMarker.getPosition());
      modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   sgsuMarker.addListener('mouseover', function() {
+     modifyPinLabel(2, sgsuObj.linkName);
    });
 
    //  ***  Wellness and Health Promotion  ***  //
