@@ -58,27 +58,22 @@
 
 
 
-#mapBlock{
-	background-color: #aa0000;
-	border-bottom:10px solid #aa0000;
-}
-#POIText{
+
+#PinLabel{
 	padding:30px 8.3333%;
         text-align: center;
 }
-#POIText h2{
+#PinLabel h2{
 	color:#ffffff;
         font-family: 'Roboto Slab', serif;
         margin: 0;
 }
-#POIText p{
+#PinLabel p{
 	color:#ffffff;
         margin:0;
 }
-#SeattlePOIMap{
-	height: 600px;
-}
-#POITextBox{
+
+#PinLabel{
 	overflow: hidden;
 	position:relative;
 	z-index:100;
@@ -92,7 +87,7 @@
 	-moz-box-shadow: 2px 2px 2px 0px #a9a9a9;
 	box-shadow: 2px 2px 2px 0px #a9a9a9;
 }
-#POITextBox h5{
+#PinLabel h5{
 	color:#ef4135;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -100,17 +95,17 @@
 	font-size:1.6rem;
 	padding-top:0px;
 }
-#POITextBox p{
+#PinLabel p{
 	color:#333333;
 	font-family: 'Montserrat', sans-serif;
 	font-weight:300;
 	font-size:1.4rem;
 }
-#POITextBox a{
+#PinLabel a{
 	color:#008765;
 	text-decoration:underline;
 }
-#POITextBox a:hover{
+#PinLabel a:hover{
 	color:#333333;
 	text-decoration:underline;
 }
