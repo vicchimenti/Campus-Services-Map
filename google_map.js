@@ -291,6 +291,10 @@
      map.setCenter(mcgoldrickCollegiumMarker.getPosition());
      modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   mcgoldrickCollegiumMarker.addListener('mouseover', function() {
+     modifyPinLabel(0, mcgoldrickCollegiumObj.linkName);
+   });
 
 
    //  ***  Outreach Center  ***  //
