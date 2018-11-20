@@ -967,6 +967,10 @@
      map.setCenter(theByteMarker.getPosition());
      modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   theByteMarker.addListener('mouseover', function() {
+     modifyPinLabel(3, theByteObj.linkName);
+   });
 
    //  ***  The Side Bar  ***  //
    var theSideBarMarker = new google.maps.Marker({
@@ -993,6 +997,10 @@
      map.setCenter(theSideBarMarker.getPosition());
      modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   theSideBarMarker.addListener('mouseover', function() {
+     modifyPinLabel(3, theSideBarObj.linkName);
+   });
 
    //  ***  Student Center Dining Options  ***  //
    var stcnDiningMarker = new google.maps.Marker({
@@ -1018,6 +1026,10 @@
      map.setZoom(18);
      map.setCenter(stcnDiningMarker.getPosition());
      modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   stcnDiningMarker.addListener('mouseover', function() {
+     modifyPinLabel(3, stcnDiningObj.linkName);
    });
    //  *** End of Food/Blue Markers ***  //
 
