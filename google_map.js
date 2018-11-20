@@ -387,6 +387,10 @@
      map.setCenter(careerEngagementOfficeMarker.getPosition());
      modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   careerEngagementOfficeMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, careerEngagementOfficeObj.linkName);
+   });
 
    //  ***  Counseling and Psychological Services  ***  //
    var capsMarker = new google.maps.Marker({
@@ -412,6 +416,10 @@
      map.setZoom(18);
      map.setCenter(capsMarker.getPosition());
      modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   capsMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, capsObj.linkName);
    });
 
    //  ***  Learning Assistance Program  ***  //
@@ -439,6 +447,10 @@
      map.setCenter(learningAssistanceProgramsMarker.getPosition());
      modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   learningAssistanceProgramsMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, learningAssistanceProgramsObj.linkName);
+   });
 
    //  ***  Media Production Center  ***  //
    var mpcMarker = new google.maps.Marker({
@@ -465,6 +477,10 @@
      map.setCenter(mpcMarker.getPosition());
      modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   mpcMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, mpcObj.linkName);
+   });
 
    //  ***  Public Safety  ***  //
    var publicSafetyMarker = new google.maps.Marker({
@@ -490,6 +506,10 @@
      map.setZoom(18);
      map.setCenter(publicSafetyMarker.getPosition());
      modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   publicSafetyMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, publicSafetyObj.linkName);
    });
 
    //  ***  Redhawk Axis  ***  //
