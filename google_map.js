@@ -44,11 +44,11 @@
 
    // Physical Space/Yellow
    if(type == 0){
-    $("#PinLabel").css("border-left", "5px solid #fdb913");
+     $("#PinLabel").css("border-left", "5px solid #fdb913");
    }
 	// Services/Green
 	if(type == 1){
-	$("#PinLabel").css("border-left", "5px solid #55b31b");
+    $("#PinLabel").css("border-left", "5px solid #55b31b");
 	}
   // Involvement/Red
 	if(type == 2){
@@ -59,8 +59,8 @@
     $("#PinLabel").css("border-left", "5px solid #003282");
    }
    // Text Box Margins
-   var margin = ($("#PinLabel").height() * -1) - 30;
-   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
+   var pinMargin = ($("#PinLabel").height() * -1) - 30;
+   $("#PinLabel").css("margin", (pinMargin + "px auto 10px auto"));
  }
 
 
@@ -235,9 +235,9 @@
      modifyPinLabel(0, commuterShowersObj.linkName);
    });
    // Click Listener for Pin Labels
-   commuterShowersMarker.addListener('mouseaway', function() {
-     $("#PinLabel").hide();
-   });
+   //commuterShowersMarker.addListener('mouseaway', function() {
+  //   $("#PinLabel").hide();
+   //});
 
 
    //  ***  Lemieux Library   ***  //
