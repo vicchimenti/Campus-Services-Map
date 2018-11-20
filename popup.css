@@ -67,16 +67,16 @@
 	background-color: #aa0000;
 	border-bottom:10px solid #aa0000;
 }
-#POIText{
+#PinText{
 	padding:30px 8.3333%;
 	text-align: center;
 }
-#POIText h2{
+#PinText h2{
 	color:#ffffff;
 	font-family: 'Roboto Slab', serif;
 	margin: 0;
 }
-#POIText p{
+#PinText p{
 	color:#ffffff;
 	margin:0;
 }

@@ -38,30 +38,34 @@
 
  // *** Floating InfoPopup  ***  //
  function modifyPinLabel(type, header, text) {
-   $("#PinLabel").show();
+   $("#POITextBox").show();
    $("#POITextBox h5").html(header);
-   $("#PinLabel p").html(text);
-   $("#PinLabel").css("padding","5px 15px 15px 15px");
+   $("#POITextBox p").html(text);
+   $("#POITextBox").css("padding","5px 15px 15px 15px");
 
    // Physical Space/Yellow
    if(type == 0){
-     $("#PinLabel").css("border-left", "5px solid #fdb913");
+     $("#POITextBox").css("border-left", "5px solid #fdb913");
+     $("#POITextBox h5").css("color", "#333333");
    }
 	// Services/Green
 	if(type == 1){
-    $("#PinLabel").css("border-left", "5px solid #55b31b");
+    $("#POITextBox").css("border-left", "5px solid #55b31b");
+    $("#POITextBox h5").css("color", "#333333");
 	}
   // Involvement/Red
 	if(type == 2){
-    $("#PinLabel").css("border-left", "5px solid #aa0000");
+    $("#POITextBox").css("border-left", "5px solid #aa0000");
+    $("#POITextBox h5").css("color", "#aa0000");
    }
   //  Food/Blue
 	if(type == 3){
-    $("#PinLabel").css("border-left", "5px solid #003282");
+    $("#POITextBox").css("border-left", "5px solid #003282");
+    $("#POITextBox h5").css("color", "#003282");
    }
    // Pin Label Margins
-   var margin = ($("#PinLabel").height() * -1) - 30;
-   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
+   var margin = ($("#POITextBox").height() * -1) - 30;
+   $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
  }
 
 
@@ -151,7 +155,7 @@
    });
    // Click Listener for Text Box
    map.addListener('click', function() {
-     $("#PinLabel").hide();
+     $("#POITextBox").hide();
    });
    //  *** Map style end ***  //
 
@@ -237,7 +241,7 @@
    });
    // Click Listener for Pin Labels
    //////commuterShowersMarker.addListener('mouseaway', function() {
-    // $("#PinLabel").hide();
+    // $("#POITextBox").hide();
   // });
 
 
