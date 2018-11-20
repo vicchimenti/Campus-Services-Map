@@ -812,6 +812,10 @@
      map.setCenter(wellnessHealthPromotionMarker.getPosition());
      modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   wellnessHealthPromotionMarker.addListener('mouseover', function() {
+     modifyPinLabel(2, wellnessHealthPromotionObj.linkName);
+   });
    //  *** Markers for Involvement Opportunities end ***  //
 
 
@@ -843,6 +847,10 @@
      map.setCenter(cupcakeRoyaleMarker.getPosition());
      modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   cupcakeRoyaleMarker.addListener('mouseover', function() {
+     modifyPinLabel(3, cupcakeRoyaleObj.linkName);
+   });
 
    //  ***  Mr. Saigon  ***  //
    var mrSaigonMarker = new google.maps.Marker({
@@ -868,6 +876,10 @@
      map.setZoom(18);
      map.setCenter(mrSaigonMarker.getPosition());
      modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   mrSaigonMarker.addListener('mouseover', function() {
+     modifyPinLabel(3, mrSaigonObj.linkName);
    });
 
    //  ***  Southpaw Pizza  ***  //
@@ -895,6 +907,10 @@
      map.setCenter(southPawMarker.getPosition());
      modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   southPawMarker.addListener('mouseover', function() {
+     modifyPinLabel(3, southPawObj.linkName);
+   });
 
    //  ***  The Bottom Line  ***  //
    var theBottomLineMarker = new google.maps.Marker({
@@ -920,6 +936,10 @@
      map.setZoom(18);
      map.setCenter(theBottomLineMarker.getPosition());
      modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   theBottomLineMarker.addListener('mouseover', function() {
+     modifyPinLabel(3, theBottomLineObj.linkName);
    });
 
    //  ***  The Byte  ***  //
