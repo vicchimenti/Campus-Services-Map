@@ -38,29 +38,29 @@
 
  // *** Floating InfoPopup  ***  //
  function modifyPinLabel(type, text) {
-   $("#POITextBox").show();
-   $("#POITextBox pin").html(text);
-   $("#POITextBox").css("padding","5px 15px 15px 15px");
+   $("#PinLabel").show();
+   $("#PinLabel p").html(text);
+   $("#PinLabel").css("padding","5px 15px 15px 15px");
 
    // Physical Space/Yellow
    if(type == 0){
-     $("#POITextBox").css("border-left", "5px solid #fdb913");
+     $("#PinLabel").css("border-left", "5px solid #fdb913");
    }
 	// Services/Green
 	if(type == 1){
-    $("#POITextBox").css("border-left", "5px solid #55b31b");
+    $("#PinLabel").css("border-left", "5px solid #55b31b");
 	}
   // Involvement/Red
 	if(type == 2){
-    $("#POITextBox").css("border-left", "5px solid #aa0000");
+    $("#PinLabel").css("border-left", "5px solid #aa0000");
    }
   //  Food/Blue
 	if(type == 3){
-    $("#POITextBox").css("border-left", "5px solid #003282");
+    $("#PinLabel").css("border-left", "5px solid #003282");
    }
    // Pin Label Margins
-   var margin = ($("#POITextBox").height() * -1) - 30;
-   $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
+   var margin = ($("#PinLabel").height() * -1) - 30;
+   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
  }
 
 

@@ -61,18 +61,12 @@
 
 #PinLabel{
 	padding:30px 8.3333%;
-        text-align: center;
-}
-#PinLabel h2{
-	color:#ffffff;
-        font-family: 'Roboto Slab', serif;
-        margin: 0;
+  text-align: center;
 }
 #PinLabel p{
 	color:#ffffff;
-        margin:0;
+  margin:0;
 }
-
 #PinLabel{
 	overflow: hidden;
 	position:relative;
@@ -100,12 +94,5 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight:300;
 	font-size:1.4rem;
-}
-#PinLabel a{
-	color:#008765;
-	text-decoration:underline;
-}
-#PinLabel a:hover{
-	color:#333333;
-	text-decoration:underline;
+	text-align: center;
 }
