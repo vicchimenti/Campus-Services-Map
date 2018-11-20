@@ -322,6 +322,10 @@
      map.setCenter(outreachCenterMarker.getPosition());
      modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   outreachCenterMarker.addListener('mouseover', function() {
+     modifyPinLabel(0, outreachCenterObj.linkName);
+   });
    //  *** Physical Spaces markers end ***  //
 
 
@@ -352,6 +356,10 @@
      map.setZoom(18);
      map.setCenter(campusStoreMarker.getPosition());
      modifyTextBox(1, campusStoreObj.linkName, campusStoreObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   campusStoreMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, campusStoreObj.linkName);
    });
 
    //  ***  Career Engagement Office  ***  //
