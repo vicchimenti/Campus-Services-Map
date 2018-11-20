@@ -38,29 +38,29 @@
 
  // *** Floating InfoPopup  ***  //
  function modifyPinLabel(type, text) {
-   $("#PinLabel").show();
-   $("#PinLabel p").html(text);
-   $("#PinLabel").css("padding","5px 25px 15px 25px");
+   $("#POITextBox").show();
+   $("#POITextBox pin").html(text);
+   $("#POITextBox").css("padding","5px 15px 15px 15px");
 
    // Physical Space/Yellow
    if(type == 0){
-     $("#PinLabel").css("border-left", "5px solid #fdb913");
+     $("#POITextBox").css("border-left", "5px solid #fdb913");
    }
 	// Services/Green
 	if(type == 1){
-    $("#PinLabel").css("border-left", "5px solid #55b31b");
+    $("#POITextBox").css("border-left", "5px solid #55b31b");
 	}
   // Involvement/Red
 	if(type == 2){
-    $("#PinLabel").css("border-left", "5px solid #aa0000");
+    $("#POITextBox").css("border-left", "5px solid #aa0000");
    }
   //  Food/Blue
 	if(type == 3){
-    $("#PinLabel").css("border-left", "5px solid #003282");
+    $("#POITextBox").css("border-left", "5px solid #003282");
    }
-   // Text Box Margins
-   var margin = ($("#PinLabel").height() * -1) - 30;
-   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
+   // Pin Label Margins
+   var margin = ($("#POITextBox").height() * -1) - 30;
+   $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
  }
 
 
@@ -148,10 +148,6 @@
    map.addListener('click', function() {
      $("#POITextBox").hide();
    });
-   // Click Listener for Pin Labels
-   map.addListener('click', function() {
-     $("#PinLabel").hide();
-   });
    //  *** Map style end ***  //
 
 
@@ -235,9 +231,9 @@
      modifyPinLabel(0, commuterShowersObj.linkName);
    });
    // Click Listener for Pin Labels
-   //commuterShowersMarker.addListener('mouseaway', function() {
-  //   $("#PinLabel").hide();
-   //});
+   //////commuterShowersMarker.addListener('mouseaway', function() {
+    // $("#PinLabel").hide();
+  // });
 
 
    //  ***  Lemieux Library   ***  //
@@ -264,6 +260,10 @@
      map.setZoom(18);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   lemieuxLibraryMarker.addListener('mouseover', function() {
+     modifyPinLabel(0, lemieuxLibraryObj.linkName);
    });
 
    //  *** McGoldrick Collegium  ***  //
