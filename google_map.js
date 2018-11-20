@@ -37,8 +37,9 @@
 
 
  // *** Floating InfoPopup  ***  //
- function modifyPinLabel(type, text) {
+ function modifyPinLabel(type, header, text) {
    $("#PinLabel").show();
+   $("#POITextBox h5").html(header);
    $("#PinLabel p").html(text);
    $("#PinLabel").css("padding","5px 15px 15px 15px");
 
@@ -148,6 +149,10 @@
    map.addListener('click', function() {
      $("#POITextBox").hide();
    });
+   // Click Listener for Text Box
+   map.addListener('click', function() {
+     $("#PinLabel").hide();
+   });
    //  *** Map style end ***  //
 
 
@@ -228,7 +233,7 @@
    });
    // create mouseover listener for marker label
    commuterShowersMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, commuterShowersObj.linkName);
+     modifyPinLabel(0, "Physical Spaces", commuterShowersObj.linkName);
    });
    // Click Listener for Pin Labels
    //////commuterShowersMarker.addListener('mouseaway', function() {
@@ -263,7 +268,7 @@
    });
    // create mouseover listener for marker label
    lemieuxLibraryMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, lemieuxLibraryObj.linkName);
+     modifyPinLabel(0, "Physical Spaces", lemieuxLibraryObj.linkName);
    });
 
    //  *** McGoldrick Collegium  ***  //
@@ -293,7 +298,7 @@
    });
    // create mouseover listener for marker label
    mcgoldrickCollegiumMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, mcgoldrickCollegiumObj.linkName);
+     modifyPinLabel(0, "Physical Spaces", mcgoldrickCollegiumObj.linkName);
    });
 
 
@@ -324,7 +329,7 @@
    });
    // create mouseover listener for marker label
    outreachCenterMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, outreachCenterObj.linkName);
+     modifyPinLabel(0, "Physical Spaces", outreachCenterObj.linkName);
    });
    //  *** Physical Spaces markers end ***  //
 
@@ -359,7 +364,7 @@
    });
    // create mouseover listener for marker label
    campusStoreMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, campusStoreObj.linkName);
+     modifyPinLabel(1, "Student Services", campusStoreObj.linkName);
    });
 
    //  ***  Career Engagement Office  ***  //
@@ -389,7 +394,7 @@
    });
    // create mouseover listener for marker label
    careerEngagementOfficeMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, careerEngagementOfficeObj.linkName);
+     modifyPinLabel(1, "Student Services", careerEngagementOfficeObj.linkName);
    });
 
    //  ***  Counseling and Psychological Services  ***  //
@@ -419,7 +424,7 @@
    });
    // create mouseover listener for marker label
    capsMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, capsObj.linkName);
+     modifyPinLabel(1, "Student Services", capsObj.linkName);
    });
 
    //  ***  Learning Assistance Program  ***  //
@@ -449,7 +454,7 @@
    });
    // create mouseover listener for marker label
    learningAssistanceProgramsMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, learningAssistanceProgramsObj.linkName);
+     modifyPinLabel(1, "Student Services", learningAssistanceProgramsObj.linkName);
    });
 
    //  ***  Media Production Center  ***  //
@@ -479,7 +484,7 @@
    });
    // create mouseover listener for marker label
    mpcMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, mpcObj.linkName);
+     modifyPinLabel(1, "Student Services", mpcObj.linkName);
    });
 
    //  ***  Public Safety  ***  //
@@ -509,7 +514,7 @@
    });
    // create mouseover listener for marker label
    publicSafetyMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, publicSafetyObj.linkName);
+     modifyPinLabel(1, "Student Services", publicSafetyObj.linkName);
    });
 
    //  ***  Redhawk Axis  ***  //
@@ -539,7 +544,7 @@
    });
    // create mouseover listener for marker label
    redhawkAxisMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, redhawkAxisObj.linkName);
+     modifyPinLabel(1, "Student Services", redhawkAxisObj.linkName);
    });
 
    //  ***  Redhawk Resource Desk  ***  //
@@ -569,7 +574,7 @@
    });
    // create mouseover listener for marker label
    redhawkResourceHubDeskMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, redhawkResourceHubDeskObj.linkName);
+     modifyPinLabel(1, "Student Services", redhawkResourceHubDeskObj.linkName);
    });
 
    //  ***  SU Supercopy  ***  //
@@ -599,7 +604,7 @@
    });
    // create mouseover listener for marker label
    supercopyMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, superCopyObj.linkName);
+     modifyPinLabel(1, "Student Services", superCopyObj.linkName);
    });
 
    //  ***  Fitness Center  ***  //
@@ -629,7 +634,7 @@
    });
    // create mouseover listener for marker label
    universityRecreationMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, universityRecreationObj.linkName);
+     modifyPinLabel(1, "Student Services", universityRecreationObj.linkName);
    });
    //  *** Services Markers end ***  //
 
@@ -664,7 +669,7 @@
    });
    // create mouseover listener for marker label
    centerStudentInvolvementMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, centerForStudentInvolvementObj.linkName);
+     modifyPinLabel(2, "Involvement Opportunities", centerForStudentInvolvementObj.linkName);
    });
 
    //  ***  Intramural Sports  ***  //
@@ -694,7 +699,7 @@
    });
    // create mouseover listener for marker label
    intramuralMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, intramuralObj.linkName);
+     modifyPinLabel(2, "Involvement Opportunities", intramuralObj.linkName);
    });
 
    //  ***  International Student Center  ***  //
@@ -724,7 +729,7 @@
    });
    // create mouseover listener for marker label
    internationalStudentCenterMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, internationalStudentCenterObj.linkName);
+     modifyPinLabel(2, "Involvement Opportunities", internationalStudentCenterObj.linkName);
    });
 
    //  ***  Office of Multicultural Affairs  ***  //
@@ -754,7 +759,7 @@
    });
    // create mouseover listener for marker label
    omaMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, omaObj.linkName);
+     modifyPinLabel(2, "Involvement Opportunities", omaObj.linkName);
    });
 
    //  ***  Student Government at SeattleU  ***  //
@@ -784,7 +789,7 @@
    });
    // create mouseover listener for marker label
    sgsuMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, sgsuObj.linkName);
+     modifyPinLabel(2, "Involvement Opportunities", sgsuObj.linkName);
    });
 
    //  ***  Wellness and Health Promotion  ***  //
@@ -814,7 +819,7 @@
    });
    // create mouseover listener for marker label
    wellnessHealthPromotionMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, wellnessHealthPromotionObj.linkName);
+     modifyPinLabel(2, "Involvement Opportunities", wellnessHealthPromotionObj.linkName);
    });
    //  *** Markers for Involvement Opportunities end ***  //
 
@@ -849,7 +854,7 @@
    });
    // create mouseover listener for marker label
    cupcakeRoyaleMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, cupcakeRoyaleObj.linkName);
+     modifyPinLabel(3, "Food on or Near Campus", cupcakeRoyaleObj.linkName);
    });
 
    //  ***  Mr. Saigon  ***  //
@@ -879,7 +884,7 @@
    });
    // create mouseover listener for marker label
    mrSaigonMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, mrSaigonObj.linkName);
+     modifyPinLabel(3, "Food on or Near Campus", mrSaigonObj.linkName);
    });
 
    //  ***  Southpaw Pizza  ***  //
@@ -909,7 +914,7 @@
    });
    // create mouseover listener for marker label
    southPawMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, southPawObj.linkName);
+     modifyPinLabel(3, "Food on or Near Campus", southPawObj.linkName);
    });
 
    //  ***  The Bottom Line  ***  //
@@ -939,7 +944,7 @@
    });
    // create mouseover listener for marker label
    theBottomLineMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, theBottomLineObj.linkName);
+     modifyPinLabel(3, "Food on or Near Campus", theBottomLineObj.linkName);
    });
 
    //  ***  The Byte  ***  //
@@ -969,7 +974,7 @@
    });
    // create mouseover listener for marker label
    theByteMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, theByteObj.linkName);
+     modifyPinLabel(3, "Food on or Near Campus", theByteObj.linkName);
    });
 
    //  ***  The Side Bar  ***  //
@@ -999,7 +1004,7 @@
    });
    // create mouseover listener for marker label
    theSideBarMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, theSideBarObj.linkName);
+     modifyPinLabel(3, "Food on or Near Campus", theSideBarObj.linkName);
    });
 
    //  ***  Student Center Dining Options  ***  //
@@ -1029,7 +1034,7 @@
    });
    // create mouseover listener for marker label
    stcnDiningMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, stcnDiningObj.linkName);
+     modifyPinLabel(3, "Food on or Near Campus", stcnDiningObj.linkName);
    });
    //  *** End of Food/Blue Markers ***  //
 
