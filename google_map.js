@@ -59,8 +59,8 @@
     $("#PinLabel").css("border-left", "5px solid #003282");
    }
    // Text Box Margins
-   var pinMargin = ($("#PinLabel").height() * -1) - 30;
-   $("#PinLabel").css("pinMargin", (pinMargin + "px auto 10px auto"));
+   var margin = ($("#PinLabel").height() * -1) - 30;
+   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
  }
 
 
