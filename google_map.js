@@ -60,7 +60,7 @@
    }
    // Text Box Margins
    var pinMargin = ($("#PinLabel").height() * -1) - 30;
-   $("#PinLabel").css("margin", (pinMargin + "px auto 10px auto"));
+   $("#PinLabel").css("pinMargin", (pinMargin + "px auto 10px auto"));
  }
 
 
