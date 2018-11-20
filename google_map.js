@@ -537,6 +537,10 @@
      map.setCenter(redhawkAxisMarker.getPosition());
      modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   redhawkAxisMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, redhawkAxisObj.linkName);
+   });
 
    //  ***  Redhawk Resource Desk  ***  //
    var redhawkResourceHubDeskMarker = new google.maps.Marker({
@@ -562,6 +566,10 @@
      map.setZoom(19);
      map.setCenter(redhawkResourceHubDeskMarker.getPosition());
      modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   redhawkResourceHubDeskMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, redhawkResourceHubDeskObj.linkName);
    });
 
    //  ***  SU Supercopy  ***  //
@@ -589,6 +597,10 @@
      map.setCenter(supercopyMarker.getPosition());
      modifyTextBox(1, superCopyObj.linkName, superCopyObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   supercopyMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, superCopyObj.linkName);
+   });
 
    //  ***  Fitness Center  ***  //
    var universityRecreationMarker = new google.maps.Marker({
@@ -614,6 +626,10 @@
      map.setZoom(18);
      map.setCenter(universityRecreationMarker.getPosition());
      modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   universityRecreationMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, universityRecreationObj.linkName);
    });
    //  *** Services Markers end ***  //
 
@@ -646,6 +662,10 @@
      map.setCenter(centerStudentInvolvementMarker.getPosition());
      modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
    });
+   // create mouseover listener for marker label
+   centerStudentInvolvementMarker.addListener('mouseover', function() {
+     modifyPinLabel(2, centerForStudentInvolvementObj.linkName);
+   });
 
    //  ***  Intramural Sports  ***  //
    var intramuralMarker = new google.maps.Marker({
@@ -671,6 +691,10 @@
      map.setZoom(18);
      map.setCenter(intramuralMarker.getPosition());
      modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
+   });
+   // create mouseover listener for marker label
+   intramuralMarker.addListener('mouseover', function() {
+     modifyPinLabel(2, intramuralObj.linkName);
    });
 
    //  ***  International Student Center  ***  //
