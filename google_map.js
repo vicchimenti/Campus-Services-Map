@@ -37,33 +37,30 @@
 
 
  // *** Floating InfoPopup  ***  //
- function modifyInfoPopup(type, text) {
-   $("#POITextBox").show();
-   $("#POITextBox p").html(text);
-   $("#POITextBox").css("padding","5px 25px 15px 25px");
+ function modifyPinLabel(type, text) {
+   $("#PinLabel").show();
+   $("#PinLabel p").html(text);
+   $("#PinLabel").css("padding","5px 25px 15px 25px");
 
    // Physical Space/Yellow
    if(type == 0){
-    $("#POITextBox").css("border-left", "5px solid #fdb913");
+    $("#PinLabel").css("border-left", "5px solid #fdb913");
    }
 	// Services/Green
 	if(type == 1){
-	$("#POITextBox").css("border-left", "5px solid #55b31b");
-    $("#POITextBox h5").css("color", "#333333");
+	$("#PinLabel").css("border-left", "5px solid #55b31b");
 	}
   // Involvement/Red
 	if(type == 2){
-    $("#POITextBox").css("border-left", "5px solid #aa0000");
-    $("#POITextBox h5").css("color", "#aa0000");
+    $("#PinLabel").css("border-left", "5px solid #aa0000");
    }
   //  Food/Blue
 	if(type == 3){
-    $("#POITextBox").css("border-left", "5px solid #003282");
-    $("#POITextBox h5").css("color", "#003282");
+    $("#PinLabel").css("border-left", "5px solid #003282");
    }
    // Text Box Margins
-   var margin = ($("#POITextBox").height() * -1) - 30;
-   $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
+   var margin = ($("#PinLabel").height() * -1) - 30;
+   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
  }
 
 
@@ -147,9 +144,13 @@
        }],
      }],
    });
-   // Click Listener
+   // Click Listener for Text Box
    map.addListener('click', function() {
      $("#POITextBox").hide();
+   });
+   // Click Listener for Pin Labels
+   map.addListener('click', function() {
+     $("#PinLabel").hide();
    });
    //  *** Map style end ***  //
 
@@ -231,7 +232,11 @@
    });
    // create mouseover listener for marker label
    commuterShowersMarker.addListener('mouseover', function() {
-     modifyInfoPopup(0, commuterShowersObj.linkName);
+     modifyPinLabel(0, commuterShowersObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   commuterShowersMarker.addListener('mouseaway', function() {
+     $("#PinLabel").hide();
    });
 
 
