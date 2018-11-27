@@ -23,18 +23,19 @@
     min-height: 60px;
     padding: 10px;
     text-align: left;
+    text-decoration: none;
 }
 
-.categoryLabel .fa-plus {
-  display: none
-}
 .categoryLabel .collapsed .fa-plus {
-  color:#aa0000;
-}
-
-.categoryLabel .fa-minus {
-  color:#aa0000;
+  color:  #aa0000;
+  display: initial;
 }
 .categoryLabel .collapsed .fa-minus {
-  display: none
+  display: none;
+}
+.categoryLabel .fa-plus {
+  display: none;
+}
+.categoryLabel .fa-minus {
+  color:  #aa0000;
 }
