@@ -24,3 +24,17 @@
     padding: 10px;
     text-align: left;
 }
+
+.categoryLabel .fa-plus {
+  display: none
+}
+.categoryLabel .collapsed .fa-plus {
+  color:#aa0000;
+}
+
+.categoryLabel .fa-minus {
+  color:#aa0000;
+}
+.categoryLabel .collapsed .fa-minus {
+  display: none
+}
