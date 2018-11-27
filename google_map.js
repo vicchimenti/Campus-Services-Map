@@ -240,9 +240,9 @@
      modifyPinLabel(0, "Physical Spaces", commuterShowersObj.linkName);
    });
    // Click Listener for Pin Labels
-   //////commuterShowersMarker.addListener('mouseaway', function() {
-    // $("#POITextBox").hide();
-  // });
+   commuterShowersMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
 
    //  ***  Lemieux Library   ***  //
