@@ -26,16 +26,18 @@
     text-decoration: none;
 }
 
-.categoryLabel .collapsed .fa-plus {
-  color:  #aa0000;
-  display: initial;
-}
-.categoryLabel .collapsed .fa-minus {
-  display: none;
-}
 .categoryLabel .fa-plus {
   display: none;
 }
+.categoryLabel .collapsed .fa-plus {
+  color:  #aa0000;
+  background-color: inherit;
+  display: initial;
+}
 .categoryLabel .fa-minus {
   color:  #aa0000;
+  border-color: inherit;
+}
+.categoryLabel .collapsed .fa-minus {
+  display: none;
 }
