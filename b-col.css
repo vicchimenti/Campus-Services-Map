@@ -17,13 +17,15 @@
 
 .categoryLabel button {
     color: #aa0000;
-    font-size: 1.75rem;
+    font-size: 2.0rem;
+    font-weight: bold;
     line-height: 20px;
     margin-left: 22px;
     min-height: 60px;
     padding: 10px;
     text-align: left;
     text-decoration: none;
+    display: inline-block;
 }
 
 .categoryLabel .fa-plus {
@@ -33,10 +35,12 @@
   color:  #aa0000;
   background-color: inherit;
   display: initial;
+  display: inline-block;
 }
 .categoryLabel .fa-minus {
   color:  #aa0000;
-  border-color: inherit;
+  background-color: inherit;
+  display: inline-block;
 }
 .categoryLabel .collapsed .fa-minus {
   display: none;
