@@ -736,6 +736,10 @@
    centerStudentInvolvementMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", centerForStudentInvolvementObj.linkName);
    });
+   // Click Listener for Pin Labels
+   centerStudentInvolvementMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Intramural Sports  ***  //
    var intramuralMarker = new google.maps.Marker({
@@ -765,6 +769,10 @@
    // create mouseover listener for marker label
    intramuralMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", intramuralObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   intramuralMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
    //  ***  International Student Center  ***  //
@@ -796,6 +804,10 @@
    internationalStudentCenterMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", internationalStudentCenterObj.linkName);
    });
+   // Click Listener for Pin Labels
+   internationalStudentCenterMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Office of Multicultural Affairs  ***  //
    var omaMarker = new google.maps.Marker({
@@ -825,6 +837,10 @@
    // create mouseover listener for marker label
    omaMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", omaObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   omaMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
    //  ***  Student Government at SeattleU  ***  //
@@ -856,6 +872,10 @@
    sgsuMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", sgsuObj.linkName);
    });
+   // Click Listener for Pin Labels
+   sgsuMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Wellness and Health Promotion  ***  //
    var wellnessHealthPromotionMarker = new google.maps.Marker({
@@ -885,6 +905,10 @@
    // create mouseover listener for marker label
    wellnessHealthPromotionMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", wellnessHealthPromotionObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   wellnessHealthPromotionMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
    //  *** Markers for Involvement Opportunities end ***  //
 
@@ -921,6 +945,10 @@
    cupcakeRoyaleMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", cupcakeRoyaleObj.linkName);
    });
+   // Click Listener for Pin Labels
+   cupcakeRoyaleMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Mr. Saigon  ***  //
    var mrSaigonMarker = new google.maps.Marker({
@@ -950,6 +978,10 @@
    // create mouseover listener for marker label
    mrSaigonMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", mrSaigonObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   mrSaigonMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
    //  ***  Southpaw Pizza  ***  //
@@ -981,6 +1013,10 @@
    southPawMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", southPawObj.linkName);
    });
+   // Click Listener for Pin Labels
+   southPawMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  The Bottom Line  ***  //
    var theBottomLineMarker = new google.maps.Marker({
@@ -1010,6 +1046,10 @@
    // create mouseover listener for marker label
    theBottomLineMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", theBottomLineObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   theBottomLineMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
    //  ***  The Byte  ***  //
@@ -1041,6 +1081,10 @@
    theByteMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", theByteObj.linkName);
    });
+   // Click Listener for Pin Labels
+   theByteMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  The Side Bar  ***  //
    var theSideBarMarker = new google.maps.Marker({
@@ -1071,6 +1115,10 @@
    theSideBarMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", theSideBarObj.linkName);
    });
+   // Click Listener for Pin Labels
+   theSideBarMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Student Center Dining Options  ***  //
    var stcnDiningMarker = new google.maps.Marker({
@@ -1100,6 +1148,10 @@
    // create mouseover listener for marker label
    stcnDiningMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", stcnDiningObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   stcnDiningMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
    //  *** End of Food/Blue Markers ***  //
 
