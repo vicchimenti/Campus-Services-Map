@@ -39,34 +39,34 @@
 
  // *** Floating InfoPopup  ***  //
  function modifyPinLabel(type, header, text) {
-   $("#POITextBox").show();
-   $("#POITextBox h5").html(header);
-   $("#POITextBox p").html(text);
-   $("#POITextBox").css("padding","5px 15px 15px 15px");
+   $("#PinLabel").show();
+   $("#PinLabel h5").html(header);
+   $("#PinLabel p").html(text);
+   $("#PinLabel").css("padding","5px 15px 15px 15px");
 
    // Physical Space/Yellow
    if(type == 0){
-     $("#POITextBox").css("border-left", "5px solid #fdb913");
-     $("#POITextBox h5").css("color", "#333333");
+     $("#PinLabel").css("border-left", "5px solid #fdb913");
+     $("#PinLabel h5").css("color", "#333333");
    }
 	// Services/Green
 	if(type == 1){
-    $("#POITextBox").css("border-left", "5px solid #55b31b");
-    $("#POITextBox h5").css("color", "#333333");
+    $("#PinLabel").css("border-left", "5px solid #55b31b");
+    $("#PinLabel h5").css("color", "#333333");
 	}
   // Involvement/Red
 	if(type == 2){
-    $("#POITextBox").css("border-left", "5px solid #aa0000");
-    $("#POITextBox h5").css("color", "#aa0000");
+    $("#PinLabel").css("border-left", "5px solid #aa0000");
+    $("#PinLabel h5").css("color", "#aa0000");
    }
   //  Food/Blue
 	if(type == 3){
-    $("#POITextBox").css("border-left", "5px solid #003282");
-    $("#POITextBox h5").css("color", "#003282");
+    $("#PinLabel").css("border-left", "5px solid #003282");
+    $("#PinLabel h5").css("color", "#003282");
    }
    // Pin Label Margins
-   var margin = ($("#POITextBox").height() * -1) - 30;
-   $("#POITextBox").css("margin", (margin + "px auto 10px auto"));
+   var margin = ($("#PinLabel").height() * -1) - 30;
+   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
  }
 
 
@@ -250,7 +250,7 @@
    });
    // Click Listener for Pin Labels
    commuterShowersMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
 
@@ -285,7 +285,7 @@
    });
    // Click Listener for Pin Labels
    lemieuxLibraryMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  *** McGoldrick Collegium  ***  //
@@ -319,7 +319,7 @@
    });
    // Click Listener for Pin Labels
    mcgoldrickCollegiumMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
 
@@ -354,7 +354,7 @@
    });
    // Click Listener for Pin Labels
    outreachCenterMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
    //  *** Physical Spaces markers end ***  //
 
@@ -393,7 +393,7 @@
    });
    // Click Listener for Pin Labels
    campusStoreMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Career Engagement Office  ***  //
@@ -427,7 +427,7 @@
    });
    // Click Listener for Pin Labels
    careerEngagementOfficeMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
 
@@ -462,7 +462,7 @@
    });
    // Click Listener for Pin Labels
    capsMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Learning Assistance Program  ***  //
@@ -496,7 +496,7 @@
    });
    // Click Listener for Pin Labels
    learningAssistanceProgramsMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Media Production Center  ***  //
@@ -530,7 +530,7 @@
    });
    // Click Listener for Pin Labels
    mpcMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Public Safety  ***  //
@@ -564,7 +564,7 @@
    });
    // Click Listener for Pin Labels
    publicSafetyMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Redhawk Axis  ***  //
@@ -598,7 +598,7 @@
    });
    // Click Listener for Pin Labels
    redhawkAxisMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Redhawk Resource Desk  ***  //
@@ -632,7 +632,7 @@
    });
    // Click Listener for Pin Labels
    redhawkResourceHubDeskMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  SU Supercopy  ***  //
@@ -666,7 +666,7 @@
    });
    // Click Listener for Pin Labels
    supercopyMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Fitness Center  ***  //
@@ -700,7 +700,7 @@
    });
    // Click Listener for Pin Labels
    universityRecreationMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
    //  *** Services Markers end ***  //
 
@@ -739,7 +739,7 @@
    });
    // Click Listener for Pin Labels
    centerStudentInvolvementMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Intramural Sports  ***  //
@@ -773,7 +773,7 @@
    });
    // Click Listener for Pin Labels
    intramuralMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  International Student Center  ***  //
@@ -807,7 +807,7 @@
    });
    // Click Listener for Pin Labels
    internationalStudentCenterMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Office of Multicultural Affairs  ***  //
@@ -841,7 +841,7 @@
    });
    // Click Listener for Pin Labels
    omaMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Student Government at SeattleU  ***  //
@@ -875,7 +875,7 @@
    });
    // Click Listener for Pin Labels
    sgsuMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Wellness and Health Promotion  ***  //
@@ -909,7 +909,7 @@
    });
    // Click Listener for Pin Labels
    wellnessHealthPromotionMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
    //  *** Markers for Involvement Opportunities end ***  //
 
@@ -948,7 +948,7 @@
    });
    // Click Listener for Pin Labels
    cupcakeRoyaleMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Mr. Saigon  ***  //
@@ -982,7 +982,7 @@
    });
    // Click Listener for Pin Labels
    mrSaigonMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Southpaw Pizza  ***  //
@@ -1016,7 +1016,7 @@
    });
    // Click Listener for Pin Labels
    southPawMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  The Bottom Line  ***  //
@@ -1050,7 +1050,7 @@
    });
    // Click Listener for Pin Labels
    theBottomLineMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  The Byte  ***  //
@@ -1084,7 +1084,7 @@
    });
    // Click Listener for Pin Labels
    theByteMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  The Side Bar  ***  //
@@ -1118,7 +1118,7 @@
    });
    // Click Listener for Pin Labels
    theSideBarMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
 
    //  ***  Student Center Dining Options  ***  //
@@ -1152,7 +1152,7 @@
    });
    // Click Listener for Pin Labels
    stcnDiningMarker.addListener('mouseout', function() {
-     $("#POITextBox").hide();
+     $("#PinLabel").hide();
    });
    //  *** End of Food/Blue Markers ***  //
 
