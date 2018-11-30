@@ -210,7 +210,7 @@
      modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
    });
    // Click Listener for Pin Labels
-   commuterShowersMarker.addListener('mouseout', function() {
+   seattleuMarker.addListener('mouseout', function() {
      $("#POITextBox").hide();
    });
 
