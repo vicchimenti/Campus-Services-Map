@@ -54,19 +54,6 @@
 	color:#333333;
 	text-decoration:underline;
 }
-
-
-
-
-
-
-
-
-
-#mapBlock{
-	background-color: #aa0000;
-	border-bottom:10px solid #aa0000;
-}
 #PinText{
 	padding:30px 8.3333%;
 	text-align: center;
@@ -79,9 +66,6 @@
 #PinText p{
 	color:#ffffff;
 	margin:0;
-}
-#SeattlePOIMap{
-	height: 600px;
 }
 #PinLabel{
 	overflow: hidden;
