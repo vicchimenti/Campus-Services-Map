@@ -205,6 +205,14 @@
      map.setCenter(seattleuMarker.getPosition());
      modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
    });
+   // create mouseover listener for marker label
+   seattleuMarker.addListener('mouseover', function() {
+     modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
+   });
+   // Click Listener for Pin Labels
+   commuterShowersMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
 
 
@@ -274,6 +282,10 @@
    lemieuxLibraryMarker.addListener('mouseover', function() {
      modifyPinLabel(0, "Physical Spaces", lemieuxLibraryObj.linkName);
    });
+   // Click Listener for Pin Labels
+   lemieuxLibraryMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  *** McGoldrick Collegium  ***  //
    var mcgoldrickCollegiumMarker = new google.maps.Marker({
@@ -303,6 +315,10 @@
    // create mouseover listener for marker label
    mcgoldrickCollegiumMarker.addListener('mouseover', function() {
      modifyPinLabel(0, "Physical Spaces", mcgoldrickCollegiumObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   mcgoldrickCollegiumMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
 
@@ -334,6 +350,10 @@
    // create mouseover listener for marker label
    outreachCenterMarker.addListener('mouseover', function() {
      modifyPinLabel(0, "Physical Spaces", outreachCenterObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   outreachCenterMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
    //  *** Physical Spaces markers end ***  //
 
@@ -370,6 +390,10 @@
    campusStoreMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", campusStoreObj.linkName);
    });
+   // Click Listener for Pin Labels
+   campusStoreMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Career Engagement Office  ***  //
    var careerEngagementOfficeMarker = new google.maps.Marker({
@@ -400,6 +424,11 @@
    careerEngagementOfficeMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", careerEngagementOfficeObj.linkName);
    });
+   // Click Listener for Pin Labels
+   careerEngagementOfficeMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
+
 
    //  ***  Counseling and Psychological Services  ***  //
    var capsMarker = new google.maps.Marker({
@@ -429,6 +458,10 @@
    // create mouseover listener for marker label
    capsMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", capsObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   capsMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
    //  ***  Learning Assistance Program  ***  //
@@ -460,6 +493,10 @@
    learningAssistanceProgramsMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", learningAssistanceProgramsObj.linkName);
    });
+   // Click Listener for Pin Labels
+   learningAssistanceProgramsMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Media Production Center  ***  //
    var mpcMarker = new google.maps.Marker({
@@ -489,6 +526,10 @@
    // create mouseover listener for marker label
    mpcMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", mpcObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   mpcMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
    //  ***  Public Safety  ***  //
@@ -520,6 +561,10 @@
    publicSafetyMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", publicSafetyObj.linkName);
    });
+   // Click Listener for Pin Labels
+   publicSafetyMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Redhawk Axis  ***  //
    var redhawkAxisMarker = new google.maps.Marker({
@@ -549,6 +594,10 @@
    // create mouseover listener for marker label
    redhawkAxisMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", redhawkAxisObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   redhawkAxisMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
 
    //  ***  Redhawk Resource Desk  ***  //
@@ -580,6 +629,10 @@
    redhawkResourceHubDeskMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", redhawkResourceHubDeskObj.linkName);
    });
+   // Click Listener for Pin Labels
+   redhawkResourceHubDeskMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  SU Supercopy  ***  //
    var supercopyMarker = new google.maps.Marker({
@@ -610,6 +663,10 @@
    supercopyMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", superCopyObj.linkName);
    });
+   // Click Listener for Pin Labels
+   supercopyMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
+   });
 
    //  ***  Fitness Center  ***  //
    var universityRecreationMarker = new google.maps.Marker({
@@ -639,6 +696,10 @@
    // create mouseover listener for marker label
    universityRecreationMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", universityRecreationObj.linkName);
+   });
+   // Click Listener for Pin Labels
+   universityRecreationMarker.addListener('mouseout', function() {
+     $("#POITextBox").hide();
    });
    //  *** Services Markers end ***  //
 
