@@ -154,10 +154,10 @@
    map.addListener('click', function() {
      $("#POITextBox").hide();
    });
-   // Click Listener for Text Box
-   map.addListener('click', function() {
-     $("#POITextBox").hide();
-   });
+   // // Click Listener for Text Box
+   // map.addListener('click', function() {
+   //   $("#POITextBox").hide();
+   // });
    //  *** Map style end ***  //
 
 
