@@ -55,19 +55,7 @@
 	text-decoration:underline;
 }
 
-#PinText{
-	padding:30px 8.3333%;
-	text-align: center;
-}
-#PinText h2{
-	color:#ffffff;
-	font-family: 'Roboto Slab', serif;
-	margin: 0;
-}
-#PinText p{
-	color:#ffffff;
-	margin:0;
-}
+
 #PinLabel{
 	overflow: hidden;
 	position:relative;
@@ -103,4 +91,17 @@
 #PinLabel a:hover{
 	color:#333333;
 	text-decoration:underline;
+}
+#PinText{
+	padding:30px 8.3333%;
+	text-align: left;
+}
+#PinText h2{
+	color:#ffffff;
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+}
+#PinText p{
+	color:#ffffff;
+	margin:0;
 }
