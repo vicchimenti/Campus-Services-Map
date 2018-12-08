@@ -1,0 +1,46 @@
+.categoryLabel {
+    min-height: 30px;
+    margin: 15px 0 15px 10px;
+}
+#categoryOne .categoryLabel {
+    background: url(/media/student-development/Marker_Yellow.png) no-repeat 0 center;
+}
+#categoryTwo .categoryLabel {
+    background: url(/media/student-development/Marker_Green.png) no-repeat 0 center;
+}
+#categoryThree .categoryLabel {
+    background: url(/media/student-development/Marker_Red.png) no-repeat 0 center;
+}
+#categoryFour .categoryLabel {
+    background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
+}
+
+.categoryLabel button {
+    color: #aa0000;
+    font-size: 2.0rem;
+    line-height: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    min-height: 60px;
+    padding: 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.categoryLabel .fa-plus {
+  display: none;
+}
+.categoryLabel .collapsed .fa-plus {
+  color:  #aa0000;
+  background-color: inherit;
+  display: initial;
+}
+.categoryLabel .fa-minus {
+  color:  #aa0000;
+  background-color: inherit;
+  display: inline-block;
+}
+.categoryLabel .collapsed .fa-minus {
+  display: none;
+}
