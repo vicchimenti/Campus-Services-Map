@@ -243,6 +243,7 @@
      map.setZoom(19);
      map.setCenter(commuterShowersMarker.getPosition());
      modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    commuterShowersMarker.addListener('mouseover', function() {
