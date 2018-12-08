@@ -1,3 +1,4 @@
+
 #mapBlock{
 	background-color: #aa0000;
 	border-bottom:10px solid #aa0000;
@@ -104,4 +105,55 @@
 #PinText p{
 	color:#ffffff;
 	margin:0;
+}
+
+
+
+
+.categoryLabel {
+    min-height: 30px;
+    margin: 15px 0 15px 10px;
+}
+#categoryOne .categoryLabel {
+    background: url(/media/student-development/Marker_Yellow.png) no-repeat 0 center;
+}
+#categoryTwo .categoryLabel {
+    background: url(/media/student-development/Marker_Green.png) no-repeat 0 center;
+}
+#categoryThree .categoryLabel {
+    background: url(/media/student-development/Marker_Red.png) no-repeat 0 center;
+}
+#categoryFour .categoryLabel {
+    background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button {
+    color: #aa0000;
+    display: inline-block;
+    font-size: 2.0rem;
+    line-height: 20px;
+    min-height: 60px;
+    padding: 20px 20px 20px 35px;
+    text-align: left;
+    text-decoration: none;
+}
+#accordionWrapper .categoryWrapper .categoryLabel button:hover span {
+  text-decoration: underline;
+}
+#accordionWrapper .categoryWrapper .categoryLabel button .fas {
+  background-color: inherit;
+  color:  #aa0000;
+  padding-left:5px;
+}
+#accordionWrapper .categoryWrapper .categoryLabel button .fa-plus {
+  display: none;
+}
+#accordionWrapper .categoryWrapper .categoryLabel button.collapsed .fa-plus {
+  display: initial;
+}
+#accordionWrapper .categoryWrapper .categoryLabel button .fa-minus {
+  display: inline-block;
+}
+#accordionWrapper .categoryWrapper .categoryLabel button.collapsed .fa-minus {
+  display: none;
 }
