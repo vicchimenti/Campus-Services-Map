@@ -12,22 +12,22 @@
 
    // Physical Space/Yellow
    if(type == 0){
-    $("#POITextBox").css("border-left", "5px solid #fdb913");
+    $("#POITextBox").css("border-left", "5px solid #FDB913");
     $("#POITextBox h5").css("color", "#333333");
    }
 	// Services/Green
 	if(type == 1){
-	$("#POITextBox").css("border-left", "5px solid #55b31b");
+	$("#POITextBox").css("border-left", "5px solid #6CCB3F");
     $("#POITextBox h5").css("color", "#333333");
 	}
   // Involvement/Red
 	if(type == 2){
-    $("#POITextBox").css("border-left", "5px solid #aa0000");
+    $("#POITextBox").css("border-left", "5px solid #EF4135");
     $("#POITextBox h5").css("color", "#aa0000");
    }
   //  Food/Blue
 	if(type == 3){
-    $("#POITextBox").css("border-left", "5px solid #003282");
+    $("#POITextBox").css("border-left", "5px solid #47C3D3");
     $("#POITextBox h5").css("color", "#003282");
    }
    // Text Box Margins
@@ -46,22 +46,22 @@
 
    // Physical Space/Yellow
    if(type == 0){
-     $("#PinLabel").css("border-left", "5px solid #fdb913");
+     $("#PinLabel").css("border-left", "5px solid #FDB913");
      $("#PinLabel h5").css("color", "#333333");
    }
 	// Services/Green
 	if(type == 1){
-    $("#PinLabel").css("border-left", "5px solid #55b31b");
+    $("#PinLabel").css("border-left", "5px solid #6CCB3F");
     $("#PinLabel h5").css("color", "#333333");
 	}
   // Involvement/Red
 	if(type == 2){
-    $("#PinLabel").css("border-left", "5px solid #aa0000");
+    $("#PinLabel").css("border-left", "5px solid #EF4135");
     $("#PinLabel h5").css("color", "#aa0000");
    }
   //  Food/Blue
 	if(type == 3){
-    $("#PinLabel").css("border-left", "5px solid #003282");
+    $("#PinLabel").css("border-left", "5px solid #47C3D3");
     $("#PinLabel h5").css("color", "#003282");
    }
    // Pin Label Margins
@@ -1214,9 +1214,4 @@
 
    //  *** End of Google Map JavaScript ***  //
  }
-
-
-
-
-
 //eof
