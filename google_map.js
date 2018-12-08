@@ -1,5 +1,5 @@
 // *** Begin Google Map JS ***  //
-// *** Last Modified 11/30/2018 *** ///
+// *** Last Modified 12/7/2018 *** ///
 
 
 
@@ -154,10 +154,10 @@
    map.addListener('click', function() {
      $("#POITextBox").hide();
    });
-   // // Click Listener for Text Box
-   // map.addListener('click', function() {
-   //   $("#POITextBox").hide();
-   // });
+   // Click Listener for Text Box
+   map.addListener('click', function() {
+     $("#PinLabel").hide();
+   });
    //  *** Map style end ***  //
 
 
@@ -248,6 +248,7 @@
    // create mouseover listener for marker label
    commuterShowersMarker.addListener('mouseover', function() {
      modifyPinLabel(0, "Physical Spaces", commuterShowersObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    commuterShowersMarker.addListener('mouseout', function() {
@@ -279,10 +280,12 @@
      map.setZoom(18);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    lemieuxLibraryMarker.addListener('mouseover', function() {
      modifyPinLabel(0, "Physical Spaces", lemieuxLibraryObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    lemieuxLibraryMarker.addListener('mouseout', function() {
@@ -313,10 +316,12 @@
      map.setZoom(18);
      map.setCenter(mcgoldrickCollegiumMarker.getPosition());
      modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    mcgoldrickCollegiumMarker.addListener('mouseover', function() {
      modifyPinLabel(0, "Physical Spaces", mcgoldrickCollegiumObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    mcgoldrickCollegiumMarker.addListener('mouseout', function() {
@@ -348,10 +353,12 @@
      map.setZoom(19);
      map.setCenter(outreachCenterMarker.getPosition());
      modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    outreachCenterMarker.addListener('mouseover', function() {
      modifyPinLabel(0, "Physical Spaces", outreachCenterObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    outreachCenterMarker.addListener('mouseout', function() {
@@ -387,10 +394,12 @@
      map.setZoom(18);
      map.setCenter(campusStoreMarker.getPosition());
      modifyTextBox(1, campusStoreObj.linkName, campusStoreObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    campusStoreMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", campusStoreObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    campusStoreMarker.addListener('mouseout', function() {
@@ -421,10 +430,12 @@
      map.setZoom(19);
      map.setCenter(careerEngagementOfficeMarker.getPosition());
      modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    careerEngagementOfficeMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", careerEngagementOfficeObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    careerEngagementOfficeMarker.addListener('mouseout', function() {
@@ -456,10 +467,12 @@
      map.setZoom(18);
      map.setCenter(capsMarker.getPosition());
      modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    capsMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", capsObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    capsMarker.addListener('mouseout', function() {
@@ -490,10 +503,12 @@
      map.setZoom(18);
      map.setCenter(learningAssistanceProgramsMarker.getPosition());
      modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    learningAssistanceProgramsMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", learningAssistanceProgramsObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    learningAssistanceProgramsMarker.addListener('mouseout', function() {
@@ -524,10 +539,12 @@
      map.setZoom(18);
      map.setCenter(mpcMarker.getPosition());
      modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    mpcMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", mpcObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    mpcMarker.addListener('mouseout', function() {
@@ -558,10 +575,12 @@
      map.setZoom(18);
      map.setCenter(publicSafetyMarker.getPosition());
      modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    publicSafetyMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", publicSafetyObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    publicSafetyMarker.addListener('mouseout', function() {
@@ -592,10 +611,12 @@
      map.setZoom(18);
      map.setCenter(redhawkAxisMarker.getPosition());
      modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    redhawkAxisMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", redhawkAxisObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    redhawkAxisMarker.addListener('mouseout', function() {
@@ -626,10 +647,12 @@
      map.setZoom(19);
      map.setCenter(redhawkResourceHubDeskMarker.getPosition());
      modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    redhawkResourceHubDeskMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", redhawkResourceHubDeskObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    redhawkResourceHubDeskMarker.addListener('mouseout', function() {
@@ -660,10 +683,12 @@
      map.setZoom(17);
      map.setCenter(supercopyMarker.getPosition());
      modifyTextBox(1, superCopyObj.linkName, superCopyObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    supercopyMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", superCopyObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    supercopyMarker.addListener('mouseout', function() {
@@ -694,10 +719,12 @@
      map.setZoom(18);
      map.setCenter(universityRecreationMarker.getPosition());
      modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    universityRecreationMarker.addListener('mouseover', function() {
      modifyPinLabel(1, "Student Services", universityRecreationObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    universityRecreationMarker.addListener('mouseout', function() {
@@ -733,10 +760,12 @@
      map.setZoom(19);
      map.setCenter(centerStudentInvolvementMarker.getPosition());
      modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    centerStudentInvolvementMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", centerForStudentInvolvementObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    centerStudentInvolvementMarker.addListener('mouseout', function() {
@@ -767,10 +796,12 @@
      map.setZoom(18);
      map.setCenter(intramuralMarker.getPosition());
      modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    intramuralMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", intramuralObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    intramuralMarker.addListener('mouseout', function() {
@@ -801,10 +832,12 @@
      map.setZoom(18);
      map.setCenter(internationalStudentCenterMarker.getPosition());
      modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    internationalStudentCenterMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", internationalStudentCenterObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    internationalStudentCenterMarker.addListener('mouseout', function() {
@@ -835,10 +868,12 @@
      map.setZoom(18);
      map.setCenter(omaMarker.getPosition());
      modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    omaMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", omaObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    omaMarker.addListener('mouseout', function() {
@@ -869,10 +904,12 @@
      map.setZoom(19);
      map.setCenter(sgsuMarker.getPosition());
      modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    sgsuMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", sgsuObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    sgsuMarker.addListener('mouseout', function() {
@@ -903,10 +940,12 @@
      map.setZoom(19);
      map.setCenter(wellnessHealthPromotionMarker.getPosition());
      modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    wellnessHealthPromotionMarker.addListener('mouseover', function() {
      modifyPinLabel(2, "Involvement Opportunities", wellnessHealthPromotionObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    wellnessHealthPromotionMarker.addListener('mouseout', function() {
@@ -942,10 +981,12 @@
      map.setZoom(18);
      map.setCenter(cupcakeRoyaleMarker.getPosition());
      modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    cupcakeRoyaleMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", cupcakeRoyaleObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    cupcakeRoyaleMarker.addListener('mouseout', function() {
@@ -976,10 +1017,12 @@
      map.setZoom(18);
      map.setCenter(mrSaigonMarker.getPosition());
      modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    mrSaigonMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", mrSaigonObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    mrSaigonMarker.addListener('mouseout', function() {
@@ -1010,10 +1053,12 @@
      map.setZoom(18);
      map.setCenter(southPawMarker.getPosition());
      modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    southPawMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", southPawObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    southPawMarker.addListener('mouseout', function() {
@@ -1044,10 +1089,12 @@
      map.setZoom(18);
      map.setCenter(theBottomLineMarker.getPosition());
      modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    theBottomLineMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", theBottomLineObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    theBottomLineMarker.addListener('mouseout', function() {
@@ -1078,10 +1125,12 @@
      map.setZoom(18);
      map.setCenter(theByteMarker.getPosition());
      modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    theByteMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", theByteObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    theByteMarker.addListener('mouseout', function() {
@@ -1112,10 +1161,12 @@
      map.setZoom(18);
      map.setCenter(theSideBarMarker.getPosition());
      modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    theSideBarMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", theSideBarObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    theSideBarMarker.addListener('mouseout', function() {
@@ -1146,10 +1197,12 @@
      map.setZoom(18);
      map.setCenter(stcnDiningMarker.getPosition());
      modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
+     $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    stcnDiningMarker.addListener('mouseover', function() {
      modifyPinLabel(3, "Food on or Near Campus", stcnDiningObj.linkName);
+     $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
    stcnDiningMarker.addListener('mouseout', function() {
