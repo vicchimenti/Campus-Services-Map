@@ -307,7 +307,7 @@
    var mcgoldrickCollegiumObj = {linkId: mcgoldrickCollegiumLink, linkName: 'McGoldrick Collegium', linkDesc: "<a href='https://www.seattleu.edu/student-outreach/adult-learners/mcgoldrick-collegium/' target='_blank'>McGoldrick Collegium</a>, located in Hunthausen Hall, is the home for graduate students and adult learners over the age of 25. The space is staffed by current SU students and offers a comfortable study space and multiple events and programs throughout the year. For a list of events and to stay connected please visit our <a href='https://www.facebook.com/SUcollegia/' target='_blank'>Facebook</a> and <a href='https://orgsync.com/161729/chapter' target='_blank'>ConnectSU</a> pages."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(mcgoldrickCollegiumLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(mcgoldrickCollegiumMarker.getPosition());
      modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
    });
