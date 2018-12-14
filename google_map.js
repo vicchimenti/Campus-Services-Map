@@ -1149,7 +1149,7 @@
    // create variable to store b-coloumn link ID
    var theSideBarLink = document.getElementById('theSideBar');
    // create object to store Info Box attributes
-   var theSideBarObj = {linkId: theSideBarLink, linkName: 'The Sidebar', linkDesc: "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
+   var theSideBarObj = {linkId: theSideBarLink, linkName: 'The Sidebar', linkDesc: "While located in the Law School, this cafe is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(theSideBarLink, 'click', function() {
      map.setZoom(19);
