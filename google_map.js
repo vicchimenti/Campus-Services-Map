@@ -1,5 +1,5 @@
 // *** Begin Google Map JS ***  //
-// *** Last Modified 12/7/2018 *** ///
+// *** Last Modified 12/14/2018 *** ///
 
 
 
@@ -202,7 +202,7 @@
      zIndex: 100,
    });
    seattleuMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(seattleuMarker.getPosition());
      modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
    });
@@ -271,13 +271,13 @@
    var lemieuxLibraryObj = {linkId: lemieuxLibraryLink, linkName: 'Lemieux Library and McGoldrick Learning Commons', linkDesc: "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(lemieuxLibraryLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
    });
    // create click listener for marker
    lemieuxLibraryMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(lemieuxLibraryMarker.getPosition());
      modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
      $("#PinLabel").hide();
@@ -313,7 +313,7 @@
    });
    // create click listener for marker
    mcgoldrickCollegiumMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(mcgoldrickCollegiumMarker.getPosition());
      modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
      $("#PinLabel").hide();
@@ -385,13 +385,13 @@
    var campusStoreObj = {linkId: campusStoreLink, linkName: 'Campus Store', linkDesc: "Located at 12th and Madison, you can buy, rent, and sell your textbooks, and get all your Seattle U swag, at the <a href='https://www.seattleu.edu/campus-store/' target='_blank'>Campus Store</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(campusStoreLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(campusStoreMarker.getPosition());
      modifyTextBox(1, campusStoreObj.linkName, campusStoreObj.linkDesc);
    });
    // create click listener for marker
    campusStoreMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(campusStoreMarker.getPosition());
      modifyTextBox(1, campusStoreObj.linkName, campusStoreObj.linkDesc);
      $("#PinLabel").hide();
@@ -458,13 +458,13 @@
    var capsObj = {linkId: capsLink, linkName: 'Counseling and Psychological Services (CAPS)', linkDesc: "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(capsLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(capsMarker.getPosition());
      modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
    });
    // create click listener for marker
    capsMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(capsMarker.getPosition());
      modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
      $("#PinLabel").hide();
@@ -494,13 +494,13 @@
    var learningAssistanceProgramsObj = {linkId: learningAssistanceProgramsLink, linkName: 'Learning Assistance Programs & The Writing Center', linkDesc: "Both located on the second floor of the Lemieux Library, the <a href='https://www.seattleu.edu/writingcenter/' target='_blank'>Writing Center</a> and <a href='https://www.seattleu.edu/learning-assistance/' target='_blank'>Learning Assistance Programs</a> offer one-on-one sessions and workshops to help you become a better writer and learner."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(learningAssistanceProgramsLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(learningAssistanceProgramsMarker.getPosition());
      modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
    });
    // create click listener for marker
    learningAssistanceProgramsMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(learningAssistanceProgramsMarker.getPosition());
      modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
      $("#PinLabel").hide();
@@ -530,13 +530,13 @@
    var mpcObj = {linkId: mpcLink, linkName: 'Media Production Center', linkDesc: "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(mpcLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(mpcMarker.getPosition());
      modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
    });
    // create click listener for marker
    mpcMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(mpcMarker.getPosition());
      modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
      $("#PinLabel").hide();
@@ -566,13 +566,13 @@
    var publicSafetyObj = {linkId: publicSafetyLink, linkName: 'Public Safety', linkDesc: "Located in University Services 102, open 8:30am-4:30pm. 24-Hour Emergency Line:  (206) 296-5911; 24-Hour Non-Emergency Line:  (206) 296-5990; Business Line: (206) 296-5992; Email: <a href='mailto:publicsafety@seattleu.edu'>publicsafety@seattleu.edu</a>."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(publicSafetyLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(publicSafetyMarker.getPosition());
      modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
    });
    // create click listener for marker
    publicSafetyMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(publicSafetyMarker.getPosition());
      modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
      $("#PinLabel").hide();
@@ -602,13 +602,13 @@
    var redhawkAxisObj = {linkId: redhawkAxisLink, linkName: 'Redhawk Axis', linkDesc: "Located on the first floor of the University Services building, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!"};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(redhawkAxisLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(redhawkAxisMarker.getPosition());
      modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
    });
    // create click listener for marker
    redhawkAxisMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(redhawkAxisMarker.getPosition());
      modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
      $("#PinLabel").hide();
@@ -674,13 +674,13 @@
    var superCopyObj = {linkId: superCopyLink, linkName: 'SUperCopy', linkDesc: "Located in PAVL 010, Supercopy offers multiple services to students, such as printing, copying, mailing, and making your SU ID card. They also sell stamps and course packs. They take cash, check or card for payment. You can mail things from campus through this office! Perfect for when you need to mail back a rented textbook. Pick up time for USPS is 2pm Mon-Fri."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(superCopyLink, 'click', function() {
-     map.setZoom(17);
+     map.setZoom(19);
      map.setCenter(supercopyMarker.getPosition());
      modifyTextBox(1, superCopyObj.linkName, superCopyObj.linkDesc);
    });
    // create click listener for marker
    supercopyMarker.addListener('click', function() {
-     map.setZoom(17);
+     map.setZoom(19);
      map.setCenter(supercopyMarker.getPosition());
      modifyTextBox(1, superCopyObj.linkName, superCopyObj.linkDesc);
      $("#PinLabel").hide();
@@ -710,13 +710,13 @@
    var universityRecreationObj = {linkId: universityRecreationLink, linkName: 'William F. Eisiminger Fitness Center', linkDesc: "Located in the Redhawk Center, the Rec Center offers fitness classes, a weight room, cardio floor and studios. Check out their <a href='https://www.seattleu.edu/recreation/' target='_blank'>website</a> for quarterly hours, as well as pool hours."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(universityRecreationLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(universityRecreationMarker.getPosition());
      modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
    });
    // create click listener for marker
    universityRecreationMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(universityRecreationMarker.getPosition());
      modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
      $("#PinLabel").hide();
@@ -787,13 +787,13 @@
    var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(intramuralLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(intramuralMarker.getPosition());
      modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
    });
    // create click listener for marker
    intramuralMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(intramuralMarker.getPosition());
      modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
      $("#PinLabel").hide();
@@ -823,13 +823,13 @@
    var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(internationalStudentCenterLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(internationalStudentCenterMarker.getPosition());
      modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
    });
    // create click listener for marker
    internationalStudentCenterMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(internationalStudentCenterMarker.getPosition());
      modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
      $("#PinLabel").hide();
@@ -859,13 +859,13 @@
    var omaObj = {linkId: omaLink, linkName: 'Office of Multicultural Affairs', linkDesc: "Located in PAVL 180, OMA encourages students to increase their awareness of and engagement with diversity by creating an environment that promotes inclusion and advocacy. This is done through a variety of programs, services, and resources focused on historically marginalized experiences, dynamics of privilege, and social justice."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(omaLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(omaMarker.getPosition());
      modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
    });
    // create click listener for marker
    omaMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(omaMarker.getPosition());
      modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
      $("#PinLabel").hide();
@@ -972,13 +972,13 @@
    var cupcakeRoyaleObj = {linkId: cupcakeRoyaleLink, linkName: 'Cupcake Royale', linkDesc: "Just off campus, at 1111 E Pike St, be sure to visit <a href='https://www.cupcakeroyale.com/' target='_blank'>Cupcake Royale</a> to enjoy fresh baked cupcakes, Stumptown espresso, and Seattle's Best ice cream scoops, sundaes, shakes, and pints! They are open late (to 10am Sun-Thurs and 11pm Fri-Sat) and offer a 10% student discount for SU students."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(cupcakeRoyaleLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(cupcakeRoyaleMarker.getPosition());
      modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
    });
    // create click listener for marker
    cupcakeRoyaleMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(cupcakeRoyaleMarker.getPosition());
      modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
      $("#PinLabel").hide();
@@ -1008,13 +1008,13 @@
    var mrSaigonObj = {linkId: mrSaigonLink, linkName: 'Mr. Saigon', linkDesc: "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(mrSaigonLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(mrSaigonMarker.getPosition());
      modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
    });
    // create click listener for marker
    mrSaigonMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(mrSaigonMarker.getPosition());
      modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
      $("#PinLabel").hide();
@@ -1044,13 +1044,13 @@
    var southPawObj = {linkId: southPawLink, linkName: 'Southpaw', linkDesc: "Located at 926 12th Ave, for great pizza, a great lunch special, and a family friendly atmosphere, this is a great place to eat near campus. Check out their <a href='http://www.southpawpizza.com/' target='_blank'>website</a> for details about their menu and upcoming events. They also offer a student discount of 10%, so remember to bring your SU ID."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(southPawLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(southPawMarker.getPosition());
      modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
    });
    // create click listener for marker
    southPawMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(southPawMarker.getPosition());
      modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
      $("#PinLabel").hide();
@@ -1080,13 +1080,13 @@
    var theBottomLineObj = {linkId: theBottomLineLink, linkName: 'The Bottom Line', linkDesc: "If you have a class in Pigott, stop by The Bottom Line for coffee, baked goods, or a hot sandwich. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(theBottomLineLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(theBottomLineMarker.getPosition());
      modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
    });
    // create click listener for marker
    theBottomLineMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(theBottomLineMarker.getPosition());
      modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
      $("#PinLabel").hide();
@@ -1116,13 +1116,13 @@
    var theByteObj = {linkId: theByteLink, linkName: 'The Byte', linkDesc: "Located on the second floor of the Lemieux Library, The Byte offers a great place to grab a coffee or snack while studying. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(theByteLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(theByteMarker.getPosition());
      modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
    });
    // create click listener for marker
    theByteMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(theByteMarker.getPosition());
      modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
      $("#PinLabel").hide();
@@ -1152,13 +1152,13 @@
    var theSideBarObj = {linkId: theSideBarLink, linkName: 'The Sidebar', linkDesc: "While located in the Law School, this café is open to all at SU. Known for their grilled cheeses, be sure to check out The Side Bar. Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(theSideBarLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(theSideBarMarker.getPosition());
      modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
    });
    // create click listener for marker
    theSideBarMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(theSideBarMarker.getPosition());
      modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
      $("#PinLabel").hide();
@@ -1188,13 +1188,13 @@
    var stcnDiningObj = {linkId: stcnDiningLink, linkName: 'Cherry Street Market and The Hawks Nest', linkDesc: "On the second floor of the Student Center, you will find the <strong>Cherry Street Market</strong>, our main dining hall location on campus; serving a variety of breakfast, lunch, and dinner options every day. On the third floor of the Student Center, check out the <strong>Hawk's Nest Bistro</strong>-a great place to grab a late night meal! Visit the <a href='https://www.dineoncampus.com/seattleu' target='_blank'>Redhawk Dining website</a> for hours and daily menu."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(stcnDiningLink, 'click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(stcnDiningMarker.getPosition());
      modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
    });
    // create click listener for marker
    stcnDiningMarker.addListener('click', function() {
-     map.setZoom(18);
+     map.setZoom(19);
      map.setCenter(stcnDiningMarker.getPosition());
      modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
      $("#PinLabel").hide();
@@ -1214,4 +1214,9 @@
 
    //  *** End of Google Map JavaScript ***  //
  }
+
+
+
+
+
 //eof
