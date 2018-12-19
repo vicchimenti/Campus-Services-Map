@@ -160,7 +160,7 @@
   display: none;
 }
 
-.box-button {
+#standardContent .box-button {
   background-color: #aa0000;
   border: none;
   color: white;
