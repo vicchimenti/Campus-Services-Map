@@ -996,8 +996,8 @@
    //  ***  Mr. Saigon  ***  //
    var mrSaigonMarker = new google.maps.Marker({
      position: {
-       lat: 47.609314,
-       lng: -122.316544
+       lat: 47.60915,
+       lng: -122.3166
      },
      icon: icons['foodIcon'].icon,
      map: map,
@@ -1033,7 +1033,7 @@
    var southPawMarker = new google.maps.Marker({
      position: {
        lat: 47.611189,
-       lng: -122.316465
+       lng: -122.3166
      },
      icon: icons['foodIcon'].icon,
      map: map,
@@ -1214,4 +1214,5 @@
 
    //  *** End of Google Map JavaScript ***  //
  }
+
 //eof
