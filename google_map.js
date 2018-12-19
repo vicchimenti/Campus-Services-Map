@@ -588,38 +588,38 @@
    });
 
    //  ***  Redhawk Axis  ***  //
-   var redhawkAxisMarker = new google.maps.Marker({
+   var redhawkStudentServicesMarker = new google.maps.Marker({
      position: {
-       lat: 47.610037,
-       lng: -122.317502
+       lat: 47.6122,
+       lng: -122.3176
      },
      icon: icons['servicesIcon'].icon,
      map: map,
    });
    // create variable to store b-coloumn link ID
-   var redhawkAxisLink = document.getElementById('redhawkAxis');
+   var redhawkStudentServicesLink = document.getElementById('redhawkStudentServices');
    // create object to store Info Box attributes
-   var redhawkAxisObj = {linkId: redhawkAxisLink, linkName: 'Redhawk Axis', linkDesc: "Located on the first floor of the University Services building, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!"};
+   var redhawkStudentServicesObj = {linkId: redhawkStudentServicesLink, linkName: 'Redhawk Student Services', linkDesc: "Located on the second floor of Vi Hilbert Hall, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!"};
    // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(redhawkAxisLink, 'click', function() {
+   google.maps.event.addDomListener(redhawkStudentServicesLink, 'click', function() {
      map.setZoom(19);
-     map.setCenter(redhawkAxisMarker.getPosition());
-     modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
+     map.setCenter(redhawkStudentServicesMarker.getPosition());
+     modifyTextBox(1, redhawkStudentServicesObj.linkName, redhawkStudentServicesObj.linkDesc);
    });
    // create click listener for marker
-   redhawkAxisMarker.addListener('click', function() {
+   redhawkStudentServicesMarker.addListener('click', function() {
      map.setZoom(19);
-     map.setCenter(redhawkAxisMarker.getPosition());
-     modifyTextBox(1, redhawkAxisObj.linkName, redhawkAxisObj.linkDesc);
+     map.setCenter(redhawkStudentServicesMarker.getPosition());
+     modifyTextBox(1, redhawkStudentServicesObj.linkName, redhawkStudentServicesObj.linkDesc);
      $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
-   redhawkAxisMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", redhawkAxisObj.linkName);
+   redhawkStudentServicesMarker.addListener('mouseover', function() {
+     modifyPinLabel(1, "Student Services", redhawkStudentServicesObj.linkName);
      $("#POITextBox").hide();
    });
    // Click Listener for Pin Labels
-   redhawkAxisMarker.addListener('mouseout', function() {
+   redhawkStudentServicesMarker.addListener('mouseout', function() {
      $("#PinLabel").hide();
    });
 
@@ -1214,9 +1214,4 @@
 
    //  *** End of Google Map JavaScript ***  //
  }
-
-
-
-
-
 //eof
