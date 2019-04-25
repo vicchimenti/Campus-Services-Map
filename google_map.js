@@ -554,8 +554,8 @@
    //  ***  Public Safety  ***  //
    var publicSafetyMarker = new google.maps.Marker({
      position: {
-       lat: 47.610125,
-       lng: -122.317712
+       lat: 47.6090,
+       lng: -122.3145
      },
      icon: icons['servicesIcon'].icon,
      map: map,
