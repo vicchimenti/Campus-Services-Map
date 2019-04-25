@@ -1214,5 +1214,4 @@
 
    //  *** End of Google Map JavaScript ***  //
  }
-
 //eof
