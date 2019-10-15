@@ -7,9 +7,6 @@
 *
 */
 
-// *** Begin Google Map JS ***  //
-// *** Last Modified 4/25/2019 *** ///
-
 
 
  // *** Floating InfoWindow  ***  //
