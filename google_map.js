@@ -1,3 +1,12 @@
+/*****
+*   Victor Chimenti
+*   MSCS 2020
+*   Campus Service Interactive Map
+*   Last Modified 20191015
+*
+*
+*/
+
 // *** Begin Google Map JS ***  //
 // *** Last Modified 4/25/2019 *** ///
 
