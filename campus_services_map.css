@@ -27,12 +27,12 @@
 #VenueTextBox {
 	float: left;
 	overflow: hidden;
-	/* opacity: .75; */
+	opacity: .85;
 	position:relative;
 	z-index:100;
 	width: 85%;
 	background-color:#ffffff;
-	background: rgba(0, 151, 19, 0.1);
+	/* background: rgba(0, 151, 19, 0.8); */
 	padding:0px 25px 0px 25px;
 	border-left:5px solid #ef4135;
 	display:none;
