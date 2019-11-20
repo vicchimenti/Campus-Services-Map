@@ -1,25 +1,30 @@
 
-#mapBlock{
+#mapBlock {
 	background-color: #aa0000;
 	border-bottom:10px solid #aa0000;
 }
-#POIText{
+
+#Map-Title {
 	padding:20px 8.3333%;
 	text-align: center;
 }
-#POIText h2{
+
+#Map-Title h2 {
 	color:#ffffff;
 	font-family: 'Roboto Slab', serif;
 	margin: 0;
 }
-#POIText p{
+
+#Map-Title p {
 	color:#ffffff;
 	margin:0;
 }
+
 #Campus-Services-Map {
 	height: 500px;
 }
-#POITextBox{
+
+#VenueTextBox {
 	overflow: hidden;
 	position:relative;
 	z-index:100;
@@ -33,7 +38,8 @@
 	-moz-box-shadow: 2px 2px 2px 0px #a9a9a9;
 	box-shadow: 2px 2px 2px 0px #a9a9a9;
 }
-#POITextBox h5{
+
+#VenueTextBox h5 {
 	color:#ef4135;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -41,23 +47,25 @@
 	font-size:1.6rem;
 	padding-top:0px;
 }
-#POITextBox p{
+
+#VenueTextBox p {
 	color:#333333;
 	font-family: 'Montserrat', sans-serif;
 	font-weight:300;
 	font-size:1.4rem;
 }
-#POITextBox a{
+
+#VenueTextBox a {
 	color:#008765;
 	text-decoration:underline;
 }
-#POITextBox a:hover{
+
+#VenueTextBox a:hover {
 	color:#333333;
 	text-decoration:underline;
 }
 
-
-#PinLabel{
+#PinLabel {
 	overflow: hidden;
 	position:relative;
 	z-index:100;
@@ -71,7 +79,8 @@
 	-moz-box-shadow: 2px 2px 2px 0px #a9a9a9;
 	box-shadow: 2px 2px 2px 0px #a9a9a9;
 }
-#PinLabel h5{
+
+#PinLabel h5 {
 	color:#ef4135;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -79,30 +88,36 @@
 	font-size:1.6rem;
 	padding-top:0px;
 }
-#PinLabel p{
+
+#PinLabel p {
 	color:#333333;
 	font-family: 'Montserrat', sans-serif;
 	font-weight:300;
 	font-size:1.4rem;
 }
-#PinLabel a{
+
+#PinLabel a {
 	color:#008765;
 	text-decoration:underline;
 }
-#PinLabel a:hover{
+
+#PinLabel a:hover {
 	color:#333333;
 	text-decoration:underline;
 }
-#PinText{
+
+#PinText {
 	padding:30px 8.3333%;
 	text-align: left;
 }
-#PinText h2{
+
+#PinText h2 {
 	color:#ffffff;
 	font-family: 'Roboto Slab', serif;
 	margin: 0;
 }
-#PinText p{
+
+#PinText p {
 	color:#ffffff;
 	margin:0;
 }
@@ -114,15 +129,19 @@
     min-height: 30px;
     margin: 15px 10px 15px 10px;
 }
+
 #categoryOne .categoryLabel {
     background: url(/media/student-development/Marker_Yellow.png) no-repeat 0 center;
 }
+
 #categoryTwo .categoryLabel {
     background: url(/media/student-development/Marker_Green.png) no-repeat 0 center;
 }
+
 #categoryThree .categoryLabel {
     background: url(/media/student-development/Marker_Red.png) no-repeat 0 center;
 }
+
 #categoryFour .categoryLabel {
     background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
 }
@@ -136,26 +155,33 @@
     text-align: left;
     text-decoration: none;
 }
+
 #accordionWrapper .categoryWrapper .categoryLabel button span {
   font-size: 2.0rem;
 }
+
 #accordionWrapper .categoryWrapper .categoryLabel button:hover span {
   text-decoration: underline;
 }
+
 #accordionWrapper .categoryWrapper .categoryLabel button .fas {
   background-color: inherit;
   color:  #aa0000;
   padding-left:	10px;
   display: inline-block;
 }
+
 #accordionWrapper .categoryWrapper .categoryLabel button .fa-plus {
   display: none;
 }
+
 #accordionWrapper .categoryWrapper .categoryLabel button.collapsed .fa-plus {
   display: initial;
 }
+
 #accordionWrapper .categoryWrapper .categoryLabel button .fa-minus {
 }
+
 #accordionWrapper .categoryWrapper .categoryLabel button.collapsed .fa-minus {
   display: none;
 }
