@@ -97,62 +97,6 @@
      fullscreenControl: false,
      mapTypeId: 'satellite',
      zoom: 16,
-
-
-
-
-
-     //  *** Map style from Snazzy Maps (Blue Water) start ***  //
-     styles: [{
-       // Land
-       "featureType": "administrative.land_parcel",
-       "elementType": "labels",
-       "stylers": [{
-         "visibility": "off"
-       }],
-     }, {
-       // Points of Interest
-       "featureType": "poi",
-       "elementType": "labels.text",
-       "stylers": [{
-         "visibility": "off"
-       }],
-     }, {
-       // Businesses
-       "featureType": "poi.business",
-       "stylers": [{
-         "visibility": "off"
-       }],
-     }, {
-       // Roads
-       "featureType": "road",
-       "elementType": "labels.icon",
-       "stylers": [{
-         "visibility": "off"
-       }],
-     }, {
-       // Local Roads
-       "featureType": "road.local",
-       "elementType": "labels",
-       "stylers": [{
-         "visibility": "off"
-       }],
-     }, {
-       // Transit
-       "featureType": "transit",
-       "stylers": [{
-         "visibility": "off"
-       }],
-     }, {
-       // Water
-       "featureType": "water",
-       "elementType": "all",
-       "stylers": [{
-         "color": "#04A9C5"
-       }, {
-         "visibility": "on"
-       }],
-     }],
    });
 
    // Click Listener for Text Box
