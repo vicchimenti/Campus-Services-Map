@@ -77,8 +77,6 @@
 
 
 
-
-
  //  *** Implementation of initialize function ***  //
  function initialize() {
 
@@ -519,6 +517,7 @@
    theSideBarMarker.addListener('mouseout', function() {
      $("#PinLabel").hide();
    });
+
 
    //  ***  Student Center Dining Options  ***  //
    var stcnDiningMarker = new google.maps.Marker({
