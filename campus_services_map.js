@@ -92,7 +92,7 @@
    //  ***  Campus Map Control Settings  ***  //
    var map = new google.maps.Map(document.getElementById('Campus-Services-Map'), {
      center: seattleu,
-     streetViewControl: false,
+     // streetViewControl: false,
      scaleControl: true,
      zoomControl: true,
      mapTypeControl: true,
@@ -156,6 +156,7 @@
        }],
      }],
    });
+
    // Click Listener for Text Box
    map.addListener('click', function() {
      $("#VenueTextBox").hide();
@@ -204,7 +205,7 @@
      position: seattleu,
      icon: icons['seattleUIcon'].icon,
      map: map,
-     optimized: false,
+     // optimized: false,
      zIndex: 100,
    });
    seattleuMarker.addListener('click', function() {
@@ -225,153 +226,153 @@
 
    //  *** Physical Space/yellow Markers start, alphabetized listings ***  //
 
-   //  ***  Commuter Showers  ***  //
-   var commuterShowersMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608331,
-       lng: -122.318721
-     },
-     icon: icons['physicalSpacesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var commuterShowersLink = document.getElementById('commuterShowers');
-   // create object to store Info Box attributes
-   var commuterShowersObj = {linkId: commuterShowersLink, linkName: 'Commuter Showers', linkDesc: "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>Commuter Students Resources webpage</a>."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(commuterShowersLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(commuterShowersMarker.getPosition());
-     modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
-   });
-   // create click listener for marker
-   commuterShowersMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(commuterShowersMarker.getPosition());
-     modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   commuterShowersMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Physical Spaces", commuterShowersObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   commuterShowersMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-
-   //  ***  Lemieux Library   ***  //
-   var lemieuxLibraryMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608963,
-       lng: -122.318996
-     },
-     icon: icons['physicalSpacesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var lemieuxLibraryLink = document.getElementById('lemieuxLibrary');
-   // create object to store Info Box attributes
-   var lemieuxLibraryObj = {linkId: lemieuxLibraryLink, linkName: 'Lemieux Library and McGoldrick Learning Commons', linkDesc: "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(lemieuxLibraryLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(lemieuxLibraryMarker.getPosition());
-     modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
-   });
-   // create click listener for marker
-   lemieuxLibraryMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(lemieuxLibraryMarker.getPosition());
-     modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   lemieuxLibraryMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Physical Spaces", lemieuxLibraryObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   lemieuxLibraryMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  *** McGoldrick Collegium  ***  //
-   var mcgoldrickCollegiumMarker = new google.maps.Marker({
-     position: {
-       lat: 47.611762,
-       lng: -122.318301
-     },
-     icon: icons['physicalSpacesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var mcgoldrickCollegiumLink = document.getElementById('mcgoldrickCollegium');
-   // create object to store Info Box attributes
-   var mcgoldrickCollegiumObj = {linkId: mcgoldrickCollegiumLink, linkName: 'McGoldrick Collegium', linkDesc: "<a href='https://www.seattleu.edu/student-outreach/adult-learners/mcgoldrick-collegium/' target='_blank'>McGoldrick Collegium</a>, located in Hunthausen Hall, is the home for graduate students and adult learners over the age of 25. The space is staffed by current SU students and offers a comfortable study space and multiple events and programs throughout the year. For a list of events and to stay connected please visit our <a href='https://www.facebook.com/SUcollegia/' target='_blank'>Facebook</a> and <a href='https://orgsync.com/161729/chapter' target='_blank'>ConnectSU</a> pages."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(mcgoldrickCollegiumLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(mcgoldrickCollegiumMarker.getPosition());
-     modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
-   });
-   // create click listener for marker
-   mcgoldrickCollegiumMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(mcgoldrickCollegiumMarker.getPosition());
-     modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   mcgoldrickCollegiumMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Physical Spaces", mcgoldrickCollegiumObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   mcgoldrickCollegiumMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-
-   //  ***  Outreach Center  ***  //
-   var outreachCenterMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608319,
-       lng: -122.317772
-     },
-     icon: icons['physicalSpacesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var outreachCenterLink = document.getElementById('outreachCenter');
-   // create object to store Info Box attributes
-   var outreachCenterObj = {linkId: outreachCenterLink, linkName: 'Outreach Center', linkDesc: "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(outreachCenterLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(outreachCenterMarker.getPosition());
-     modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
-   });
-   // create click listener for marker
-   outreachCenterMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(outreachCenterMarker.getPosition());
-     modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   outreachCenterMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Physical Spaces", outreachCenterObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   outreachCenterMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-   //  *** Physical Spaces markers end ***  //
-
+   // //  ***  Commuter Showers  ***  //
+   // var commuterShowersMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608331,
+   //     lng: -122.318721
+   //   },
+   //   icon: icons['physicalSpacesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var commuterShowersLink = document.getElementById('commuterShowers');
+   // // create object to store Info Box attributes
+   // var commuterShowersObj = {linkId: commuterShowersLink, linkName: 'Commuter Showers', linkDesc: "If you are a bicycle commuter, or just want to take a shower after running the track before class, there is a locker room with showers available on campus specifically for commuter students. These showers are located at the west end of the first floor of the Student Center. Bring your campus card and swipe for entry. Find out more on the <a href='https://www.seattleu.edu/student-outreach/commuter-students/commuter-resources/' target='_blank'>Commuter Students Resources webpage</a>."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(commuterShowersLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(commuterShowersMarker.getPosition());
+   //   modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // commuterShowersMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(commuterShowersMarker.getPosition());
+   //   modifyTextBox(0, commuterShowersObj.linkName, commuterShowersObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // commuterShowersMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(0, "Physical Spaces", commuterShowersObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // commuterShowersMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   //
+   // //  ***  Lemieux Library   ***  //
+   // var lemieuxLibraryMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608963,
+   //     lng: -122.318996
+   //   },
+   //   icon: icons['physicalSpacesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var lemieuxLibraryLink = document.getElementById('lemieuxLibrary');
+   // // create object to store Info Box attributes
+   // var lemieuxLibraryObj = {linkId: lemieuxLibraryLink, linkName: 'Lemieux Library and McGoldrick Learning Commons', linkDesc: "The library offers many study areas, quiet reading rooms, and research assistance to all students. Visit the <a href='http://libguides.seattleu.edu/libraryhours' target='_blank'>Library's website</a> to find out their hours. Group study rooms can be reserved using <a href='http://libguides.seattleu.edu/gsr' target='_blank'>these instructions</a>. <a href='https://www.seattleu.edu/library/library-services/study-spaces/' target='_blank'>Check out the full list of the Library's study spaces</a>."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(lemieuxLibraryLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(lemieuxLibraryMarker.getPosition());
+   //   modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // lemieuxLibraryMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(lemieuxLibraryMarker.getPosition());
+   //   modifyTextBox(0, lemieuxLibraryObj.linkName, lemieuxLibraryObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // lemieuxLibraryMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(0, "Physical Spaces", lemieuxLibraryObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // lemieuxLibraryMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  *** McGoldrick Collegium  ***  //
+   // var mcgoldrickCollegiumMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.611762,
+   //     lng: -122.318301
+   //   },
+   //   icon: icons['physicalSpacesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var mcgoldrickCollegiumLink = document.getElementById('mcgoldrickCollegium');
+   // // create object to store Info Box attributes
+   // var mcgoldrickCollegiumObj = {linkId: mcgoldrickCollegiumLink, linkName: 'McGoldrick Collegium', linkDesc: "<a href='https://www.seattleu.edu/student-outreach/adult-learners/mcgoldrick-collegium/' target='_blank'>McGoldrick Collegium</a>, located in Hunthausen Hall, is the home for graduate students and adult learners over the age of 25. The space is staffed by current SU students and offers a comfortable study space and multiple events and programs throughout the year. For a list of events and to stay connected please visit our <a href='https://www.facebook.com/SUcollegia/' target='_blank'>Facebook</a> and <a href='https://orgsync.com/161729/chapter' target='_blank'>ConnectSU</a> pages."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(mcgoldrickCollegiumLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(mcgoldrickCollegiumMarker.getPosition());
+   //   modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // mcgoldrickCollegiumMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(mcgoldrickCollegiumMarker.getPosition());
+   //   modifyTextBox(0, mcgoldrickCollegiumObj.linkName, mcgoldrickCollegiumObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // mcgoldrickCollegiumMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(0, "Physical Spaces", mcgoldrickCollegiumObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // mcgoldrickCollegiumMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   //
+   // //  ***  Outreach Center  ***  //
+   // var outreachCenterMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608319,
+   //     lng: -122.317772
+   //   },
+   //   icon: icons['physicalSpacesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var outreachCenterLink = document.getElementById('outreachCenter');
+   // // create object to store Info Box attributes
+   // var outreachCenterObj = {linkId: outreachCenterLink, linkName: 'Outreach Center', linkDesc: "Located in STCN 110, <a href='https://www.seattleu.edu/student-outreach/resource-spaces/outreach-center/' target='_blank'>The Outreach Center</a> is a community and resource space for members of the Seattle University community who identify with the first-generation college student experience and the student veteran experience."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(outreachCenterLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(outreachCenterMarker.getPosition());
+   //   modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // outreachCenterMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(outreachCenterMarker.getPosition());
+   //   modifyTextBox(0, outreachCenterObj.linkName, outreachCenterObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // outreachCenterMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(0, "Physical Spaces", outreachCenterObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // outreachCenterMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   // //  *** Physical Spaces markers end ***  //
+   //
 
 
    //  *** Services/Green Markers start, alphabetized listings ***  //
@@ -412,222 +413,225 @@
      $("#PinLabel").hide();
    });
 
-   //  ***  Career Engagement Office  ***  //
-   var careerEngagementOfficeMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608853,
-       lng: -122.317784
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var careerEngagementOfficeLink = document.getElementById('careerEngagementOffice');
-   // create object to store Info Box attributes
-   var careerEngagementOfficeObj = {linkId: careerEngagementOfficeLink, linkName: 'Career Engagement Office', linkDesc: "The <a href='https://www.seattleu.edu/careerservices' target='_blank'>Career Engagement Office</a>, located in PAVL 110, works with students at every stage of the career and job process. Career advisors are available to discuss career exploration, job and internship searches, resumes, cover letters, conduct mock interviews, and more."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(careerEngagementOfficeLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(careerEngagementOfficeMarker.getPosition());
-     modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
-   });
-   // create click listener for marker
-   careerEngagementOfficeMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(careerEngagementOfficeMarker.getPosition());
-     modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   careerEngagementOfficeMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", careerEngagementOfficeObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   careerEngagementOfficeMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
+   //
+   // //  ***  Career Engagement Office  ***  //
+   // var careerEngagementOfficeMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608853,
+   //     lng: -122.317784
+   //   },
+   //   icon: icons['servicesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var careerEngagementOfficeLink = document.getElementById('careerEngagementOffice');
+   // // create object to store Info Box attributes
+   // var careerEngagementOfficeObj = {linkId: careerEngagementOfficeLink, linkName: 'Career Engagement Office', linkDesc: "The <a href='https://www.seattleu.edu/careerservices' target='_blank'>Career Engagement Office</a>, located in PAVL 110, works with students at every stage of the career and job process. Career advisors are available to discuss career exploration, job and internship searches, resumes, cover letters, conduct mock interviews, and more."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(careerEngagementOfficeLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(careerEngagementOfficeMarker.getPosition());
+   //   modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // careerEngagementOfficeMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(careerEngagementOfficeMarker.getPosition());
+   //   modifyTextBox(1, careerEngagementOfficeObj.linkName, careerEngagementOfficeObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // careerEngagementOfficeMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(1, "Student Services", careerEngagementOfficeObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // careerEngagementOfficeMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   //
+   // //  ***  Counseling and Psychological Services  ***  //
+   // var capsMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608884,
+   //     lng: -122.317554
+   //   },
+   //   icon: icons['servicesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var capsLink = document.getElementById('caps');
+   // // create object to store Info Box attributes
+   // var capsObj = {linkId: capsLink, linkName: 'Counseling and Psychological Services (CAPS)', linkDesc: "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(capsLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(capsMarker.getPosition());
+   //   modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // capsMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(capsMarker.getPosition());
+   //   modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // capsMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(1, "Student Services", capsObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // capsMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Learning Assistance Program  ***  //
+   // var learningAssistanceProgramsMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608837,
+   //     lng: -122.319127
+   //   },
+   //   icon: icons['servicesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var learningAssistanceProgramsLink = document.getElementById('learningAssistancePrograms');
+   // // create object to store Info Box attributes
+   // var learningAssistanceProgramsObj = {linkId: learningAssistanceProgramsLink, linkName: 'Learning Assistance Programs & The Writing Center', linkDesc: "Both located on the second floor of the Lemieux Library, the <a href='https://www.seattleu.edu/writingcenter/' target='_blank'>Writing Center</a> and <a href='https://www.seattleu.edu/learning-assistance/' target='_blank'>Learning Assistance Programs</a> offer one-on-one sessions and workshops to help you become a better writer and learner."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(learningAssistanceProgramsLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(learningAssistanceProgramsMarker.getPosition());
+   //   modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // learningAssistanceProgramsMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(learningAssistanceProgramsMarker.getPosition());
+   //   modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // learningAssistanceProgramsMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(1, "Student Services", learningAssistanceProgramsObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // learningAssistanceProgramsMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Media Production Center  ***  //
+   // var mpcMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608838,
+   //     lng: -122.318540
+   //   },
+   //   icon: icons['servicesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var mpcLink = document.getElementById('mpc');
+   // // create object to store Info Box attributes
+   // var mpcObj = {linkId: mpcLink, linkName: 'Media Production Center', linkDesc: "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(mpcLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(mpcMarker.getPosition());
+   //   modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // mpcMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(mpcMarker.getPosition());
+   //   modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // mpcMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(1, "Student Services", mpcObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // mpcMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
 
 
-   //  ***  Counseling and Psychological Services  ***  //
-   var capsMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608884,
-       lng: -122.317554
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var capsLink = document.getElementById('caps');
-   // create object to store Info Box attributes
-   var capsObj = {linkId: capsLink, linkName: 'Counseling and Psychological Services (CAPS)', linkDesc: "<a href='https://www.seattleu.edu/caps' target='_blank'>Counseling and Psychological Services (CAPS)</a> is committed to helping students meet the challenges of life during college, graduate and professional school by encouraging healthy personal choices and balanced perspectives. CAPS provides affirmative therapy that values diversity and respects the individual."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(capsLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(capsMarker.getPosition());
-     modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
-   });
-   // create click listener for marker
-   capsMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(capsMarker.getPosition());
-     modifyTextBox(1, capsObj.linkName, capsObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   capsMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", capsObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   capsMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Learning Assistance Program  ***  //
-   var learningAssistanceProgramsMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608837,
-       lng: -122.319127
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var learningAssistanceProgramsLink = document.getElementById('learningAssistancePrograms');
-   // create object to store Info Box attributes
-   var learningAssistanceProgramsObj = {linkId: learningAssistanceProgramsLink, linkName: 'Learning Assistance Programs & The Writing Center', linkDesc: "Both located on the second floor of the Lemieux Library, the <a href='https://www.seattleu.edu/writingcenter/' target='_blank'>Writing Center</a> and <a href='https://www.seattleu.edu/learning-assistance/' target='_blank'>Learning Assistance Programs</a> offer one-on-one sessions and workshops to help you become a better writer and learner."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(learningAssistanceProgramsLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(learningAssistanceProgramsMarker.getPosition());
-     modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
-   });
-   // create click listener for marker
-   learningAssistanceProgramsMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(learningAssistanceProgramsMarker.getPosition());
-     modifyTextBox(1, learningAssistanceProgramsObj.linkName, learningAssistanceProgramsObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   learningAssistanceProgramsMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", learningAssistanceProgramsObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   learningAssistanceProgramsMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Media Production Center  ***  //
-   var mpcMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608838,
-       lng: -122.318540
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var mpcLink = document.getElementById('mpc');
-   // create object to store Info Box attributes
-   var mpcObj = {linkId: mpcLink, linkName: 'Media Production Center', linkDesc: "Located on the first floor of the Lemieux Library, the <a href='https://www.seattleu.edu/library/library-services/media-production-center/' target='_blank'>Media Production Center</a> offers training, workshops, equipment check-out, and support so you can bring to life your original multimedia productions."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(mpcLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(mpcMarker.getPosition());
-     modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
-   });
-   // create click listener for marker
-   mpcMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(mpcMarker.getPosition());
-     modifyTextBox(1, mpcObj.linkName, mpcObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   mpcMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", mpcObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   mpcMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Public Safety  ***  //
-   var publicSafetyMarker = new google.maps.Marker({
-     position: {
-       lat: 47.6090,
-       lng: -122.3145
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var publicSafetyLink = document.getElementById('publicSafety');
-   // create object to store Info Box attributes
-   var publicSafetyObj = {linkId: publicSafetyLink, linkName: 'Public Safety', linkDesc: "Located in University Services 102, open 8:30am-4:30pm. 24-Hour Emergency Line:  (206) 296-5911; 24-Hour Non-Emergency Line:  (206) 296-5990; Business Line: (206) 296-5992; Email: <a href='mailto:publicsafety@seattleu.edu'>publicsafety@seattleu.edu</a>."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(publicSafetyLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(publicSafetyMarker.getPosition());
-     modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
-   });
-   // create click listener for marker
-   publicSafetyMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(publicSafetyMarker.getPosition());
-     modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   publicSafetyMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", publicSafetyObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   publicSafetyMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Redhawk Axis  ***  //
-   var redhawkStudentServicesMarker = new google.maps.Marker({
-     position: {
-       lat: 47.6122,
-       lng: -122.3176
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var redhawkStudentServicesLink = document.getElementById('redhawkStudentServices');
-   // create object to store Info Box attributes
-   var redhawkStudentServicesObj = {linkId: redhawkStudentServicesLink, linkName: 'Redhawk Student Services', linkDesc: "Located on the second floor of Vi Hilbert Hall, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!"};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(redhawkStudentServicesLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(redhawkStudentServicesMarker.getPosition());
-     modifyTextBox(1, redhawkStudentServicesObj.linkName, redhawkStudentServicesObj.linkDesc);
-   });
-   // create click listener for marker
-   redhawkStudentServicesMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(redhawkStudentServicesMarker.getPosition());
-     modifyTextBox(1, redhawkStudentServicesObj.linkName, redhawkStudentServicesObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   redhawkStudentServicesMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", redhawkStudentServicesObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   redhawkStudentServicesMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
+   //
+   // //  ***  Public Safety  ***  //
+   // var publicSafetyMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.6090,
+   //     lng: -122.3145
+   //   },
+   //   icon: icons['servicesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var publicSafetyLink = document.getElementById('publicSafety');
+   // // create object to store Info Box attributes
+   // var publicSafetyObj = {linkId: publicSafetyLink, linkName: 'Public Safety', linkDesc: "Located in University Services 102, open 8:30am-4:30pm. 24-Hour Emergency Line:  (206) 296-5911; 24-Hour Non-Emergency Line:  (206) 296-5990; Business Line: (206) 296-5992; Email: <a href='mailto:publicsafety@seattleu.edu'>publicsafety@seattleu.edu</a>."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(publicSafetyLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(publicSafetyMarker.getPosition());
+   //   modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // publicSafetyMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(publicSafetyMarker.getPosition());
+   //   modifyTextBox(1, publicSafetyObj.linkName, publicSafetyObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // publicSafetyMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(1, "Student Services", publicSafetyObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // publicSafetyMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Redhawk Axis  ***  //
+   // var redhawkStudentServicesMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.6122,
+   //     lng: -122.3176
+   //   },
+   //   icon: icons['servicesIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var redhawkStudentServicesLink = document.getElementById('redhawkStudentServices');
+   // // create object to store Info Box attributes
+   // var redhawkStudentServicesObj = {linkId: redhawkStudentServicesLink, linkName: 'Redhawk Student Services', linkDesc: "Located on the second floor of Vi Hilbert Hall, this desk allows students to drop and speak to a Registrar staff member or a Student Financial Services staff member. Extended hours are offered during registration!"};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(redhawkStudentServicesLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(redhawkStudentServicesMarker.getPosition());
+   //   modifyTextBox(1, redhawkStudentServicesObj.linkName, redhawkStudentServicesObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // redhawkStudentServicesMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(redhawkStudentServicesMarker.getPosition());
+   //   modifyTextBox(1, redhawkStudentServicesObj.linkName, redhawkStudentServicesObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // redhawkStudentServicesMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(1, "Student Services", redhawkStudentServicesObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // redhawkStudentServicesMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
 
    //  ***  Redhawk Resource Desk  ***  //
    var redhawkResourceHubDeskMarker = new google.maps.Marker({
@@ -740,224 +744,224 @@
 
 
 
-   //  *** Involvement Opportunities/red Markers, alphabetized listings ***  //
-
-   //  ***  Center for Student Involvement  ***  //
-   var centerStudentInvolvementMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608285,
-       lng: -122.318658
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var centerForStudentInvolvementLink = document.getElementById('centerForStudentInvolvement');
-   // create object to store Info Box attributes
-   var centerForStudentInvolvementObj = {linkId: centerForStudentInvolvementLink, linkName: 'Center for Student Involvement', linkDesc: "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac/' target='_blank'>SEAC</a> event - there are many way to get connected!"};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(centerForStudentInvolvementLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(centerStudentInvolvementMarker.getPosition());
-     modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
-   });
-   // create click listener for marker
-   centerStudentInvolvementMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(centerStudentInvolvementMarker.getPosition());
-     modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   centerStudentInvolvementMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, "Involvement Opportunities", centerForStudentInvolvementObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   centerStudentInvolvementMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Intramural Sports  ***  //
-   var intramuralMarker = new google.maps.Marker({
-     position: {
-       lat: 47.607561,
-       lng: -122.313441
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var intramuralLink = document.getElementById('intramural');
-   // create object to store Info Box attributes
-   var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(intramuralLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(intramuralMarker.getPosition());
-     modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
-   });
-   // create click listener for marker
-   intramuralMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(intramuralMarker.getPosition());
-     modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   intramuralMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, "Involvement Opportunities", intramuralObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   intramuralMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  International Student Center  ***  //
-   var internationalStudentCenterMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608758,
-       lng: -122.317567
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var internationalStudentCenterLink = document.getElementById('internationalStudentCenter');
-   // create object to store Info Box attributes
-   var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(internationalStudentCenterLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(internationalStudentCenterMarker.getPosition());
-     modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
-   });
-   // create click listener for marker
-   internationalStudentCenterMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(internationalStudentCenterMarker.getPosition());
-     modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   internationalStudentCenterMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, "Involvement Opportunities", internationalStudentCenterObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   internationalStudentCenterMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Office of Multicultural Affairs  ***  //
-   var omaMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608711,
-       lng: -122.317803
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var omaLink = document.getElementById('oma');
-   // create object to store Info Box attributes
-   var omaObj = {linkId: omaLink, linkName: 'Office of Multicultural Affairs', linkDesc: "Located in PAVL 180, OMA encourages students to increase their awareness of and engagement with diversity by creating an environment that promotes inclusion and advocacy. This is done through a variety of programs, services, and resources focused on historically marginalized experiences, dynamics of privilege, and social justice."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(omaLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(omaMarker.getPosition());
-     modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
-   });
-   // create click listener for marker
-   omaMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(omaMarker.getPosition());
-     modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   omaMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, "Involvement Opportunities", omaObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   omaMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Student Government at SeattleU  ***  //
-   var sgsuMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608363,
-       lng: -122.318600
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var sgsuLink = document.getElementById('sgsu');
-   // create object to store Info Box attributes
-   var sgsuObj = {linkId: sgsuLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/' target='_blank_'>Graduate Student Council</a> is here to support you."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(sgsuLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(sgsuMarker.getPosition());
-     modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
-   });
-   // create click listener for marker
-   sgsuMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(sgsuMarker.getPosition());
-     modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   sgsuMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, "Involvement Opportunities", sgsuObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   sgsuMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Wellness and Health Promotion  ***  //
-   var wellnessHealthPromotionMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608406,
-       lng: -122.318307
-     },
-     icon: icons['involvementIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var wellnessHealthPromotionLink = document.getElementById('wellnessHealthPromotion');
-   // create object to store Info Box attributes
-   var wellnessHealthPromotionObj = {linkId: wellnessHealthPromotionLink, linkName: 'Wellness and Health Promotion', linkDesc: "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/' target='_blank'>HAWC</a>."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(wellnessHealthPromotionLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(wellnessHealthPromotionMarker.getPosition());
-     modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
-   });
-   // create click listener for marker
-   wellnessHealthPromotionMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(wellnessHealthPromotionMarker.getPosition());
-     modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   wellnessHealthPromotionMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, "Involvement Opportunities", wellnessHealthPromotionObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   wellnessHealthPromotionMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-   //  *** Markers for Involvement Opportunities end ***  //
+   // //  *** Involvement Opportunities/red Markers, alphabetized listings ***  //
+   //
+   // //  ***  Center for Student Involvement  ***  //
+   // var centerStudentInvolvementMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608285,
+   //     lng: -122.318658
+   //   },
+   //   icon: icons['involvementIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var centerForStudentInvolvementLink = document.getElementById('centerForStudentInvolvement');
+   // // create object to store Info Box attributes
+   // var centerForStudentInvolvementObj = {linkId: centerForStudentInvolvementLink, linkName: 'Center for Student Involvement', linkDesc: "Located in Student Center 350 and 360. Get involved through this office! Whether you join a club or organization, create a new one, or partake in a <a href='https://www.seattleu.edu/seac/' target='_blank'>SEAC</a> event - there are many way to get connected!"};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(centerForStudentInvolvementLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(centerStudentInvolvementMarker.getPosition());
+   //   modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // centerStudentInvolvementMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(centerStudentInvolvementMarker.getPosition());
+   //   modifyTextBox(2, centerForStudentInvolvementObj.linkName, centerForStudentInvolvementObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // centerStudentInvolvementMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(2, "Involvement Opportunities", centerForStudentInvolvementObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // centerStudentInvolvementMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Intramural Sports  ***  //
+   // var intramuralMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.607561,
+   //     lng: -122.313441
+   //   },
+   //   icon: icons['involvementIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var intramuralLink = document.getElementById('intramural');
+   // // create object to store Info Box attributes
+   // var intramuralObj = {linkId: intramuralLink, linkName: 'Intramural Sports', linkDesc: "Happening throughout the school year and open to all students! Visit the <a href='https://www.seattleu.edu/recreation/intramural-sports/' target='_blank'>UREC Website</a> for more information."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(intramuralLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(intramuralMarker.getPosition());
+   //   modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // intramuralMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(intramuralMarker.getPosition());
+   //   modifyTextBox(2, intramuralObj.linkName, intramuralObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // intramuralMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(2, "Involvement Opportunities", intramuralObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // intramuralMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  International Student Center  ***  //
+   // var internationalStudentCenterMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608758,
+   //     lng: -122.317567
+   //   },
+   //   icon: icons['involvementIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var internationalStudentCenterLink = document.getElementById('internationalStudentCenter');
+   // // create object to store Info Box attributes
+   // var internationalStudentCenterObj = {linkId: internationalStudentCenterLink, linkName: 'International Student Center', linkDesc: "Located in PAVL 160, the <a href='https://www.seattleu.edu/isc/' target='_blank'>ISC</a> works closely with campus partners in supporting over 865 international students from 60 countries around the world. Some major events and programs include: International Dinner and International Education Week."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(internationalStudentCenterLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(internationalStudentCenterMarker.getPosition());
+   //   modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // internationalStudentCenterMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(internationalStudentCenterMarker.getPosition());
+   //   modifyTextBox(2, internationalStudentCenterObj.linkName, internationalStudentCenterObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // internationalStudentCenterMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(2, "Involvement Opportunities", internationalStudentCenterObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // internationalStudentCenterMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Office of Multicultural Affairs  ***  //
+   // var omaMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608711,
+   //     lng: -122.317803
+   //   },
+   //   icon: icons['involvementIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var omaLink = document.getElementById('oma');
+   // // create object to store Info Box attributes
+   // var omaObj = {linkId: omaLink, linkName: 'Office of Multicultural Affairs', linkDesc: "Located in PAVL 180, OMA encourages students to increase their awareness of and engagement with diversity by creating an environment that promotes inclusion and advocacy. This is done through a variety of programs, services, and resources focused on historically marginalized experiences, dynamics of privilege, and social justice."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(omaLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(omaMarker.getPosition());
+   //   modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // omaMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(omaMarker.getPosition());
+   //   modifyTextBox(2, omaObj.linkName, omaObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // omaMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(2, "Involvement Opportunities", omaObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // omaMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Student Government at SeattleU  ***  //
+   // var sgsuMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608363,
+   //     lng: -122.318600
+   //   },
+   //   icon: icons['involvementIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var sgsuLink = document.getElementById('sgsu');
+   // // create object to store Info Box attributes
+   // var sgsuObj = {linkId: sgsuLink, linkName: 'Student Government of Seattle University (SGSU)', linkDesc: "Stop by Student Center 360 and involved with student government. There are roles specific to non-traditional students on <a href='https://www.seattleu.edu/sgsu/' target='_blank_'>SGSU</a>. If you are a graduate student, the <a href='https://www.seattleu.edu/gsc/' target='_blank_'>Graduate Student Council</a> is here to support you."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(sgsuLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(sgsuMarker.getPosition());
+   //   modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // sgsuMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(sgsuMarker.getPosition());
+   //   modifyTextBox(2, sgsuObj.linkName, sgsuObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // sgsuMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(2, "Involvement Opportunities", sgsuObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // sgsuMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Wellness and Health Promotion  ***  //
+   // var wellnessHealthPromotionMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.608406,
+   //     lng: -122.318307
+   //   },
+   //   icon: icons['involvementIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var wellnessHealthPromotionLink = document.getElementById('wellnessHealthPromotion');
+   // // create object to store Info Box attributes
+   // var wellnessHealthPromotionObj = {linkId: wellnessHealthPromotionLink, linkName: 'Wellness and Health Promotion', linkDesc: "Through online screenings, individual consultations and large events this office offers education and support for the following areas: mental health, alcohol and other drugs, healthy relationships and physical wellness. Get involved with <a href='https://www.seattleu.edu/wellness/hawc/' target='_blank'>HAWC</a>."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(wellnessHealthPromotionLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(wellnessHealthPromotionMarker.getPosition());
+   //   modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // wellnessHealthPromotionMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(wellnessHealthPromotionMarker.getPosition());
+   //   modifyTextBox(2, wellnessHealthPromotionObj.linkName, wellnessHealthPromotionObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // wellnessHealthPromotionMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(2, "Involvement Opportunities", wellnessHealthPromotionObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // wellnessHealthPromotionMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   // //  *** Markers for Involvement Opportunities end ***  //
 
 
 
