@@ -966,114 +966,114 @@
 
 
    //  *** Food/Blue markers begin, alphabetically listed ***  //
-
-   //  ***  Cupcake Royale  ***  //
-   var cupcakeRoyaleMarker = new google.maps.Marker({
-     position: {
-       lat: 47.614058,
-       lng: -122.317592
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var cupcakeRoyaleLink = document.getElementById('cupcakeRoyale');
-   // create object to store Info Box attributes
-   var cupcakeRoyaleObj = {linkId: cupcakeRoyaleLink, linkName: 'Cupcake Royale', linkDesc: "Just off campus, at 1111 E Pike St, be sure to visit <a href='https://www.cupcakeroyale.com/' target='_blank'>Cupcake Royale</a> to enjoy fresh baked cupcakes, Stumptown espresso, and Seattle's Best ice cream scoops, sundaes, shakes, and pints! They are open late (to 10am Sun-Thurs and 11pm Fri-Sat) and offer a 10% student discount for SU students."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(cupcakeRoyaleLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(cupcakeRoyaleMarker.getPosition());
-     modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
-   });
-   // create click listener for marker
-   cupcakeRoyaleMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(cupcakeRoyaleMarker.getPosition());
-     modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   cupcakeRoyaleMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, "Food on or Near Campus", cupcakeRoyaleObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   cupcakeRoyaleMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Mr. Saigon  ***  //
-   var mrSaigonMarker = new google.maps.Marker({
-     position: {
-       lat: 47.60915,
-       lng: -122.3166
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var mrSaigonLink = document.getElementById('mrSaigon');
-   // create object to store Info Box attributes
-   var mrSaigonObj = {linkId: mrSaigonLink, linkName: 'Mr. Saigon', linkDesc: "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(mrSaigonLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(mrSaigonMarker.getPosition());
-     modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
-   });
-   // create click listener for marker
-   mrSaigonMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(mrSaigonMarker.getPosition());
-     modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   mrSaigonMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, "Food on or Near Campus", mrSaigonObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   mrSaigonMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
-
-   //  ***  Southpaw Pizza  ***  //
-   var southPawMarker = new google.maps.Marker({
-     position: {
-       lat: 47.611189,
-       lng: -122.3166
-     },
-     icon: icons['foodIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var southPawLink = document.getElementById('southPaw');
-   // create object to store Info Box attributes
-   var southPawObj = {linkId: southPawLink, linkName: 'Southpaw', linkDesc: "Located at 926 12th Ave, for great pizza, a great lunch special, and a family friendly atmosphere, this is a great place to eat near campus. Check out their <a href='http://www.southpawpizza.com/' target='_blank'>website</a> for details about their menu and upcoming events. They also offer a student discount of 10%, so remember to bring your SU ID."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(southPawLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(southPawMarker.getPosition());
-     modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
-   });
-   // create click listener for marker
-   southPawMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(southPawMarker.getPosition());
-     modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   southPawMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, "Food on or Near Campus", southPawObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   southPawMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
+   //
+   // //  ***  Cupcake Royale  ***  //
+   // var cupcakeRoyaleMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.614058,
+   //     lng: -122.317592
+   //   },
+   //   icon: icons['foodIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var cupcakeRoyaleLink = document.getElementById('cupcakeRoyale');
+   // // create object to store Info Box attributes
+   // var cupcakeRoyaleObj = {linkId: cupcakeRoyaleLink, linkName: 'Cupcake Royale', linkDesc: "Just off campus, at 1111 E Pike St, be sure to visit <a href='https://www.cupcakeroyale.com/' target='_blank'>Cupcake Royale</a> to enjoy fresh baked cupcakes, Stumptown espresso, and Seattle's Best ice cream scoops, sundaes, shakes, and pints! They are open late (to 10am Sun-Thurs and 11pm Fri-Sat) and offer a 10% student discount for SU students."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(cupcakeRoyaleLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(cupcakeRoyaleMarker.getPosition());
+   //   modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // cupcakeRoyaleMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(cupcakeRoyaleMarker.getPosition());
+   //   modifyTextBox(3, cupcakeRoyaleObj.linkName, cupcakeRoyaleObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // cupcakeRoyaleMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(3, "Food on or Near Campus", cupcakeRoyaleObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // cupcakeRoyaleMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Mr. Saigon  ***  //
+   // var mrSaigonMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.60915,
+   //     lng: -122.3166
+   //   },
+   //   icon: icons['foodIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var mrSaigonLink = document.getElementById('mrSaigon');
+   // // create object to store Info Box attributes
+   // var mrSaigonObj = {linkId: mrSaigonLink, linkName: 'Mr. Saigon', linkDesc: "Right on the corner of 12th and Columbia, visit Mr. Saigon to enjoy awesome bahn mi, bubble tea and Vietnamese iced coffee. For more info check out their <a href='https://www.mrsaigonbanhmi.com/' target='_blank'>website</a>. They also offer a student discount of 10%, so remember to bring your SU ID."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(mrSaigonLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(mrSaigonMarker.getPosition());
+   //   modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // mrSaigonMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(mrSaigonMarker.getPosition());
+   //   modifyTextBox(3, mrSaigonObj.linkName, mrSaigonObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // mrSaigonMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(3, "Food on or Near Campus", mrSaigonObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // mrSaigonMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
+   //
+   // //  ***  Southpaw Pizza  ***  //
+   // var southPawMarker = new google.maps.Marker({
+   //   position: {
+   //     lat: 47.611189,
+   //     lng: -122.3166
+   //   },
+   //   icon: icons['foodIcon'].icon,
+   //   map: map,
+   // });
+   // // create variable to store b-coloumn link ID
+   // var southPawLink = document.getElementById('southPaw');
+   // // create object to store Info Box attributes
+   // var southPawObj = {linkId: southPawLink, linkName: 'Southpaw', linkDesc: "Located at 926 12th Ave, for great pizza, a great lunch special, and a family friendly atmosphere, this is a great place to eat near campus. Check out their <a href='http://www.southpawpizza.com/' target='_blank'>website</a> for details about their menu and upcoming events. They also offer a student discount of 10%, so remember to bring your SU ID."};
+   // // create dom listener for b-coloumn anchor link
+   // google.maps.event.addDomListener(southPawLink, 'click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(southPawMarker.getPosition());
+   //   modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
+   // });
+   // // create click listener for marker
+   // southPawMarker.addListener('click', function() {
+   //   map.setZoom(19);
+   //   map.setCenter(southPawMarker.getPosition());
+   //   modifyTextBox(3, southPawObj.linkName, southPawObj.linkDesc);
+   //   $("#PinLabel").hide();
+   // });
+   // // create mouseover listener for marker label
+   // southPawMarker.addListener('mouseover', function() {
+   //   modifyPinLabel(3, "Food on or Near Campus", southPawObj.linkName);
+   //   $("#VenueTextBox").hide();
+   // });
+   // // Click Listener for Pin Labels
+   // southPawMarker.addListener('mouseout', function() {
+   //   $("#PinLabel").hide();
+   // });
 
    //  ***  The Bottom Line  ***  //
    var theBottomLineMarker = new google.maps.Marker({
