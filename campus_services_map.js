@@ -75,7 +75,6 @@
 }
 
 
-
  //  *** Implementation of initialize function ***  //
  function initialize() {
 
@@ -182,7 +181,7 @@
    });
    // create mouseover listener for marker label
    campusStoreMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", campusStoreObj.linkName);
+     modifyPinLabel(1, "Campus Resources", campusStoreObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -221,7 +220,7 @@
    });
    // create mouseover listener for marker label
    publicSafetyMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", publicSafetyObj.linkName);
+     modifyPinLabel(1, "Campus Resources", publicSafetyObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -258,7 +257,7 @@
    });
    // create mouseover listener for marker label
    redhawkResourceHubDeskMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", redhawkResourceHubDeskObj.linkName);
+     modifyPinLabel(1, "Campus Resources", redhawkResourceHubDeskObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -294,7 +293,7 @@
    });
    // create mouseover listener for marker label
    supercopyMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", superCopyObj.linkName);
+     modifyPinLabel(1, "Campus Resources", superCopyObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -330,7 +329,7 @@
    });
    // create mouseover listener for marker label
    universityRecreationMarker.addListener('mouseover', function() {
-     modifyPinLabel(2, "Student Services", universityRecreationObj.linkName);
+     modifyPinLabel(2, "Campus Venues", universityRecreationObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -368,7 +367,7 @@
    });
    // create mouseover listener for marker label
    theBottomLineMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Food on or Near Campus", theBottomLineObj.linkName);
+     modifyPinLabel(0, "Campus Dining", theBottomLineObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -404,7 +403,7 @@
    });
    // create mouseover listener for marker label
    theByteMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Food on or Near Campus", theByteObj.linkName);
+     modifyPinLabel(0, "Campus Dining", theByteObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -440,7 +439,7 @@
    });
    // create mouseover listener for marker label
    theSideBarMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Food on or Near Campus", theSideBarObj.linkName);
+     modifyPinLabel(0, "Campus Dining", theSideBarObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -477,7 +476,7 @@
    });
    // create mouseover listener for marker label
    stcnDiningMarker.addListener('mouseover', function() {
-     modifyPinLabel(0, "Food on or Near Campus", stcnDiningObj.linkName);
+     modifyPinLabel(0, "Campus Dining", stcnDiningObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
