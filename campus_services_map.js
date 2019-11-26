@@ -17,22 +17,22 @@
     $("#VenueTextBox").css("padding","5px 25px 15px 25px");
 
     // Food/Red-Orange
-    if(type == 0) {
+    if(type === 0) {
         $("#VenueTextBox").css("border-left", "5px solid #EF4135");
         $("#VenueTextBox h5").css("color", "#EF4135");
     }
 	// Services/Green
-	if(type == 1) {
+	if(type === 1) {
         $("#VenueTextBox").css("border-left", "5px solid #55B31B");
         $("#VenueTextBox h5").css("color", "#55B31B");
     }
     // Event Venues/Blue
-	if(type == 2) {
+	if(type === 2) {
         $("#VenueTextBox").css("border-left", "5px solid #088099");
         $("#VenueTextBox h5").css("color", "#088099");
     }
     // SU Marker
-    if(type == 3) {
+    if(type === 3) {
         $("#VenueTextBox").css("border-left", "5px solid #AA0000");
         $("#VenueTextBox h5").css("color", "#AA0000");
     }
@@ -50,22 +50,22 @@
     $("#PinLabel").css("padding","5px 15px 15px 15px");
 
     // Food/Red-Orange
-    if(type == 0) {
+    if(type === 0) {
         $("#PinLabel").css("border-left", "5px solid #EF4135");
         $("#PinLabel h5").css("color", "#EF4135");
     }
     // Services/Green
-    if(type == 1) {
+    if(type === 1) {
         $("#PinLabel").css("border-left", "5px solid #55B31B");
         $("#PinLabel h5").css("color", "#55B31B");
     }
     // Event Venues/Blue
-    if(type == 2) {
+    if(type === 2) {
         $("#PinLabel").css("border-left", "5px solid #088099");
         $("#PinLabel h5").css("color", "#088099");
     }
     // SU Marker
-    if(type == 3) {
+    if(type === 3) {
         $("#PinLabel").css("border-left", "5px solid #AA0000");
         $("#PinLabel h5").css("color", "#AA0000");
     }
@@ -122,7 +122,7 @@
        icon: '/media/student-development/Marker_Green.png'
      },
      // Venue Icon
-     involvementIcon: {
+     venueIcon: {
        icon: '/media/student-development/Marker_Blue.png'
      },
    };
@@ -308,7 +308,7 @@
        lat: 47.606994,
        lng: -122.313798
      },
-     icon: icons['servicesIcon'].icon,
+     icon: icons['venueIcon'].icon,
      map: map,
    });
    // create variable to store b-coloumn link ID
