@@ -241,7 +241,7 @@
    // create variable to store b-coloumn link ID
    var redhawkResourceHubDeskLink = document.getElementById('redhawkResourceHubDesk');
    // create object to store Info Box attributes
-   var redhawkResourceHubDeskObj = {linkId: redhawkResourceHubDeskLink, linkName: 'Redhawk Resource Hub Desk', linkDesc: "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events."};
+   var redhawkResourceHubDeskObj = {linkId: redhawkResourceHubDeskLink, linkName: 'Redhawk Resource Hub Information Desk', linkDesc: "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events."};
    // create dom listener for b-coloumn anchor link
    google.maps.event.addDomListener(redhawkResourceHubDeskLink, 'click', function() {
      map.setZoom(19);
