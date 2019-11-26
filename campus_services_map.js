@@ -9,77 +9,75 @@
 
 
 
- // *** Floating InfoWindow  ***  //
+ // *** Floating InfoWindow for Details ***  //
  function modifyTextBox(type, header, text) {
-   $("#VenueTextBox").show();
-   $("#VenueTextBox h5").html(header);
-   $("#VenueTextBox p").html(text);
-   $("#VenueTextBox").css("padding","5px 25px 15px 25px");
+    $("#VenueTextBox").show();
+    $("#VenueTextBox h5").html(header);
+    $("#VenueTextBox p").html(text);
+    $("#VenueTextBox").css("padding","5px 25px 15px 25px");
 
-   // Physical Space/Yellow
-   if(type == 0){
-    $("#VenueTextBox").css("border-left", "5px solid #FDB913");
-    $("#VenueTextBox h5").css("color", "#333333");
-   }
+    // Food/Red-Orange
+    if(type === 0) {
+        $("#VenueTextBox").css("border-left", "5px solid #EF4135");
+        $("#VenueTextBox h5").css("color", "#EF4135);
+    }
 	// Services/Green
-	if(type == 1){
-	$("#VenueTextBox").css("border-left", "5px solid #6CCB3F");
-    $("#VenueTextBox h5").css("color", "#333333");
-	}
-  // Involvement/Red
-	if(type == 2){
-    $("#VenueTextBox").css("border-left", "5px solid #EF4135");
-    $("#VenueTextBox h5").css("color", "#aa0000");
-   }
-  //  Food/Blue
-	if(type == 3){
-    $("#VenueTextBox").css("border-left", "5px solid #47C3D3");
-    $("#VenueTextBox h5").css("color", "#003282");
-   }
-   // Text Box Margins
-   var margin = ($("#VenueTextBox").height() * -1) - 30;
-   $("#VenueTextBox").css("margin", (margin + "px auto 10px auto"));
- }
- // *** End of Floating InfoWindow  ***  //
+	if(type === 1) {
+        $("#VenueTextBox").css("border-left", "5px solid #55B31B");
+        $("#VenueTextBox h5").css("color", "#55B31B");
+    }
+    // Event Venues/Blue
+	if(type === 2) {
+        $("#VenueTextBox").css("border-left", "5px solid #088099");
+        $("#VenueTextBox h5").css("color", "#088099");
+    }
+    // SU Marker
+    if(type === 3) {
+        $("#VenueTextBox").css("border-left", "5px solid #AA0000");
+        $("#VenueTextBox h5").css("color", "#AA0000");
+    }
+    // Text Box Margins
+    var margin = ($("#VenueTextBox").height() * -1) - 30;
+    $("#VenueTextBox").css("margin", (margin + "px auto 10px auto"));
+}
 
 
- // *** Floating InfoPopup  ***  //
+ // *** Floating Pin Labels for Title Summary ***  //
  function modifyPinLabel(type, header, text) {
-   $("#PinLabel").show();
-   $("#PinLabel h5").html(header);
-   $("#PinLabel p").html(text);
-   $("#PinLabel").css("padding","5px 15px 15px 15px");
+    $("#PinLabel").show();
+    $("#PinLabel h5").html(header);
+    $("#PinLabel p").html(text);
+    $("#PinLabel").css("padding","5px 15px 15px 15px");
 
-   // Physical Space/Yellow
-   if(type == 0){
-     $("#PinLabel").css("border-left", "5px solid #FDB913");
-     $("#PinLabel h5").css("color", "#333333");
-   }
-	// Services/Green
-	if(type == 1){
-    $("#PinLabel").css("border-left", "5px solid #6CCB3F");
-    $("#PinLabel h5").css("color", "#333333");
-	}
-  // Involvement/Red
-	if(type == 2){
-    $("#PinLabel").css("border-left", "5px solid #EF4135");
-    $("#PinLabel h5").css("color", "#aa0000");
-   }
-  //  Food/Blue
-	if(type == 3){
-    $("#PinLabel").css("border-left", "5px solid #47C3D3");
-    $("#PinLabel h5").css("color", "#003282");
-   }
-   // Pin Label Margins
-   var margin = ($("#PinLabel").height() * -1) - 30;
-   $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
- }
+    // Food/Red-Orange
+    if(type === 0) {
+        $("#PinLabel").css("border-left", "5px solid #EF4135");
+        $("#PinLabel h5").css("color", "#EF4135");
+    }
+    // Services/Green
+    if(type === 1) {
+        $("#PinLabel").css("border-left", "5px solid #55B31B");
+        $("#PinLabel h5").css("color", "#55B31B");
+    }
+    // Event Venues/Blue
+    if(type === 2) {
+        $("#PinLabel").css("border-left", "5px solid #088099");
+        $("#PinLabel h5").css("color", "#088099");
+    }
+    // SU Marker
+    if(type === 3) {
+        $("#PinLabel").css("border-left", "5px solid #AA0000");
+        $("#PinLabel h5").css("color", "#AA0000");
+    }
+    // Pin Label Margins
+    var margin = ($("#PinLabel").height() * -1) - 30;
+    $("#PinLabel").css("margin", (margin + "px auto 10px auto"));
+}
 
 
 
  //  *** Implementation of initialize function ***  //
  function initialize() {
-
 
    //  ***  Campus Primary Location  ***  //
    var seattleu = {
@@ -90,7 +88,6 @@
    //  ***  Campus Map Control Settings  ***  //
    var map = new google.maps.Map(document.getElementById('Campus-Services-Map'), {
      center: seattleu,
-     // streetViewControl: false,
      scaleControl: true,
      zoomControl: true,
      mapTypeControl: true,
@@ -98,6 +95,7 @@
      mapTypeId: 'satellite',
      zoom: 16,
    });
+
 
    // Click Listener for Text Box
    map.addListener('click', function() {
@@ -107,11 +105,7 @@
    map.addListener('click', function() {
      $("#PinLabel").hide();
    });
-   //  *** Map style end ***  //
 
-
-
-   //  *** Map markers start ***  //
 
    //  *** Map marker url list start ***  //
    var icons = {
@@ -119,28 +113,20 @@
      seattleUIcon: {
        icon: '/media/graduate-admissions/images/graduate-viewbook/sulogo.png'
      },
-     // Physical Icon
-     physicalSpacesIcon: {
-       icon: '/media/student-development/Marker_Yellow.png'
+     // Food Icon
+     involvementIcon: {
+       icon: '/media/student-development/Marker_Red.png'
      },
      // Services Icon
      servicesIcon: {
        icon: '/media/student-development/Marker_Green.png'
      },
-     // Involvement Icon
-     involvementIcon: {
-       icon: '/media/student-development/Marker_Red.png'
-     },
-     // Food Icon
+     // Venue Icon
      foodIcon: {
        icon: '/media/student-development/Marker_Blue.png'
      },
    };
-   //  *** Map marker url list end ***  //
 
-
-
-   //  ***  click listeners for map icons ***  //
 
    //  *** Seattle University Main Campus Marker ***  //
    var seattleuMarker = new google.maps.Marker({
@@ -153,11 +139,11 @@
    seattleuMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(seattleuMarker.getPosition());
-     modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
+     modifyTextBox(3, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
    });
    // create mouseover listener for marker label
    seattleuMarker.addListener('mouseover', function() {
-     modifyTextBox(2, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
+     modifyTextBox(3, "Seattle University", "Seattle University, founded in 1891, is a Jesuit Catholic university located on 50 acres in Seattle's Capitol Hill neighborhood.");
    });
    // Click Listener for Pin Labels
    seattleuMarker.addListener('mouseout', function() {
@@ -333,18 +319,18 @@
    google.maps.event.addDomListener(universityRecreationLink, 'click', function() {
      map.setZoom(19);
      map.setCenter(universityRecreationMarker.getPosition());
-     modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
+     modifyTextBox(2, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
    });
    // create click listener for marker
    universityRecreationMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(universityRecreationMarker.getPosition());
-     modifyTextBox(1, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
+     modifyTextBox(2, universityRecreationObj.linkName, universityRecreationObj.linkDesc);
      $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    universityRecreationMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Student Services", universityRecreationObj.linkName);
+     modifyPinLabel(2, "Student Services", universityRecreationObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -371,18 +357,18 @@
    google.maps.event.addDomListener(theBottomLineLink, 'click', function() {
      map.setZoom(19);
      map.setCenter(theBottomLineMarker.getPosition());
-     modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
+     modifyTextBox(0, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
    });
    // create click listener for marker
    theBottomLineMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(theBottomLineMarker.getPosition());
-     modifyTextBox(3, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
+     modifyTextBox(0, theBottomLineObj.linkName, theBottomLineObj.linkDesc);
      $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    theBottomLineMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, "Food on or Near Campus", theBottomLineObj.linkName);
+     modifyPinLabel(0, "Food on or Near Campus", theBottomLineObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -407,18 +393,18 @@
    google.maps.event.addDomListener(theByteLink, 'click', function() {
      map.setZoom(19);
      map.setCenter(theByteMarker.getPosition());
-     modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
+     modifyTextBox(0, theByteObj.linkName, theByteObj.linkDesc);
    });
    // create click listener for marker
    theByteMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(theByteMarker.getPosition());
-     modifyTextBox(3, theByteObj.linkName, theByteObj.linkDesc);
+     modifyTextBox(0, theByteObj.linkName, theByteObj.linkDesc);
      $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    theByteMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, "Food on or Near Campus", theByteObj.linkName);
+     modifyPinLabel(0, "Food on or Near Campus", theByteObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -443,18 +429,18 @@
    google.maps.event.addDomListener(theSideBarLink, 'click', function() {
      map.setZoom(19);
      map.setCenter(theSideBarMarker.getPosition());
-     modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
+     modifyTextBox(0, theSideBarObj.linkName, theSideBarObj.linkDesc);
    });
    // create click listener for marker
    theSideBarMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(theSideBarMarker.getPosition());
-     modifyTextBox(3, theSideBarObj.linkName, theSideBarObj.linkDesc);
+     modifyTextBox(0, theSideBarObj.linkName, theSideBarObj.linkDesc);
      $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    theSideBarMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, "Food on or Near Campus", theSideBarObj.linkName);
+     modifyPinLabel(0, "Food on or Near Campus", theSideBarObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
@@ -480,28 +466,23 @@
    google.maps.event.addDomListener(stcnDiningLink, 'click', function() {
      map.setZoom(19);
      map.setCenter(stcnDiningMarker.getPosition());
-     modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
+     modifyTextBox(0, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
    });
    // create click listener for marker
    stcnDiningMarker.addListener('click', function() {
      map.setZoom(19);
      map.setCenter(stcnDiningMarker.getPosition());
-     modifyTextBox(3, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
+     modifyTextBox(0, stcnDiningObj.linkName, stcnDiningObj.linkDesc);
      $("#PinLabel").hide();
    });
    // create mouseover listener for marker label
    stcnDiningMarker.addListener('mouseover', function() {
-     modifyPinLabel(3, "Food on or Near Campus", stcnDiningObj.linkName);
+     modifyPinLabel(0, "Food on or Near Campus", stcnDiningObj.linkName);
      $("#VenueTextBox").hide();
    });
    // Click Listener for Pin Labels
    stcnDiningMarker.addListener('mouseout', function() {
      $("#PinLabel").hide();
    });
-   //  *** End of Food/Blue Markers ***  //
-
-
-
-   //  *** End of Google Map JavaScript ***  //
  }
 //eof
