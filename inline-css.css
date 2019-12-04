@@ -1,0 +1,214 @@
+/******
+*	OK TO DELETE FILE*
+*/
+
+
+
+#mapBlock {
+	background-color: #aa0000;
+	border-bottom:10px solid #aa0000;
+}
+
+#Map-Title {
+	padding:20px 8.3333%;
+	text-align: center;
+}
+
+#Map-Title h2 {
+	color:#ffffff;
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+}
+
+#Map-Title p {
+	color:#ffffff;
+	margin:0;
+}
+
+#Campus-Services-Map {
+	height: 600px;
+}
+
+#VenueTextBox {
+	float: left;
+	overflow: hidden;
+	/* opacity: .95; */
+	position:relative;
+	z-index:100;
+	width: 85%;
+	background-color:#ffffff;
+	/* background: rgba(0, 151, 19, 0.8); */
+	padding:0px 25px 0px 25px;
+	border-left:5px solid #ef4135;
+	display:none;
+	margin-bottom:10px;
+	-webkit-box-shadow: 2px 2px 2px 0px #a9a9a9;
+	-moz-box-shadow: 2px 2px 2px 0px #a9a9a9;
+	box-shadow: 2px 2px 2px 0px #a9a9a9;
+}
+
+#VenueTextBox h5 {
+	color:#ef4135;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:700;
+	font-size:1.6rem;
+	/* font-style: bold; */
+	padding-top:0px;
+}
+
+#VenueTextBox p {
+	color:#333333;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:600;
+	font-size:1.4rem;
+}
+
+#VenueTextBox a {
+	color:#008765;
+	text-decoration:underline;
+}
+
+#VenueTextBox a:hover {
+	color:#333333;
+	text-decoration:underline;
+}
+
+#PinLabel {
+	overflow: hidden;
+	/* opacity: .9; */
+	position:relative;
+	z-index:100;
+	width: 356px;
+	background-color:#ffffff;
+	padding:0px 25px 0px 25px;
+	border-left:5px solid #ef4135;
+	display:none;
+	margin-bottom:10px;
+	-webkit-box-shadow: 2px 2px 2px 0px #a9a9a9;
+	-moz-box-shadow: 2px 2px 2px 0px #a9a9a9;
+	box-shadow: 2px 2px 2px 0px #a9a9a9;
+}
+
+#PinLabel h5 {
+	color:#ef4135;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:700;
+	font-size:1.6rem;
+	padding-top:0px;
+}
+
+#PinLabel p {
+	color:#333333;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:600;
+	font-size:1.4rem;
+}
+
+#PinLabel a {
+	color:#008765;
+	text-decoration:underline;
+}
+
+#PinLabel a:hover {
+	color:#333333;
+	text-decoration:underline;
+}
+
+#PinText {
+	padding:30px 8.3333%;
+	text-align: left;
+}
+
+#PinText h2 {
+	color:#ffffff;
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+}
+
+#PinText p {
+	color:#ffffff;
+	margin:0;
+}
+
+
+
+
+.categoryLabel {
+    min-height: 30px;
+    margin: 15px 10px 15px 10px;
+}
+
+#categoryOne .categoryLabel {
+    background: url(/media/student-development/Marker_Yellow.png) no-repeat 0 center;
+}
+
+#categoryTwo .categoryLabel {
+    background: url(/media/student-development/Marker_Green.png) no-repeat 0 center;
+}
+
+#categoryThree .categoryLabel {
+    background: url(/media/student-development/Marker_Red.png) no-repeat 0 center;
+}
+
+#categoryFour .categoryLabel {
+    background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button {
+    color: #aa0000;
+    display: inline-block;
+    line-height: 20px;
+    min-height: 60px;
+    padding: 20px 20px 20px 35px;
+    text-align: left;
+    text-decoration: none;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button span {
+  font-size: 2.0rem;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button:hover span {
+  text-decoration: underline;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button .fas {
+  background-color: inherit;
+  color:  #aa0000;
+  padding-left:	10px;
+  display: inline-block;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button .fa-plus {
+  display: none;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button.collapsed .fa-plus {
+  display: initial;
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button .fa-minus {
+}
+
+#accordionWrapper .categoryWrapper .categoryLabel button.collapsed .fa-minus {
+  display: none;
+}
+
+#standardContent .box-button {
+  background-color: #aa0000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#zoneA .codeZoneAWrapper {
+	padding: 20px;
+}
