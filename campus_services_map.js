@@ -114,15 +114,15 @@
      },
      // Food Icon
      foodIcon: {
-       icon: '/media/campus-services/images/pin-red-orange.png'
+       icon: '/media/campus-services/images/redorangepin.png'
      },
      // Services Icon
      servicesIcon: {
-       icon: '/media/campus-services/images/pin-green.png'
+       icon: '/media/campus-services/images/greenpin.png'
      },
      // Venue Icon
      venueIcon: {
-       icon: '/media/campus-services/images/pin-blue.png'
+       icon: '/media/campus-services/images/bluepin.png'
      }
    };
 
