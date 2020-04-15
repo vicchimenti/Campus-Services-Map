@@ -132,11 +132,11 @@
 }
 
 #categoryOne .categoryLabel {
-    background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
+    background: url(/media/student-development/Marker_Green.png) no-repeat 0 center;
 }
 
 #categoryTwo .categoryLabel {
-    background: url(/media/student-development/Marker_Green.png) no-repeat 0 center;
+    background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
 }
 
 #categoryThree .categoryLabel {
