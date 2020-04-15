@@ -456,43 +456,4 @@
  }
 
 
-
-   //  //  ***  Redhawk Resource Desk  ***  //
-  //  var redhawkResourceHubDeskMarker = new google.maps.Marker({
-  //    position: {
-  //      lat: 47.608555,
-  //      lng: -122.317994
-  //    },
-  //    icon: icons['servicesIcon'].icon,
-  //    map: map,
-  //  });
-  //  // create variable to store b-coloumn link ID
-  //  var redhawkResourceHubDeskLink = document.getElementById('redhawkResourceHubDesk');
-  //  // create object to store Info Box attributes
-  //  var redhawkResourceHubDeskObj = {linkId: redhawkResourceHubDeskLink, linkName: 'Redhawk Resource Hub Information Desk', linkDesc: "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events."};
-  //  // create dom listener for b-coloumn anchor link
-  //  google.maps.event.addDomListener(redhawkResourceHubDeskLink, 'click', function() {
-  //    map.setZoom(19);
-  //    map.setCenter(redhawkResourceHubDeskMarker.getPosition());
-  //    modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
-  //  });
-  //  // create click listener for marker
-  //  redhawkResourceHubDeskMarker.addListener('click', function() {
-  //    map.setZoom(19);
-  //    map.setCenter(redhawkResourceHubDeskMarker.getPosition());
-  //    modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
-  //    $("#PinLabel").hide();
-  //  });
-  //  // create mouseover listener for marker label
-  //  redhawkResourceHubDeskMarker.addListener('mouseover', function() {
-  //    modifyPinLabel(1, "Campus Resources", redhawkResourceHubDeskObj.linkName);
-  //    $("#VenueTextBox").hide();
-  //  });
-  //  // Click Listener for Pin Labels
-  //  redhawkResourceHubDeskMarker.addListener('mouseout', function() {
-  //    $("#PinLabel").hide();
-  //  });
-
-
-
 //eof
