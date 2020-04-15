@@ -1,26 +1,25 @@
-// ***  accordian.js *** //
+// ***  accordion.js *** //
 
 
 /// *** initialize the accordian
-function initializeAccordian(accordianElement) {
+function initializeAccordian(accordionElement) {
+
+  // *** open new panel and close last one *** //
+  funtion showPanel(panel) {
+    var openPanel = accordionElement.querySelctor(".active");
+    if (openPanel) {
+      openPanel.classList.remove("active");
+    }
+    // *** open new panel *** //
+    panel.classList.add("active");
+  }
 
   // *** change panel from open or close *** //
   function handlePanelClick(event) {
     showPanel(event.CurrentTarget);
   }
 
-  // *** open new panel and close last one *** //
-  funtion showPanel(panel) {
-    var openPanel = accordianElement.querySelctor(".active");
-    if (openPanel) {
-      openPanel.classList.remove("active");
-    }
-
-    // *** open new panel *** //
-    panel.classList.add("active");
-  }
-
-  var allPanelElements = accordianElement.querySelctorAll(".panel");
+  var allPanelElements = accordionElement.querySelctorAll(".panel");
   for (var i = 0, len = allPanelElements.length; i < len; i++) {
     allPanelElements[i].addEventListener("click", handlePanelClick);
   }
@@ -29,4 +28,4 @@ function initializeAccordian(accordianElement) {
   showPanel(allPanelElements[0])
 }
 
-initializeAccordian(document.getElementById("accordian"));
+initializeAccordion(document.getElementById("accordion"));
