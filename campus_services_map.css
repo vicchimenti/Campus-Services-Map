@@ -132,7 +132,7 @@
 }
 
 #categoryOne .categoryLabel {
-    background: url(/media/student-development/Marker_Yellow.png) no-repeat 0 center;
+    background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
 }
 
 #categoryTwo .categoryLabel {
@@ -143,9 +143,9 @@
     background: url(/media/student-development/Marker_Red.png) no-repeat 0 center;
 }
 
-#categoryFour .categoryLabel {
+/* #categoryFour .categoryLabel {
     background: url(/media/student-development/Marker_Blue.png) no-repeat 0 center;
-}
+} */
 
 #accordionWrapper .categoryWrapper .categoryLabel button {
     color: #aa0000;
