@@ -16,7 +16,7 @@
     $("#VenueTextBox p").html(text);
     $("#VenueTextBox").css("padding","5px 25px 15px 25px");
 
-    // Food/Red-Orange
+    // Food/Red
     if(type === 0) {
         $("#VenueTextBox").css("border-left", "5px solid #EF4135");
         $("#VenueTextBox h5").css("color", "#EF4135");
@@ -26,7 +26,7 @@
         $("#VenueTextBox").css("border-left", "5px solid #55B31B");
         $("#VenueTextBox h5").css("color", "#55B31B");
     }
-    // Event Venues/Blue
+    // Campus Venues/Blue
 	if(type === 2) {
         $("#VenueTextBox").css("border-left", "5px solid #088099");
         $("#VenueTextBox h5").css("color", "#088099");
@@ -121,12 +121,8 @@
        icon: '/media/student-development/Marker_Green.png'
      },
      // Venue Icon
-     superCopy: {
+     venueIcon: {
        icon: '/media/student-development/Marker_Blue.png'
-     },
-    // Venue Icon
-    venueIcon: {
-      icon: '/media/student-development/Marker_Yellow.png'
      }
    };
 
@@ -233,41 +229,6 @@
    });
 
 
-   //  ***  Redhawk Resource Desk  ***  //
-   var redhawkResourceHubDeskMarker = new google.maps.Marker({
-     position: {
-       lat: 47.608555,
-       lng: -122.317994
-     },
-     icon: icons['servicesIcon'].icon,
-     map: map,
-   });
-   // create variable to store b-coloumn link ID
-   var redhawkResourceHubDeskLink = document.getElementById('redhawkResourceHubDesk');
-   // create object to store Info Box attributes
-   var redhawkResourceHubDeskObj = {linkId: redhawkResourceHubDeskLink, linkName: 'Redhawk Resource Hub Information Desk', linkDesc: "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events."};
-   // create dom listener for b-coloumn anchor link
-   google.maps.event.addDomListener(redhawkResourceHubDeskLink, 'click', function() {
-     map.setZoom(19);
-     map.setCenter(redhawkResourceHubDeskMarker.getPosition());
-     modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
-   });
-   // create click listener for marker
-   redhawkResourceHubDeskMarker.addListener('click', function() {
-     map.setZoom(19);
-     map.setCenter(redhawkResourceHubDeskMarker.getPosition());
-     modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
-     $("#PinLabel").hide();
-   });
-   // create mouseover listener for marker label
-   redhawkResourceHubDeskMarker.addListener('mouseover', function() {
-     modifyPinLabel(1, "Campus Resources", redhawkResourceHubDeskObj.linkName);
-     $("#VenueTextBox").hide();
-   });
-   // Click Listener for Pin Labels
-   redhawkResourceHubDeskMarker.addListener('mouseout', function() {
-     $("#PinLabel").hide();
-   });
 
    //  ***  SU Supercopy  ***  //
    var supercopyMarker = new google.maps.Marker({
@@ -304,6 +265,9 @@
    supercopyMarker.addListener('mouseout', function() {
      $("#PinLabel").hide();
    });
+   //  *** Services Markers end ***  //
+
+
 
    //  ***  Fitness Center  ***  //
    var universityRecreationMarker = new google.maps.Marker({
@@ -340,7 +304,7 @@
    universityRecreationMarker.addListener('mouseout', function() {
      $("#PinLabel").hide();
    });
-   //  *** Services Markers end ***  //
+   
 
 
    //  ***  The Bottom Line  ***  //
@@ -379,6 +343,7 @@
      $("#PinLabel").hide();
    });
 
+
    //  ***  The Byte  ***  //
    var theByteMarker = new google.maps.Marker({
      position: {
@@ -414,6 +379,7 @@
    theByteMarker.addListener('mouseout', function() {
      $("#PinLabel").hide();
    });
+
 
    //  ***  The Side Bar  ***  //
    var theSideBarMarker = new google.maps.Marker({
@@ -488,4 +454,45 @@
      $("#PinLabel").hide();
    });
  }
+
+
+
+   //  //  ***  Redhawk Resource Desk  ***  //
+  //  var redhawkResourceHubDeskMarker = new google.maps.Marker({
+  //    position: {
+  //      lat: 47.608555,
+  //      lng: -122.317994
+  //    },
+  //    icon: icons['servicesIcon'].icon,
+  //    map: map,
+  //  });
+  //  // create variable to store b-coloumn link ID
+  //  var redhawkResourceHubDeskLink = document.getElementById('redhawkResourceHubDesk');
+  //  // create object to store Info Box attributes
+  //  var redhawkResourceHubDeskObj = {linkId: redhawkResourceHubDeskLink, linkName: 'Redhawk Resource Hub Information Desk', linkDesc: "Located on the first floor of the Student Center, this desk offers free daily ORCA passes, locker rentals, and sells tickets for major campus events."};
+  //  // create dom listener for b-coloumn anchor link
+  //  google.maps.event.addDomListener(redhawkResourceHubDeskLink, 'click', function() {
+  //    map.setZoom(19);
+  //    map.setCenter(redhawkResourceHubDeskMarker.getPosition());
+  //    modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
+  //  });
+  //  // create click listener for marker
+  //  redhawkResourceHubDeskMarker.addListener('click', function() {
+  //    map.setZoom(19);
+  //    map.setCenter(redhawkResourceHubDeskMarker.getPosition());
+  //    modifyTextBox(1, redhawkResourceHubDeskObj.linkName, redhawkResourceHubDeskObj.linkDesc);
+  //    $("#PinLabel").hide();
+  //  });
+  //  // create mouseover listener for marker label
+  //  redhawkResourceHubDeskMarker.addListener('mouseover', function() {
+  //    modifyPinLabel(1, "Campus Resources", redhawkResourceHubDeskObj.linkName);
+  //    $("#VenueTextBox").hide();
+  //  });
+  //  // Click Listener for Pin Labels
+  //  redhawkResourceHubDeskMarker.addListener('mouseout', function() {
+  //    $("#PinLabel").hide();
+  //  });
+
+
+  
 //eof
